@@ -1,0 +1,355 @@
+# Guía técnica y seguimiento del desarrollo
+
+Este documento permite que una persona o asistente continúe el desarrollo sin
+tener que reconstruir las decisiones técnicas desde la conversación. El contexto
+funcional y la arquitectura objetivo están en [`PROJECT_CONTEXT.md`](PROJECT_CONTEXT.md).
+
+## Estado actual
+
+Implementado:
+
+- Lectura inmutable de la transcripción con timestamps.
+- Parseo de intervenciones.
+- Limpieza conservadora.
+- Separación declarativa de cuatro ponencias.
+- Generación de `talks.jsonl`.
+- Generación de un TXT legible por ponencia.
+- Manifiesto de procedencia y hashes.
+- Reporte de validación.
+- Pruebas de integración.
+- Análisis reproducible de longitud de las 2,301 utterances con `tiktoken` y
+  `cl100k_base`.
+- Child V1 por utterances completas, con target aproximado de 500 tokens y
+  overlap aproximado de 100.
+- Validación de cobertura, continuidad, trazabilidad, overlap y conteos.
+- Estadísticas e inventario de los 140 Children para revisión humana.
+
+No implementado:
+
+- Parents.
+- Chunking.
+- Embeddings.
+- Base de datos vectorial.
+- Retriever.
+- Reranking.
+- Integración con un LLM.
+- API o interfaz de usuario.
+
+## Requisitos de ejecución
+
+- Python 3.10 o posterior.
+- Dependencias declaradas en `pyproject.toml`.
+- `tiktoken==0.14.0` para el análisis exploratorio de tokens.
+
+`pyproject.toml` es la fuente de dependencias; no debe duplicarse en un
+`requirements.txt` mantenido manualmente.
+
+Preparación recomendada en Windows:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install setuptools==80.9.0
+.\.venv\Scripts\python.exe -m pip install . --no-build-isolation
+```
+
+## Estructura relevante
+
+```text
+.
+├── PROJECT_CONTEXT.md
+├── DEVELOPMENT.md
+├── pyproject.toml
+├── config/
+│   ├── talks.json
+│   └── child_v1.json
+├── scripts/
+│   ├── build_talks.py
+│   ├── analyze_utterance_lengths.py
+│   └── build_child_chunks.py
+├── tests/
+│   ├── test_build_talks.py
+│   ├── test_analyze_utterance_lengths.py
+│   └── test_build_child_chunks.py
+└── data/
+    ├── Transcripts_PlainText/
+    │   └── Transcripts_Text/transcripts/
+    │       └── Text_Transcript_original_AOKA-8157.txt
+    ├── processed/
+    │   ├── talks.jsonl
+    │   ├── manifest.json
+    │   ├── validation_report.json
+    │   ├── chunks.jsonl
+    │   ├── chunks_validation.json
+    │   ├── chunks_manifest.json
+    │   └── talks/
+    │       └── *.txt
+    └── analysis/
+        ├── utterance_length_analysis.json
+        ├── utterance_length_analysis.md
+        ├── child_v1_statistics.json
+        └── child_v1_statistics.md
+```
+
+## Pipeline implementado
+
+```text
+Text_Transcript_original_AOKA-8157.txt
+    │
+    ├── decodificación UTF-8 con soporte para BOM
+    ├── parseo de timestamp, etiqueta y texto
+    ├── normalización Unicode NFC
+    ├── eliminación de FEFF y espacios redundantes
+    ├── selección por límites declarados en config/talks.json
+    ├── verificación de marcadores iniciales y finales
+    └── preservación del orden canónico por source_line
+            │
+            ├── talks.jsonl
+            ├── talks/*.txt
+            ├── validation_report.json
+            └── manifest.json
+```
+
+El script no modifica ni mueve la fuente original.
+
+## Configuración de las ponencias
+
+Los límites se mantienen en `config/talks.json`. Cada ponencia declara:
+
+- `talk_id`: identificador estable.
+- `title`: título documental.
+- `primary_speaker`: ponente principal.
+- `speakers`: lista de ponentes conocidos.
+- `start_time` y `end_time`: límites inclusivos.
+- `start_marker` y `end_marker`: texto esperado en los límites.
+
+Los marcadores evitan generar documentos silenciosamente incorrectos si la
+transcripción cambia. Si un marcador deja de coincidir, el pipeline falla antes
+de sobrescribir las salidas.
+
+## Contrato de `talks.jsonl`
+
+Cada línea contiene una ponencia completa. Campos principales:
+
+```json
+{
+  "schema_version": "1.1",
+  "event_id": "jalmo-28",
+  "talk_id": "agustin-laje-batalla-cultural",
+  "title": "La batalla cultural",
+  "primary_speaker": "Agustín Laje",
+  "speakers": ["Agustín Laje"],
+  "start_time": "01:48:51",
+  "end_time": "02:56:03",
+  "start_seconds": 6531,
+  "end_seconds": 10563,
+  "utterance_count": 596,
+  "text": "...",
+  "content_sha256": "...",
+  "source_file": "Text_Transcript_original_AOKA-8157.txt",
+  "utterances": [
+    {
+      "sequence_index": 0,
+      "start_time": "01:48:51",
+      "start_seconds": 6531,
+      "text": "Y ahora nos toca escuchar a Agustín Laje con el tema La batalla Cultural.",
+      "source_line": 488,
+      "source_label": "J"
+    }
+  ]
+}
+```
+
+`text` facilita el consumo de la ponencia completa. `utterances` preserva la
+trazabilidad necesaria para asignar timestamps y líneas de origen a futuros
+parents y children. `source_line` es el orden canónico y `sequence_index` es su
+posición consecutiva dentro de la ponencia. `start_time` y `start_seconds` son
+metadata temporal y no gobiernan el orden discursivo.
+
+## Limpieza y decisiones de datos
+
+- `BAZ` es correcto y debe preservarse.
+- No se corrigen automáticamente errores semánticos de la transcripción.
+- No se utiliza un LLM para reescribir el contenido.
+- Las etiquetas del exportador no representan diarización fiable.
+- Las ponencias registran ponentes conocidos mediante configuración manual.
+- Se detectaron tres inversiones locales de timestamp en el archivo original.
+  Se mantienen en el reporte de validación, pero no reordenan el texto.
+- Los bloques solapados se preservan en orden de `source_line`. No se eliminan ni
+  reorganizan automáticamente hasta definir una política posterior y auditable.
+- La bienvenida, el receso, la música y la logística final se conservan en el
+  RAW, pero no forman parte de las unidades documentales.
+
+## Archivos de control
+
+### `manifest.json`
+
+Registra:
+
+- Ruta y SHA-256 de la fuente.
+- Ruta y SHA-256 de la configuración.
+- Estadísticas del procesamiento.
+- SHA-256 y tamaño de cada salida.
+
+Sirve para demostrar la procedencia y detectar cambios.
+
+### `validation_report.json`
+
+Verifica:
+
+- Parseo exitoso.
+- Identificadores únicos.
+- Rangos sin solapamiento.
+- Coincidencia de marcadores.
+- Ponencias no vacías.
+- Eliminación de `FEFF`.
+- Preservación de `BAZ`.
+- Orden canónico por `source_line`.
+- Índices `sequence_index` consecutivos.
+
+Las anomalías del RAW se reportan como diagnósticos y no se ocultan.
+
+## Comandos
+
+Regenerar las salidas:
+
+```powershell
+python scripts/build_talks.py
+```
+
+Regenerar el análisis exploratorio de tokens:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\analyze_utterance_lengths.py
+```
+
+Regenerar exclusivamente Child V1, su validación y estadísticas:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\build_child_chunks.py
+```
+
+Ejecutar las pruebas:
+
+```powershell
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+```
+
+Generar el baseline local de embeddings GTE una vez descargado el modelo:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\build_child_embeddings.py --local-files-only
+```
+
+Ejecutar retrieval local por cosine similarity, sin Qdrant ni thresholds:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\retrieve_local.py "¿Qué significa la batalla cultural?" --top-k 5 --local-files-only
+```
+
+El pipeline debe ejecutarse de nuevo cuando cambie:
+
+- la transcripción fuente;
+- `config/talks.json`;
+- la lógica de limpieza o serialización.
+
+No es necesario ejecutarlo para consultar los archivos ya generados.
+
+## Análisis exploratorio de tokens
+
+El análisis usa `tiktoken==0.14.0` con el encoding `cl100k_base`. Es una medida
+exploratoria explícita y reproducible, no una elección definitiva del tokenizer
+del futuro modelo de embeddings.
+
+Se cuenta solamente `utterance.text`; timestamps, metadata y separadores quedan
+fuera. El artefacto contiene estadísticas globales y por ponencia, distribuciones,
+outliers mediante la cerca exterior de Tukey y ventanas consecutivas para los
+umbrales exploratorios de 250, 500, 750 y 1000 tokens.
+
+La metodología de ventanas parte de cada posición posible, acumula utterances en
+orden canónico sin cruzar ponencias y se detiene cuando alcanza por primera vez
+el umbral. Las colas que no lo alcanzan se reportan y se excluyen de los
+percentiles. No se ha seleccionado `target_tokens` ni `overlap_tokens`.
+
+## Child V1 implementado
+
+El chunker consume exclusivamente `talks.jsonl`. La utterance es su unidad
+atómica y `sequence_index` gobierna el orden. El target cuenta el texto completo
+del Child, incluido el overlap, usando `\n` como separador canónico.
+
+Cada registro de `chunks.jsonl` conserva límites de secuencia y líneas fuente,
+conteos totales y nuevos, overlap con el Child anterior, motivo de cierre, texto
+y referencias completas de sus utterances. No contiene `parent_id` porque los
+Parents aún no existen.
+
+La regla de cierre compara la distancia al target antes y después de agregar la
+utterance que lo cruza. Se elige la opción más cercana y el empate incluye la
+utterance. Cada Child avanza al menos una utterance nueva y los últimos Children
+se emiten sin fusionar aunque sean pequeños.
+
+## Baseline de embeddings GTE
+
+Child V1 permanece congelado. El baseline consume exactamente `Child.text` y
+usa `Alibaba-NLP/gte-multilingual-base` en la revisión
+`9bbca17d9273fd0d03d5725c7a4b0f6b45142062`. El código remoto requerido por el
+modelo se fija por separado en `Alibaba-NLP/new-impl` revisión
+`40ced75c3017eb27626c9d4ea981bde21a2662f4`.
+
+La inferencia implementada usa PyTorch y Transformers, pooling CLS según
+`1_Pooling/config.json`, normalización L2, CPU/float32 y batch size 4. El
+artefacto NPZ contiene dos arrays sin pickle: `chunk_ids` y `embeddings`. El
+manifiesto conserva el mapeo de fila a `chunk_id`, hashes, revisiones y runtime.
+
+Archivos principales:
+
+- `config/gte_embedding_baseline.json`;
+- `scripts/build_child_embeddings.py`;
+- `scripts/retrieve_local.py`;
+- `data/derived/embeddings/gte_multilingual_base_child_v1.npz`;
+- `data/derived/embeddings/gte_multilingual_base_child_v1_manifest.json`;
+- `data/analysis/gte_embedding_validation.{json,md}`.
+
+Cosine similarity se usa solo como score de ranking. No es una probabilidad, no
+se aplican thresholds y los smoke tests no constituyen una evaluación formal.
+Qdrant, Parents y LLM continúan fuera de alcance.
+
+## Próxima decisión técnica
+
+Antes de implementar Parents o infraestructura se deben revisar manualmente los
+Children reales y evaluar después la base de datos y sus capacidades:
+
+- filtros por metadata;
+- búsqueda vectorial e híbrida;
+- almacenamiento o resolución de parents;
+- soporte para índices separados o tipos de registro;
+- operación local frente a servicio administrado;
+- costos y observabilidad.
+
+Después se podrá diseñar y evaluar:
+
+```text
+talks.jsonl
+    → chunks.jsonl                  (implementado)
+    → parents.jsonl                 (pendiente)
+    → embeddings
+    → índice
+    → retrieval de child
+    → resolución de parent
+    → contexto para el LLM
+```
+
+No se deben generar Parents o Children directamente desde el RAW. Child V1 se
+regenera siempre desde `talks.jsonl`; los Parents se construirán posteriormente
+a partir de la estructura validada de Children.
+
+## Regla para mantener este documento
+
+Actualizar esta guía cuando cambie alguno de estos elementos:
+
+- estructura de carpetas;
+- contratos JSON;
+- comandos de ejecución;
+- dependencias;
+- decisiones de limpieza;
+- estado de las fases;
+- arquitectura de retrieval.
+

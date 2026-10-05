@@ -1,0 +1,1179 @@
+{
+  "analysis_version": "1.0",
+  "source": {
+    "path": "data/processed/talks.jsonl",
+    "sha256": "63d162f98a4fc4a29cd1acd5a79dd5e8f48c99c648f977fc86b444856e125edc",
+    "talk_count": 4,
+    "utterance_count": 2301
+  },
+  "tokenizer": {
+    "library": "tiktoken",
+    "library_version": "0.14.0",
+    "encoding": "cl100k_base",
+    "definitive_for_embedding_model": false,
+    "input_counted": "utterance.text only; timestamps, metadata and separators excluded"
+  },
+  "methodology": {
+    "percentiles": "Hyndman-Fan type 7 linear interpolation",
+    "distribution_bins": [
+      "0",
+      "1-5",
+      "6-10",
+      "11-20",
+      "21-40",
+      "41-80",
+      "81-120",
+      "121-160",
+      "161-250",
+      "251+"
+    ],
+    "extremely_long_definition": "token_count > global P75 + 3 * IQR (Tukey outer fence)",
+    "consecutive_windows": "For every possible start within each talk, accumulate canonical consecutive utterances until the threshold is first reached. Incomplete tail starts are reported and excluded from window percentiles. Counts sum utterance text tokens and do not add separator tokens. Windows never cross talk boundaries.",
+    "canonical_order": "sequence_index/source_line from talks.jsonl"
+  },
+  "utterance_lengths": {
+    "global": {
+      "utterance_count": 2301,
+      "total_tokens": 53099,
+      "min_tokens": 1,
+      "max_tokens": 150,
+      "mean_tokens": 23.08,
+      "median_tokens": 18,
+      "p25_tokens": 10,
+      "p75_tokens": 31,
+      "p90_tokens": 45,
+      "p95_tokens": 59,
+      "p99_tokens": 86,
+      "distribution": [
+        {
+          "range": "0",
+          "min_inclusive": 0,
+          "max_inclusive": 0,
+          "count": 0,
+          "percentage": 0.0
+        },
+        {
+          "range": "1-5",
+          "min_inclusive": 1,
+          "max_inclusive": 5,
+          "count": 210,
+          "percentage": 9.13
+        },
+        {
+          "range": "6-10",
+          "min_inclusive": 6,
+          "max_inclusive": 10,
+          "count": 398,
+          "percentage": 17.3
+        },
+        {
+          "range": "11-20",
+          "min_inclusive": 11,
+          "max_inclusive": 20,
+          "count": 661,
+          "percentage": 28.73
+        },
+        {
+          "range": "21-40",
+          "min_inclusive": 21,
+          "max_inclusive": 40,
+          "count": 712,
+          "percentage": 30.94
+        },
+        {
+          "range": "41-80",
+          "min_inclusive": 41,
+          "max_inclusive": 80,
+          "count": 288,
+          "percentage": 12.52
+        },
+        {
+          "range": "81-120",
+          "min_inclusive": 81,
+          "max_inclusive": 120,
+          "count": 29,
+          "percentage": 1.26
+        },
+        {
+          "range": "121-160",
+          "min_inclusive": 121,
+          "max_inclusive": 160,
+          "count": 3,
+          "percentage": 0.13
+        },
+        {
+          "range": "161-250",
+          "min_inclusive": 161,
+          "max_inclusive": 250,
+          "count": 0,
+          "percentage": 0.0
+        },
+        {
+          "range": "251+",
+          "min_inclusive": 251,
+          "max_inclusive": null,
+          "count": 0,
+          "percentage": 0.0
+        }
+      ]
+    },
+    "by_talk": {
+      "ricardo-salinas-mensaje-apertura": {
+        "utterance_count": 357,
+        "total_tokens": 5992,
+        "min_tokens": 1,
+        "max_tokens": 81,
+        "mean_tokens": 16.78,
+        "median_tokens": 12,
+        "p25_tokens": 7,
+        "p75_tokens": 23,
+        "p90_tokens": 36,
+        "p95_tokens": 43.2,
+        "p99_tokens": 55.2,
+        "distribution": [
+          {
+            "range": "0",
+            "min_inclusive": 0,
+            "max_inclusive": 0,
+            "count": 0,
+            "percentage": 0.0
+          },
+          {
+            "range": "1-5",
+            "min_inclusive": 1,
+            "max_inclusive": 5,
+            "count": 61,
+            "percentage": 17.09
+          },
+          {
+            "range": "6-10",
+            "min_inclusive": 6,
+            "max_inclusive": 10,
+            "count": 92,
+            "percentage": 25.77
+          },
+          {
+            "range": "11-20",
+            "min_inclusive": 11,
+            "max_inclusive": 20,
+            "count": 95,
+            "percentage": 26.61
+          },
+          {
+            "range": "21-40",
+            "min_inclusive": 21,
+            "max_inclusive": 40,
+            "count": 85,
+            "percentage": 23.81
+          },
+          {
+            "range": "41-80",
+            "min_inclusive": 41,
+            "max_inclusive": 80,
+            "count": 23,
+            "percentage": 6.44
+          },
+          {
+            "range": "81-120",
+            "min_inclusive": 81,
+            "max_inclusive": 120,
+            "count": 1,
+            "percentage": 0.28
+          },
+          {
+            "range": "121-160",
+            "min_inclusive": 121,
+            "max_inclusive": 160,
+            "count": 0,
+            "percentage": 0.0
+          },
+          {
+            "range": "161-250",
+            "min_inclusive": 161,
+            "max_inclusive": 250,
+            "count": 0,
+            "percentage": 0.0
+          },
+          {
+            "range": "251+",
+            "min_inclusive": 251,
+            "max_inclusive": null,
+            "count": 0,
+            "percentage": 0.0
+          }
+        ]
+      },
+      "agustin-laje-batalla-cultural": {
+        "utterance_count": 596,
+        "total_tokens": 14911,
+        "min_tokens": 2,
+        "max_tokens": 128,
+        "mean_tokens": 25.02,
+        "median_tokens": 19,
+        "p25_tokens": 11,
+        "p75_tokens": 33,
+        "p90_tokens": 53,
+        "p95_tokens": 65,
+        "p99_tokens": 100.15,
+        "distribution": [
+          {
+            "range": "0",
+            "min_inclusive": 0,
+            "max_inclusive": 0,
+            "count": 0,
+            "percentage": 0.0
+          },
+          {
+            "range": "1-5",
+            "min_inclusive": 1,
+            "max_inclusive": 5,
+            "count": 34,
+            "percentage": 5.7
+          },
+          {
+            "range": "6-10",
+            "min_inclusive": 6,
+            "max_inclusive": 10,
+            "count": 95,
+            "percentage": 15.94
+          },
+          {
+            "range": "11-20",
+            "min_inclusive": 11,
+            "max_inclusive": 20,
+            "count": 182,
+            "percentage": 30.54
+          },
+          {
+            "range": "21-40",
+            "min_inclusive": 21,
+            "max_inclusive": 40,
+            "count": 194,
+            "percentage": 32.55
+          },
+          {
+            "range": "41-80",
+            "min_inclusive": 41,
+            "max_inclusive": 80,
+            "count": 79,
+            "percentage": 13.26
+          },
+          {
+            "range": "81-120",
+            "min_inclusive": 81,
+            "max_inclusive": 120,
+            "count": 11,
+            "percentage": 1.85
+          },
+          {
+            "range": "121-160",
+            "min_inclusive": 121,
+            "max_inclusive": 160,
+            "count": 1,
+            "percentage": 0.17
+          },
+          {
+            "range": "161-250",
+            "min_inclusive": 161,
+            "max_inclusive": 250,
+            "count": 0,
+            "percentage": 0.0
+          },
+          {
+            "range": "251+",
+            "min_inclusive": 251,
+            "max_inclusive": null,
+            "count": 0,
+            "percentage": 0.0
+          }
+        ]
+      },
+      "adrian-villasenor-liderazgo-ia": {
+        "utterance_count": 391,
+        "total_tokens": 11365,
+        "min_tokens": 2,
+        "max_tokens": 150,
+        "mean_tokens": 29.07,
+        "median_tokens": 23,
+        "p25_tokens": 13,
+        "p75_tokens": 39.5,
+        "p90_tokens": 59,
+        "p95_tokens": 75,
+        "p99_tokens": 104.1,
+        "distribution": [
+          {
+            "range": "0",
+            "min_inclusive": 0,
+            "max_inclusive": 0,
+            "count": 0,
+            "percentage": 0.0
+          },
+          {
+            "range": "1-5",
+            "min_inclusive": 1,
+            "max_inclusive": 5,
+            "count": 13,
+            "percentage": 3.32
+          },
+          {
+            "range": "6-10",
+            "min_inclusive": 6,
+            "max_inclusive": 10,
+            "count": 59,
+            "percentage": 15.09
+          },
+          {
+            "range": "11-20",
+            "min_inclusive": 11,
+            "max_inclusive": 20,
+            "count": 105,
+            "percentage": 26.85
+          },
+          {
+            "range": "21-40",
+            "min_inclusive": 21,
+            "max_inclusive": 40,
+            "count": 121,
+            "percentage": 30.95
+          },
+          {
+            "range": "41-80",
+            "min_inclusive": 41,
+            "max_inclusive": 80,
+            "count": 78,
+            "percentage": 19.95
+          },
+          {
+            "range": "81-120",
+            "min_inclusive": 81,
+            "max_inclusive": 120,
+            "count": 13,
+            "percentage": 3.32
+          },
+          {
+            "range": "121-160",
+            "min_inclusive": 121,
+            "max_inclusive": 160,
+            "count": 2,
+            "percentage": 0.51
+          },
+          {
+            "range": "161-250",
+            "min_inclusive": 161,
+            "max_inclusive": 250,
+            "count": 0,
+            "percentage": 0.0
+          },
+          {
+            "range": "251+",
+            "min_inclusive": 251,
+            "max_inclusive": null,
+            "count": 0,
+            "percentage": 0.0
+          }
+        ]
+      },
+      "luis-caro-manuel-quijano-taller-claude": {
+        "utterance_count": 957,
+        "total_tokens": 20831,
+        "min_tokens": 2,
+        "max_tokens": 97,
+        "mean_tokens": 21.77,
+        "median_tokens": 19,
+        "p25_tokens": 10,
+        "p75_tokens": 30,
+        "p90_tokens": 42,
+        "p95_tokens": 51.2,
+        "p99_tokens": 75,
+        "distribution": [
+          {
+            "range": "0",
+            "min_inclusive": 0,
+            "max_inclusive": 0,
+            "count": 0,
+            "percentage": 0.0
+          },
+          {
+            "range": "1-5",
+            "min_inclusive": 1,
+            "max_inclusive": 5,
+            "count": 102,
+            "percentage": 10.66
+          },
+          {
+            "range": "6-10",
+            "min_inclusive": 6,
+            "max_inclusive": 10,
+            "count": 152,
+            "percentage": 15.88
+          },
+          {
+            "range": "11-20",
+            "min_inclusive": 11,
+            "max_inclusive": 20,
+            "count": 279,
+            "percentage": 29.15
+          },
+          {
+            "range": "21-40",
+            "min_inclusive": 21,
+            "max_inclusive": 40,
+            "count": 312,
+            "percentage": 32.6
+          },
+          {
+            "range": "41-80",
+            "min_inclusive": 41,
+            "max_inclusive": 80,
+            "count": 108,
+            "percentage": 11.29
+          },
+          {
+            "range": "81-120",
+            "min_inclusive": 81,
+            "max_inclusive": 120,
+            "count": 4,
+            "percentage": 0.42
+          },
+          {
+            "range": "121-160",
+            "min_inclusive": 121,
+            "max_inclusive": 160,
+            "count": 0,
+            "percentage": 0.0
+          },
+          {
+            "range": "161-250",
+            "min_inclusive": 161,
+            "max_inclusive": 250,
+            "count": 0,
+            "percentage": 0.0
+          },
+          {
+            "range": "251+",
+            "min_inclusive": 251,
+            "max_inclusive": null,
+            "count": 0,
+            "percentage": 0.0
+          }
+        ]
+      }
+    }
+  },
+  "extremely_long_utterances": {
+    "outer_fence_tokens": 94,
+    "count": 18,
+    "items": [
+      {
+        "talk_id": "adrian-villasenor-liderazgo-ia",
+        "sequence_index": 185,
+        "source_line": 1292,
+        "token_count": 150,
+        "preview": "El año de los agentes y otro punto de quiebre, que es el último que voy a mencionar hoy, se dio en febrero de 2026 con el lanzamiento de este agente que ven allá abajo esta langos…"
+      },
+      {
+        "talk_id": "adrian-villasenor-liderazgo-ia",
+        "sequence_index": 314,
+        "source_line": 1421,
+        "token_count": 131,
+        "preview": "Y si tenemos contexto incompleto y data incompleta, ese es el alimento realmente ya para que la implementación es a nivel escala de IA en las empresas se puedan hacer, pero inclus…"
+      },
+      {
+        "talk_id": "agustin-laje-batalla-cultural",
+        "sequence_index": 53,
+        "source_line": 541,
+        "token_count": 128,
+        "preview": "Claro, estamos pensando en términos de cultura como concepto ilustrado, pero luego, en el siglo 19, aparecieron unos sujetos llamados antropólogos y muy poquito después sociólogos…"
+      },
+      {
+        "talk_id": "adrian-villasenor-liderazgo-ia",
+        "sequence_index": 283,
+        "source_line": 1390,
+        "token_count": 115,
+        "preview": "Y siempre digo que si una empresa tiene a una persona, una que logra llegar a este nivel, es una empresa que tiene la posibilidad de generar un valor exponencial brutal y esta per…"
+      },
+      {
+        "talk_id": "adrian-villasenor-liderazgo-ia",
+        "sequence_index": 50,
+        "source_line": 1157,
+        "token_count": 114,
+        "preview": "Ese es el número de personas que ya utilizan aplicaciones de inteligencia artificial de forma semanal, no que la bajaron una vez para preguntar algo random, no que la bajaron una…"
+      },
+      {
+        "talk_id": "agustin-laje-batalla-cultural",
+        "sequence_index": 232,
+        "source_line": 720,
+        "token_count": 114,
+        "preview": "Fukuyama escribe en 1989 un paper muy citado, muy importante para su época, que lleva el título de The End of History y dice lo siguiente Lo que podríamos estar presenciando no es…"
+      },
+      {
+        "talk_id": "agustin-laje-batalla-cultural",
+        "sequence_index": 393,
+        "source_line": 881,
+        "token_count": 110,
+        "preview": "Esto es lo que llamamos nueva derecha, porque tiene nuevas estructuras políticas, porque tiene una nueva estrategia basada en la batalla cultural y porque articula tres posiciones…"
+      },
+      {
+        "talk_id": "agustin-laje-batalla-cultural",
+        "sequence_index": 236,
+        "source_line": 724,
+        "token_count": 104,
+        "preview": "Esta es la primera reunión del Foro de Sao Pablo, una un grupo internacional, un foro internacional creado por Fidel Castro y un ignoto para esa época, el señor Lula da Silva, hoy…"
+      },
+      {
+        "talk_id": "adrian-villasenor-liderazgo-ia",
+        "sequence_index": 377,
+        "source_line": 1484,
+        "token_count": 103,
+        "preview": "Think Big Start simple, Think Big en el mundo de la inteligencia artificial es entender que estamos al inicio de una década de una coyuntura que muchos de los retos más difíciles…"
+      },
+      {
+        "talk_id": "agustin-laje-batalla-cultural",
+        "sequence_index": 581,
+        "source_line": 1069,
+        "token_count": 103,
+        "preview": "Son muy pocas las personas que quieren comprar un libro de historia, pero estas son las personas que moldean nuestra cultura los historiadores, los filósofos, los sociólogos, los…"
+      },
+      {
+        "talk_id": "agustin-laje-batalla-cultural",
+        "sequence_index": 585,
+        "source_line": 1073,
+        "token_count": 103,
+        "preview": "Se los dejo como una inquietud tener una nueva escuela de pensamiento político mexicano y ser capaces de atraer y financiar, porque acá el asunto del financiamiento es clave, como…"
+      },
+      {
+        "talk_id": "adrian-villasenor-liderazgo-ia",
+        "sequence_index": 81,
+        "source_line": 1188,
+        "token_count": 102,
+        "preview": "Y 4.º problema tampoco era un negociador experto, pero más o menos en lo incipiente que estaba el mundo de la inteligencia artificial hacia finales del 2023 2024 ya había empezado…"
+      },
+      {
+        "talk_id": "adrian-villasenor-liderazgo-ia",
+        "sequence_index": 141,
+        "source_line": 1248,
+        "token_count": 102,
+        "preview": "Y este CEO es un ingeniero químico sofisticado y le arroja una receta, se la pasa a sus ingenieros químicos, la revisan, la prueban y después de seis años que estaban tratando de…"
+      },
+      {
+        "talk_id": "agustin-laje-batalla-cultural",
+        "sequence_index": 346,
+        "source_line": 834,
+        "token_count": 100,
+        "preview": "Fíjense ustedes que funcional que es esto Entonces para aquellos que tienen apetito de no recortar el gasto público, sino al contrario, incrementarlo cada vez más, entonces la izq…"
+      },
+      {
+        "talk_id": "adrian-villasenor-liderazgo-ia",
+        "sequence_index": 357,
+        "source_line": 1464,
+        "token_count": 98,
+        "preview": "Day es el fundador de Anthropic y yo personalmente la persona que más admiro en el mundo de inteligencia artificial Es el fundador de Crowd y Dario dice El miedo es un motivador y…"
+      },
+      {
+        "talk_id": "agustin-laje-batalla-cultural",
+        "sequence_index": 262,
+        "source_line": 750,
+        "token_count": 98,
+        "preview": "Porque advirtieron rápido la crisis y crearon algo distinto llamado Grupo de Puebla y reorganizaron a la izquierda continental en Puebla, a partir del año 2019 y a partir del año…"
+      },
+      {
+        "talk_id": "luis-caro-manuel-quijano-taller-claude",
+        "sequence_index": 185,
+        "source_line": 1692,
+        "token_count": 97,
+        "preview": "Pero algo estamos viendo también que entre más implementamos ese cinco o 6% se va creciendo de manera exponencial, porque si genera ese efecto compuesto tal cual como a veces yo v…"
+      },
+      {
+        "talk_id": "adrian-villasenor-liderazgo-ia",
+        "sequence_index": 152,
+        "source_line": 1259,
+        "token_count": 96,
+        "preview": "Y también regresando a esta historia, porque estamos todavía en 2025, en 2025 fue donde ya en el ecosistema grande general de Inteligencia Artificial, surge un caso de uso como el…"
+      }
+    ]
+  },
+  "consecutive_utterances_to_threshold": {
+    "thresholds_analyzed": [
+      250,
+      500,
+      750,
+      1000
+    ],
+    "global": {
+      "250": {
+        "threshold_tokens": 250,
+        "possible_start_positions": 2301,
+        "windows_reaching_threshold": 2257,
+        "tail_starts_not_reaching_threshold": 44,
+        "utterance_count_stats": {
+          "min_utterances": 4,
+          "max_utterances": 26,
+          "mean_utterances": 11.95,
+          "median_utterances": 12,
+          "p25_utterances": 10,
+          "p75_utterances": 14,
+          "p90_utterances": 16,
+          "p95_utterances": 19,
+          "p99_utterances": 24
+        },
+        "achieved_token_stats": {
+          "min_tokens": 250,
+          "max_tokens": 394,
+          "mean_tokens": 267.62,
+          "median_tokens": 263,
+          "p25_tokens": 255,
+          "p75_tokens": 274,
+          "p90_tokens": 290,
+          "p95_tokens": 302,
+          "p99_tokens": 328.76
+        }
+      },
+      "500": {
+        "threshold_tokens": 500,
+        "possible_start_positions": 2301,
+        "windows_reaching_threshold": 2202,
+        "tail_starts_not_reaching_threshold": 99,
+        "utterance_count_stats": {
+          "min_utterances": 9,
+          "max_utterances": 46,
+          "mean_utterances": 22.85,
+          "median_utterances": 22,
+          "p25_utterances": 19,
+          "p75_utterances": 26,
+          "p90_utterances": 30,
+          "p95_utterances": 34,
+          "p99_utterances": 40
+        },
+        "achieved_token_stats": {
+          "min_tokens": 500,
+          "max_tokens": 641,
+          "mean_tokens": 517.97,
+          "median_tokens": 513,
+          "p25_tokens": 506,
+          "p75_tokens": 525,
+          "p90_tokens": 540,
+          "p95_tokens": 552,
+          "p99_tokens": 579.98
+        }
+      },
+      "750": {
+        "threshold_tokens": 750,
+        "possible_start_positions": 2301,
+        "windows_reaching_threshold": 2162,
+        "tail_starts_not_reaching_threshold": 139,
+        "utterance_count_stats": {
+          "min_utterances": 16,
+          "max_utterances": 61,
+          "mean_utterances": 33.84,
+          "median_utterances": 33,
+          "p25_utterances": 29,
+          "p75_utterances": 38,
+          "p90_utterances": 43,
+          "p95_utterances": 46.95,
+          "p99_utterances": 57
+        },
+        "achieved_token_stats": {
+          "min_tokens": 750,
+          "max_tokens": 893,
+          "mean_tokens": 767.97,
+          "median_tokens": 763,
+          "p25_tokens": 755,
+          "p75_tokens": 775,
+          "p90_tokens": 791,
+          "p95_tokens": 804,
+          "p99_tokens": 831.39
+        }
+      },
+      "1000": {
+        "threshold_tokens": 1000,
+        "possible_start_positions": 2301,
+        "windows_reaching_threshold": 2112,
+        "tail_starts_not_reaching_threshold": 189,
+        "utterance_count_stats": {
+          "min_utterances": 26,
+          "max_utterances": 77,
+          "mean_utterances": 44.68,
+          "median_utterances": 44,
+          "p25_utterances": 39,
+          "p75_utterances": 49,
+          "p90_utterances": 55,
+          "p95_utterances": 62,
+          "p99_utterances": 71
+        },
+        "achieved_token_stats": {
+          "min_tokens": 1000,
+          "max_tokens": 1137,
+          "mean_tokens": 1018.69,
+          "median_tokens": 1014,
+          "p25_tokens": 1006,
+          "p75_tokens": 1026,
+          "p90_tokens": 1041,
+          "p95_tokens": 1055,
+          "p99_tokens": 1080.78
+        }
+      }
+    },
+    "by_talk": {
+      "ricardo-salinas-mensaje-apertura": {
+        "250": {
+          "threshold_tokens": 250,
+          "possible_start_positions": 357,
+          "windows_reaching_threshold": 344,
+          "tail_starts_not_reaching_threshold": 13,
+          "utterance_count_stats": {
+            "min_utterances": 8,
+            "max_utterances": 25,
+            "mean_utterances": 15.86,
+            "median_utterances": 15.5,
+            "p25_utterances": 13,
+            "p75_utterances": 18,
+            "p90_utterances": 22,
+            "p95_utterances": 24,
+            "p99_utterances": 25
+          },
+          "achieved_token_stats": {
+            "min_tokens": 250,
+            "max_tokens": 318,
+            "mean_tokens": 263.51,
+            "median_tokens": 259,
+            "p25_tokens": 254,
+            "p75_tokens": 270,
+            "p90_tokens": 281,
+            "p95_tokens": 287.85,
+            "p99_tokens": 301.71
+          }
+        },
+        "500": {
+          "threshold_tokens": 500,
+          "possible_start_positions": 357,
+          "windows_reaching_threshold": 320,
+          "tail_starts_not_reaching_threshold": 37,
+          "utterance_count_stats": {
+            "min_utterances": 21,
+            "max_utterances": 46,
+            "mean_utterances": 30.87,
+            "median_utterances": 30,
+            "p25_utterances": 26,
+            "p75_utterances": 35,
+            "p90_utterances": 39,
+            "p95_utterances": 40,
+            "p99_utterances": 44.81
+          },
+          "achieved_token_stats": {
+            "min_tokens": 500,
+            "max_tokens": 575,
+            "mean_tokens": 513.69,
+            "median_tokens": 509.5,
+            "p25_tokens": 504,
+            "p75_tokens": 520,
+            "p90_tokens": 532,
+            "p95_tokens": 540,
+            "p99_tokens": 555.81
+          }
+        },
+        "750": {
+          "threshold_tokens": 750,
+          "possible_start_positions": 357,
+          "windows_reaching_threshold": 305,
+          "tail_starts_not_reaching_threshold": 52,
+          "utterance_count_stats": {
+            "min_utterances": 33,
+            "max_utterances": 61,
+            "mean_utterances": 45.77,
+            "median_utterances": 45,
+            "p25_utterances": 41,
+            "p75_utterances": 52,
+            "p90_utterances": 56,
+            "p95_utterances": 57,
+            "p99_utterances": 59.96
+          },
+          "achieved_token_stats": {
+            "min_tokens": 750,
+            "max_tokens": 819,
+            "mean_tokens": 762.96,
+            "median_tokens": 759,
+            "p25_tokens": 754,
+            "p75_tokens": 769,
+            "p90_tokens": 781.6,
+            "p95_tokens": 790,
+            "p99_tokens": 806.84
+          }
+        },
+        "1000": {
+          "threshold_tokens": 1000,
+          "possible_start_positions": 357,
+          "windows_reaching_threshold": 284,
+          "tail_starts_not_reaching_threshold": 73,
+          "utterance_count_stats": {
+            "min_utterances": 44,
+            "max_utterances": 77,
+            "mean_utterances": 60.04,
+            "median_utterances": 60,
+            "p25_utterances": 54,
+            "p75_utterances": 66,
+            "p90_utterances": 71,
+            "p95_utterances": 72,
+            "p99_utterances": 75
+          },
+          "achieved_token_stats": {
+            "min_tokens": 1000,
+            "max_tokens": 1079,
+            "mean_tokens": 1014.11,
+            "median_tokens": 1010,
+            "p25_tokens": 1004,
+            "p75_tokens": 1020,
+            "p90_tokens": 1033.7,
+            "p95_tokens": 1042.7,
+            "p99_tokens": 1058.51
+          }
+        }
+      },
+      "agustin-laje-batalla-cultural": {
+        "250": {
+          "threshold_tokens": 250,
+          "possible_start_positions": 596,
+          "windows_reaching_threshold": 586,
+          "tail_starts_not_reaching_threshold": 10,
+          "utterance_count_stats": {
+            "min_utterances": 4,
+            "max_utterances": 18,
+            "mean_utterances": 10.79,
+            "median_utterances": 11,
+            "p25_utterances": 9,
+            "p75_utterances": 13,
+            "p90_utterances": 14,
+            "p95_utterances": 15,
+            "p99_utterances": 16
+          },
+          "achieved_token_stats": {
+            "min_tokens": 250,
+            "max_tokens": 353,
+            "mean_tokens": 269.24,
+            "median_tokens": 264,
+            "p25_tokens": 256,
+            "p75_tokens": 275,
+            "p90_tokens": 296.5,
+            "p95_tokens": 306,
+            "p99_tokens": 335.9
+          }
+        },
+        "500": {
+          "threshold_tokens": 500,
+          "possible_start_positions": 596,
+          "windows_reaching_threshold": 580,
+          "tail_starts_not_reaching_threshold": 16,
+          "utterance_count_stats": {
+            "min_utterances": 9,
+            "max_utterances": 30,
+            "mean_utterances": 20.83,
+            "median_utterances": 21,
+            "p25_utterances": 19,
+            "p75_utterances": 23,
+            "p90_utterances": 25,
+            "p95_utterances": 26.05,
+            "p99_utterances": 28
+          },
+          "achieved_token_stats": {
+            "min_tokens": 500,
+            "max_tokens": 601,
+            "mean_tokens": 519.83,
+            "median_tokens": 514,
+            "p25_tokens": 506,
+            "p75_tokens": 527,
+            "p90_tokens": 548,
+            "p95_tokens": 560,
+            "p99_tokens": 587.21
+          }
+        },
+        "750": {
+          "threshold_tokens": 750,
+          "possible_start_positions": 596,
+          "windows_reaching_threshold": 570,
+          "tail_starts_not_reaching_threshold": 26,
+          "utterance_count_stats": {
+            "min_utterances": 16,
+            "max_utterances": 43,
+            "mean_utterances": 30.92,
+            "median_utterances": 32,
+            "p25_utterances": 28,
+            "p75_utterances": 34,
+            "p90_utterances": 36,
+            "p95_utterances": 38,
+            "p99_utterances": 39.31
+          },
+          "achieved_token_stats": {
+            "min_tokens": 750,
+            "max_tokens": 866,
+            "mean_tokens": 770.7,
+            "median_tokens": 765,
+            "p25_tokens": 756,
+            "p75_tokens": 779,
+            "p90_tokens": 798,
+            "p95_tokens": 812,
+            "p99_tokens": 847.93
+          }
+        },
+        "1000": {
+          "threshold_tokens": 1000,
+          "possible_start_positions": 596,
+          "windows_reaching_threshold": 562,
+          "tail_starts_not_reaching_threshold": 34,
+          "utterance_count_stats": {
+            "min_utterances": 26,
+            "max_utterances": 53,
+            "mean_utterances": 40.79,
+            "median_utterances": 42,
+            "p25_utterances": 38,
+            "p75_utterances": 45,
+            "p90_utterances": 47,
+            "p95_utterances": 48,
+            "p99_utterances": 50
+          },
+          "achieved_token_stats": {
+            "min_tokens": 1000,
+            "max_tokens": 1121,
+            "mean_tokens": 1020.49,
+            "median_tokens": 1016,
+            "p25_tokens": 1006,
+            "p75_tokens": 1028,
+            "p90_tokens": 1046,
+            "p95_tokens": 1059,
+            "p99_tokens": 1089.39
+          }
+        }
+      },
+      "adrian-villasenor-liderazgo-ia": {
+        "250": {
+          "threshold_tokens": 250,
+          "possible_start_positions": 391,
+          "windows_reaching_threshold": 382,
+          "tail_starts_not_reaching_threshold": 9,
+          "utterance_count_stats": {
+            "min_utterances": 4,
+            "max_utterances": 17,
+            "mean_utterances": 9.28,
+            "median_utterances": 9,
+            "p25_utterances": 7,
+            "p75_utterances": 11,
+            "p90_utterances": 13,
+            "p95_utterances": 13,
+            "p99_utterances": 16
+          },
+          "achieved_token_stats": {
+            "min_tokens": 250,
+            "max_tokens": 394,
+            "mean_tokens": 272.65,
+            "median_tokens": 266,
+            "p25_tokens": 256.25,
+            "p75_tokens": 282,
+            "p90_tokens": 300.9,
+            "p95_tokens": 314.95,
+            "p99_tokens": 353.33
+          }
+        },
+        "500": {
+          "threshold_tokens": 500,
+          "possible_start_positions": 391,
+          "windows_reaching_threshold": 376,
+          "tail_starts_not_reaching_threshold": 15,
+          "utterance_count_stats": {
+            "min_utterances": 10,
+            "max_utterances": 27,
+            "mean_utterances": 17.72,
+            "median_utterances": 17,
+            "p25_utterances": 15,
+            "p75_utterances": 20,
+            "p90_utterances": 22,
+            "p95_utterances": 24,
+            "p99_utterances": 26
+          },
+          "achieved_token_stats": {
+            "min_tokens": 500,
+            "max_tokens": 641,
+            "mean_tokens": 523.3,
+            "median_tokens": 517,
+            "p25_tokens": 507,
+            "p75_tokens": 532,
+            "p90_tokens": 551,
+            "p95_tokens": 565.25,
+            "p99_tokens": 595.5
+          }
+        },
+        "750": {
+          "threshold_tokens": 750,
+          "possible_start_positions": 391,
+          "windows_reaching_threshold": 370,
+          "tail_starts_not_reaching_threshold": 21,
+          "utterance_count_stats": {
+            "min_utterances": 18,
+            "max_utterances": 38,
+            "mean_utterances": 26.3,
+            "median_utterances": 26,
+            "p25_utterances": 23,
+            "p75_utterances": 29,
+            "p90_utterances": 32,
+            "p95_utterances": 34,
+            "p99_utterances": 37.31
+          },
+          "achieved_token_stats": {
+            "min_tokens": 750,
+            "max_tokens": 893,
+            "mean_tokens": 772.89,
+            "median_tokens": 766,
+            "p25_tokens": 757,
+            "p75_tokens": 782,
+            "p90_tokens": 801.1,
+            "p95_tokens": 819.55,
+            "p99_tokens": 849.79
+          }
+        },
+        "1000": {
+          "threshold_tokens": 1000,
+          "possible_start_positions": 391,
+          "windows_reaching_threshold": 359,
+          "tail_starts_not_reaching_threshold": 32,
+          "utterance_count_stats": {
+            "min_utterances": 27,
+            "max_utterances": 49,
+            "mean_utterances": 34.93,
+            "median_utterances": 34,
+            "p25_utterances": 31,
+            "p75_utterances": 38,
+            "p90_utterances": 41,
+            "p95_utterances": 46,
+            "p99_utterances": 48
+          },
+          "achieved_token_stats": {
+            "min_tokens": 1000,
+            "max_tokens": 1137,
+            "mean_tokens": 1024.34,
+            "median_tokens": 1018,
+            "p25_tokens": 1008,
+            "p75_tokens": 1034.5,
+            "p90_tokens": 1055,
+            "p95_tokens": 1068.3,
+            "p99_tokens": 1090.42
+          }
+        }
+      },
+      "luis-caro-manuel-quijano-taller-claude": {
+        "250": {
+          "threshold_tokens": 250,
+          "possible_start_positions": 957,
+          "windows_reaching_threshold": 945,
+          "tail_starts_not_reaching_threshold": 12,
+          "utterance_count_stats": {
+            "min_utterances": 5,
+            "max_utterances": 26,
+            "mean_utterances": 12.31,
+            "median_utterances": 12,
+            "p25_utterances": 10,
+            "p75_utterances": 14,
+            "p90_utterances": 16,
+            "p95_utterances": 18,
+            "p99_utterances": 23.56
+          },
+          "achieved_token_stats": {
+            "min_tokens": 250,
+            "max_tokens": 346,
+            "mean_tokens": 266.09,
+            "median_tokens": 262,
+            "p25_tokens": 255,
+            "p75_tokens": 273,
+            "p90_tokens": 287,
+            "p95_tokens": 296,
+            "p99_tokens": 317.56
+          }
+        },
+        "500": {
+          "threshold_tokens": 500,
+          "possible_start_positions": 957,
+          "windows_reaching_threshold": 926,
+          "tail_starts_not_reaching_threshold": 31,
+          "utterance_count_stats": {
+            "min_utterances": 14,
+            "max_utterances": 36,
+            "mean_utterances": 23.43,
+            "median_utterances": 23,
+            "p25_utterances": 21,
+            "p75_utterances": 26,
+            "p90_utterances": 28,
+            "p95_utterances": 30,
+            "p99_utterances": 34.75
+          },
+          "achieved_token_stats": {
+            "min_tokens": 500,
+            "max_tokens": 592,
+            "mean_tokens": 516.13,
+            "median_tokens": 512,
+            "p25_tokens": 506,
+            "p75_tokens": 522.75,
+            "p90_tokens": 535,
+            "p95_tokens": 544,
+            "p99_tokens": 564.25
+          }
+        },
+        "750": {
+          "threshold_tokens": 750,
+          "possible_start_positions": 957,
+          "windows_reaching_threshold": 917,
+          "tail_starts_not_reaching_threshold": 40,
+          "utterance_count_stats": {
+            "min_utterances": 23,
+            "max_utterances": 47,
+            "mean_utterances": 34.74,
+            "median_utterances": 35,
+            "p25_utterances": 32,
+            "p75_utterances": 38,
+            "p90_utterances": 41,
+            "p95_utterances": 42,
+            "p99_utterances": 45
+          },
+          "achieved_token_stats": {
+            "min_tokens": 750,
+            "max_tokens": 840,
+            "mean_tokens": 765.95,
+            "median_tokens": 762,
+            "p25_tokens": 755,
+            "p75_tokens": 773,
+            "p90_tokens": 785,
+            "p95_tokens": 794,
+            "p99_tokens": 814.84
+          }
+        },
+        "1000": {
+          "threshold_tokens": 1000,
+          "possible_start_positions": 957,
+          "windows_reaching_threshold": 907,
+          "tail_starts_not_reaching_threshold": 50,
+          "utterance_count_stats": {
+            "min_utterances": 29,
+            "max_utterances": 58,
+            "mean_utterances": 46.14,
+            "median_utterances": 47,
+            "p25_utterances": 42,
+            "p75_utterances": 50,
+            "p90_utterances": 53,
+            "p95_utterances": 54,
+            "p99_utterances": 56
+          },
+          "achieved_token_stats": {
+            "min_tokens": 1000,
+            "max_tokens": 1073,
+            "mean_tokens": 1016.78,
+            "median_tokens": 1013,
+            "p25_tokens": 1006,
+            "p75_tokens": 1023,
+            "p90_tokens": 1035.4,
+            "p95_tokens": 1048,
+            "p99_tokens": 1067
+          }
+        }
+      }
+    }
+  },
+  "decision_status": {
+    "target_tokens_selected": false,
+    "overlap_tokens_selected": false
+  }
+}

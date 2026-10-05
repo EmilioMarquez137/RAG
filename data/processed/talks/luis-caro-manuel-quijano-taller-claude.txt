@@ -1,0 +1,965 @@
+Evento: JALMO 28
+Ponencia: Introducción y taller de Claude
+Ponente(s): Luis Caro, Manuel Quijano
+Rango: 04:20:32 - 05:54:32
+ID: luis-caro-manuel-quijano-taller-claude
+
+---
+
+[04:20:32] Y ahora, eh, vamos a recibir a Luis Caro y a Manu Quijano para comenzar con el primer módulo del taller de Cloth.
+[04:20:43] Bienvenidos.
+[04:20:44] Por favor.
+[04:20:47] Hola!
+[04:20:50] Gracias.
+[04:20:55] Y la silla con la mesa.
+[04:21:03] Ahora sí.
+[04:21:10] Listo?
+[04:21:12] Bueno, Muy buenas tardes
+[04:21:13] Como estamos el dia de hoy?
+[04:20:53] Como es todo el evento?
+[04:20:54] Hasta ahora
+[04:20:57] Bueno, primero que todo muchísimas gracias a todo el equipo de la organización.
+[04:21:04] Gracias Ricardo por la invitación.
+[04:21:06] Estamos encantados de compartir una sesión que sea muy orientado a la acción.
+[04:21:12] Queremos que ustedes tengan una experiencia real.
+[04:21:16] Nos vamos a ensuciar la mano.
+[04:21:17] Veo que todos tienen sus computadores, vamos a probar interactuar con esta tecnología.
+[04:21:22] Creo que es muy importante que todos empecemos, no?
+[04:21:25] Creo que todos hemos tenido nuestro momento.
+[04:21:27] Wow, Nuestro momento.
+[04:21:29] Yo a veces lo llamo momento Terminator con la inteligencia artificial.
+[04:21:34] Hoy en día, ese momento que te asusta, que te hace algo que te sorprende.
+[04:21:39] Mi primera reacción cuando yo tuve ese momento fue miedo, no?
+[04:21:43] Hasta aquí llegó mi trabajo.
+[04:21:45] Me van a reemplazar, pero mi segunda reacción fue la inteligencia artificial.
+[04:21:49] Yo creo que de verdad es la verdadera bicicleta de la mente, no?
+[04:21:53] No sé cuántos de ustedes han escuchado.
+[04:21:55] Hay un discurso de Steve Jobs muy famoso donde él definía que la visión de la computadora personal era una bicicleta para la mente, y él decía que cuando él tenía 13 años, él lo impactó mucho.
+[04:22:06] Un estudio de una investigación científica que él leyó comparando la eficiencia locomotora de todas las especies del planeta Tierra.
+[04:22:14] Cuántas calorías consumía cada especie de ir al punto A al punto B, qué tan rápido se movían consumiendo, qué número de calorías y cuáles eran las especies más eficientes?
+[04:22:26] Y él decía que bueno, de primer lugar quedó el cóndor.
+[04:22:29] El cóndor era la raza que consumiendo menos calorías se movía más rápido y podía recorrer más distancias.
+[04:22:36] Y él decía que los seres humanos, siendo la joya de la creación e teniendo el cerebro más avanzado, teniendo conocimiento avanzado, quedaron de últimos en la lista casi que en 1/3 de la lista, pero que alguien en el estudio se le ocurrió hacer el análisis.
+[04:22:55] Pero el ser humano montado en una bicicleta y el ser humano montado en la bicicleta dejó al cóndor en el polvo y se convirtió en la raza más eficiente en esquemas locomotivos de ir del punto A al punto B.
+[04:23:09] Y él decía que la computadora personal, su visión era que fuera eso, una bicicleta para nuestra mente, porque los seres humanos construimos herramientas no que nos reemplacen, sino que aumenten nuestras capacidades.
+[04:23:20] Y yo creo que eso fue muy cierto, pero su visión no fue completa hasta hoy en día, con los avances que nosotros hemos visto en inteligencia artificial y en agentes.
+[04:23:29] Muchísimo gusto.
+[04:23:30] Mi nombre es Yo soy el doctor Luis Caro.
+[04:23:33] Actualmente lidero el área de Inteligencia Artificial e Innovación para Amazon Web Services en toda Latinoamérica.
+[04:23:39] Soy responsable por la implementación de la estrategia, no solo con nuestros clientes, sino también dentro del grupo Amazon, no?
+[04:23:48] Entonces vamos a hablar hoy un poco.
+[04:23:50] Voy a pasar ese video de Clot.
+[04:23:54] Qué es?
+[04:23:55] De las herramientas que vamos a ver hoy en día, vamos a aclarar primero una serie de conocimientos, estandarizar que todos estemos hablando de lo mismo.
+[04:24:05] Sé que todos han leído, sé que todos conocemos, hemos escuchado cosas, vamos a cubrir algunas bases, vamos a ver algunos ejemplos, porque esto está para quedarse.
+[04:24:14] Por qué las empresas en Latinoamérica y en todo el mundo están usando esta tecnología y después va a pasar a Manuel Quijano para darnos una, ehh un taller Hanson para que ustedes puedan interactuar con esto de primera mano y puedan medir el impacto real.
+[04:24:32] Estamos bien con eso.
+[04:24:32] Me escuchan bien?
+[04:24:33] Estoy hablando muy rápido, muy lento.
+[04:24:36] Todo bien.
+[04:24:36] Listo?
+[04:24:37] Perfecto.
+[04:24:38] Entonces.
+[04:24:40] Anthropic es una startup que fue fundada en el 2021.
+[04:24:44] Como mencionó el speaker anterior, fue fundada por Dario Amodei.
+[04:24:50] De hecho, él fundó la empresa junto con su hermana Daniela.
+[04:24:54] No es.
+[04:24:55] Ambos son fundadores de Anthropic.
+[04:24:58] Ellos trabajaron juntos.
+[04:25:00] Ambos trabajaron en OpenAI.
+[04:25:02] Dario era de investigación para OpenAI y él sale de OpenAI y y funda Anthropic.
+[04:25:09] Él fundó Anthropic con el objetivo de, EH, atacar una preocupación que él tenía de que esta tecnología se usara de una manera segura, de una manera responsable.
+[04:25:20] Estamos hablando de una época donde ella, eh, era era sujeto a muchas fallas.
+[04:25:25] Tu podías a las primeras versiones de GPT pedirles que te ayudaran a crear una bomba y te daban el manual detalladito y podías hacer cosas bien maliciosas con él.
+[04:25:36] Entonces ellos arrancaron y decir cómo creamos inteligencia artificial de cero, pero incorporando responsabilidad y seguridad desde el día 1, OpenAI tuvo un approach un poco diferente.
+[04:25:51] Creo que lanzaron al mercado rápido y después se dieron cuenta.
+[04:25:54] A esto hay que meterle seguridad y controles.
+[04:25:57] Darío tuvo la visión de arrancar día uno con esas funcionalidades.
+[04:26:01] Todo el mundo habla de Clod, pero es importante aclarar qué es Clod.
+[04:26:06] Clod es una familia.
+[04:26:09] Arrancó como una familia de modelos de inteligencia artificial generativa ya.
+[04:26:14] El modelo de inteligencia artificial generativa es como si fuera el cerebro de una gente.
+[04:26:21] Ya un modelo lo que hace es recibir información, ya sea en texto, imágenes o vídeo.
+[04:26:28] Dependiendo de su tipo, puede regresar texto, imágenes o vídeo.
+[04:26:34] Es capaz de razonar, pero el modelo es eso es algo que se entrenó con billones de datos en Internet y su función es eso.
+[04:26:43] Recibe una entrada, la procesa y devuelve una salida.
+[04:26:48] Ya entonces, cuando Anthropic lanzó su primer modelo, lo llamó Clod en honor AA1 matemático.
+[04:26:58] Eh, Claude Shannon, que era muy.
+[04:27:01] Fue uno de los pioneros en el área de inteligencia artificial, y Shannon era muy famoso porque era matemático e ingeniero eléctrico.
+[04:27:10] Entonces era una persona que tenía un perfil intelectual muy políglota.
+[04:27:15] O sea, conocía de inteligencia artificial, conocía de computadoras, pero también conocía de hardware, de electrónica.
+[04:27:21] Era entonces se inspiraron en honor a él.
+[04:27:24] Llamaron al primer modelo Clod, lanzó una versión, salió una versión del modelo versión uno que se llamaba Solo Clod y ya el modelo va por su 4.ª versión.
+[04:27:36] Su 4.ª iteración, no?
+[04:27:38] Entonces estos modelos, pues tienen son entrenados con grandes volúmenes de información.
+[04:27:45] Algunos modelos se entrenan con información más pequeña, más especializada, Eso los hace más rápido, pueden responder más rápido, otros con información más abierta, más cantidad de información.
+[04:27:58] Eso a veces los hace más capacidades de razonamiento, de poder pensar bien, de poder estructurar cómo van a ser las cosas.
+[04:28:06] Eso los hacen más pesados, a veces un poco más lentos, a veces inclusive más costosos de interactuar con ellos.
+[04:28:15] Entonces, lo que maneja Cloud es que siempre a partir de la versión tres en adelante, para darle a ustedes los usuarios flexibilidad de que ustedes puedan escoger si quieren ese modelo grueso, grande, entrenado, con gran volumen de información o ese modelo ligero que sea más rápido, responda más rápido.
+[04:28:34] Yo siempre han mantenido versiones actuales de tres modelos diferentes uno ligero, uno intermedio y el más avanzado que sea el que mejor le va en los rankings.
+[04:28:45] Estos modelos, cada vez que sale una nueva versión se les hacen exámenes, se les ponen pruebas, desafíos y así los rankeamos de cuáles son los que mejor se desempeñan o peor se desempeñan.
+[04:28:57] Entonces en ese momento antrópico, la versión 4.0 nos ofrece tres modelos diferentes HIGH, que es el más rápido Sonet, que es el intermedio y Opus que es la versión 4.7, que es el modelo más avanzado.
+[04:29:16] Obviamente es el que más tiempo va a demorarse en responder de los tres, pero es el que más complejas tareas pueda asumir, no?
+[04:29:23] Entonces, durante el ejercicio ustedes van a ver que van a tener la opción de escoger el modelo.
+[04:29:28] Es importante diferenciar entre un modelo y un agente.
+[04:29:33] Un agente es un proceso de software.
+[04:29:36] Es un software que es capaz de hacer tareas, que es capaz de actuar de manera independiente, tomar decisiones y es una combinación de un modelo que es como si fuera su cerebro.
+[04:29:50] Él va a tomar esas acciones basado en el modelo, pero también tiene un conjunto que son herramientas y datos base, no?
+[04:29:58] Entonces él va a combinar ese modelo con las herramientas y con los datos que tiene.
+[04:30:03] Entonces el modelo yo le digo que yo le puedo decir necesito hacer un análisis financiero y quiero saber cuánto me va a dar el ITF de aquí a diez años.
+[04:30:14] El modelo va a saber.
+[04:30:15] Tengo que hacer un cálculo del interés compuesto, pero esos modelos son muy buenos generando texto y cuando hacen fórmulas matemáticas pueden cometer errores.
+[04:30:25] Entonces, usar el modelo dentro de un agente va a permitir que el modelo sea lo suficientemente inteligente para saber.
+[04:30:31] Ah, pero para calcular el interés compuesto yo voy a usar esta herramienta que es una calculadora y yo voy a multiplicar el rendimiento del ETF por el AL al exponencial del número de años para calcular los rendimientos.
+[04:30:45] Entonces el agente combina el modelo con diferentes cosas.
+[04:30:49] Nosotros desde el lado de Amazon tenemos una alianza fuerte con Anthropic.
+[04:30:52] Estamos trabajando en una colaboración muy fuerte para traerles esta tecnología con seguridad, con escalabilidad.
+[04:31:00] Ustedes no tengan problemas de capacidad, que ustedes no tengan problemas de seguridad, pero hay muchos miedos de clientes.
+[04:31:08] Cuando yo hablo con diferentes ejecutivos en los clientes que tenemos de Latinoamérica, de que si yo uso estos modelos o use esta tecnología, mi data va a estar expuesta.
+[04:31:18] Nosotros tenemos una alianza fuerte con Anthropic Antrópico, todos esos modelos que ustedes vieron ahí de Cloud han sido entrenados y desarrollados en los data centers de Amazon Web Services.
+[04:31:30] Entonces tenemos los servicios para ofrecerlos de manera segura e inclusive de tal forma de que son con regulaciones como GDPR en Europa, que son una de las regulaciones más estrictas que tenemos a nivel mundial, no?
+[04:31:46] Entonces, esto es lo que ha traído.
+[04:31:49] Es que hoy tenemos más de 100.000 empresas en todo el mundo que están utilizando cloud bajo nuestra infraestructura, eh, de manera exitosa.
+[04:31:59] Ahora, cuando hablamos de ahí, a qué nos estamos hablando?
+[04:32:02] Hablamos de que hay empresas que usan esos modelos directamente desde su software, pero también antrópica lanzó sus propias aplicaciones, su propia suite, que lo llaman la suite empresarial, que son aplicaciones para que las empresas no tengan que manipular el modelo directamente, sino que puedan interactuar con esta tecnología de manera transparente, sencilla y asequible.
+[04:32:29] Entonces, el primer producto, que es el que históricamente lanzaron y lo hizo muy famoso, fue Cloud Chat, que es un producto que es una interfaz web, tiene un cliente desktop también y es el Clot, que yo creo que la mayoría de personas conocemos.
+[04:32:42] Entramos en cloud.
+[04:32:44] Ella, abrimos una sesión de chat y podemos hacer preguntas.
+[04:32:49] Podemos seleccionar qué versión del modelo queremos trabajar y podemos hacer preguntas.
+[04:32:53] Lo vamos a ver ahora en el taller más adelante en en detalle.
+[04:32:59] La otra solución es Cloud Cowork.
+[04:33:03] Es una solución Desktop es un programa que yo instalo en mi computador y me permite.
+[04:33:09] Es una solución que adopta más los principios de agentes, me permite crear y tener agentes dentro de mi máquina local.
+[04:33:18] Ya entonces yo descargo la aplicación y esa aplicación yo la puedo conectar con mis carpetas en mi computadora con herramientas.
+[04:33:26] Mi correo electrónico, mis esquemas de comunicación, sean Slack, sean Teams, mis herramientas de ofimáticas, sean hojas de cálculo o sean GSuite y él es capaz de hacer tareas complejas en mi máquina por mí, donde yo necesariamente tengo que estar todo el tiempo supervisando su trabajo.
+[04:33:48] Yo le doy una tarea y él se va a encargar de hacerlo.
+[04:33:52] Vamos a ver algunos ejemplos.
+[04:33:53] Como digo, de ambos chat es más para preguntas y respuestas cowork es para que nuestro computador sea ese agente personal y pueda hacer tareas de manera independiente.
+[04:34:04] Yo puedo programar tareas si necesito hacer algo todos los días a las 08:00 y mi computador está prendido, el lo va a hacer.
+[04:34:13] Y finalmente tenemos otra herramienta que también ha tenido mucho acoge en el mercado que es Cloud Code.
+[04:34:18] Esa no la vamos a ver el día de hoy.
+[04:34:21] En mi experiencia con todos los clientes que he trabajado en Latinoamérica, yo veo dos usuarios fuertes de la inteligencia artificial.
+[04:34:28] Vemos los usuarios finales que somos todos nosotros y vemos los desarrolladores de software.
+[04:34:35] Los desarrolladores de software están en otra liga, eh?
+[04:34:38] Y los agentes?
+[04:34:39] Yo puedo usar agentes ya hechos como cowork o puedo desarrollar mis propios agentes desarrollando mi propio software. Es un.
+[04:34:46] Es un área de mucha innovación.
+[04:34:48] Es una discusión para otro foro, no la vamos a ver.
+[04:34:51] Hoy nos vamos a enfocar en chat y en cowork, pero Cloudkit es una herramienta para yo hacer desarrollo de software con un agente.
+[04:34:59] De ahí a mi lado y poder pedirle a la gente que me haga cosas.
+[04:35:03] Y esto vemos un área de muchos productos, es todo un área de mercado diferente de cómo desarrollo yo software utilizando el hoy y cómo incorporo AI dentro de mi software.
+[04:35:13] No es el foco de nosotros.
+[04:35:14] Hoy nos vamos a enfocar en las dos primeras herramientas.
+[04:35:18] Ahora, cuando nosotros hablamos de estos modelos y de estas herramientas, mucha gente habla de los famosos tokens, no?
+[04:35:26] Y Jensen Huang, CEO de Nvidia, dice que ahora a los desarrolladores de software hay que pagarles la mitad del salario en tokens, no?
+[04:35:35] Qué es un token?
+[04:35:37] Yo veo mucho hablar de eso.
+[04:35:38] Cómo funciona estos modelos?
+[04:35:40] El token es simplemente una unidad de medida que mide la información que el modelo ingesta y la información que el modelo nos regresa.
+[04:35:52] Cómo funciona el modelo?
+[04:35:53] El modelo no procesa texto per se.
+[04:35:55] El modelo lo que hace Cuando yo le envío una instrucción, el convierte ese texto en esos tokens.
+[04:36:02] Tiene un proceso que se llama tokenización, que convierte de.
+[04:36:07] Imagínense que el texto está hecho en español tóquense como si fuera otro idioma, que ese es el idioma que el modelo sí puede procesar.
+[04:36:15] Entonces, por qué es tan importante?
+[04:36:17] Y todo el mundo habla de tokens?
+[04:36:19] Por qué los tokens son la medida de costo de saber cuánto me cuesta, cuánto le cuesta al modelo procesar esa información.
+[04:36:28] Y estos modelos cuestan dependiendo de cuántos token ingestan, cuántos token reciben y también cuántos token devuelven ya.
+[04:36:37] Entonces, eso es lo que son los tokens.
+[04:36:40] Qué es importante que ustedes entiendan en este punto?
+[04:36:43] Una concepción muy errada también es que la gente cree que los token son estándar.
+[04:36:47] Los token no son estándar.
+[04:36:49] Cada modelo puede tokenizar de manera ligeramente diferente.
+[04:36:53] Entonces la misma cantidad de texto me puede generar n número de tokens con un modelo N más una variación con otro.
+[04:37:01] Eso nos puede impactar el costo, pero lo único que es importante es se refiere a lo que estamos y a lo que el modelo devuelva.
+[04:37:08] Ahora algunos ejemplos.
+[04:37:09] Nosotros vemos que en todo el mundo, clientes de Amazon y de Cloud están usando estas tecnologías dentro de su negocio.
+[04:37:20] Por ejemplo, aquí tenemos el caso de Made.com, que es una empresa que hoy en día gracias a estas tecnologías ha logrado ahorrar diez horas semanales automatizando descripción de productos en su e-commerce, no?
+[04:37:35] También tenemos el caso de Intuit.
+[04:37:37] Intuit es una empresa de software orientada al consumidor final en Estados Unidos para ayudarles a los consumidores a hacer sus impuestos.
+[04:37:46] E Intuit utiliza EH esas tecnologías para.
+[04:37:51] Primero la utilizó para ayudar a los clientes a entender los formularios de impuestos en Estados Unidos.
+[04:37:59] Dentro de sus soluciones existentes, pero hoy en día también tiene conectores de tal forma de que si los clientes quieren.
+[04:38:08] Desde Cloud conectarse a las soluciones de Intuit para hacer su declaración de impuestos, también es posible.
+[04:38:15] Es algo que también vemos en los casos de éxito de los clientes.
+[04:38:19] A veces nosotros queremos.
+[04:38:21] Al adoptar esta tecnología, buscar impactos significativos desde el día 1, y eso está bien.
+[04:38:28] Pero hay un efecto que estamos viendo también.
+[04:38:30] No sé cuántos de ustedes, eh, manejen el tema de el.
+[04:38:35] Yo creo que todos debemos manejarlo.
+[04:38:37] El concepto del interés compuesto, eh?
+[04:38:40] Nosotros en ella también hablamos de.
+[04:38:47] El el interés compuesto de la inteligencia artificial.
+[04:38:50] Entonces hay muchos clientes que cuando tienen sus primeras victorias tempranas con la inteligencia artificial, tienen mejoras del cinco o del 6% y consideran que esas mejoras son pequeñas.
+[04:39:01] Pero algo estamos viendo también que entre más implementamos ese cinco o 6% se va creciendo de manera exponencial, porque si genera ese efecto compuesto tal cual como a veces yo veo un ETF que da cinco o 6% en dólares y me desanimo, pero a diez años y la ventaja del ella es que se mueve tan rápido que no es a diez años, sino en muy pocos meses.
+[04:39:26] Eso se vuelve ese compounding empieza a disparar.
+[04:39:28] Entonces hoy mejoramos cómo hacemos la reunión del equipo o la reunión X de la organización?
+[04:39:35] Si yo eso lo hago por diez reuniones más, ese beneficio que hice en esa reunión lo voy a multiplicar por diez.
+[04:39:42] Si hago un agente que simplifica 5% de mi tiempo, hago diez agentes más y eso me va a multiplicar por 50%.
+[04:39:50] El beneficio.
+[04:39:50] Entonces es muy importante que no se desesperen y tengan en cuenta ese inter.
+[04:39:56] Y finalmente otro cliente que está usando esta tecnología muy de moda recientemente eh?
+[04:40:06] Pues es la Fórmula uno, no?
+[04:40:09] Eh, Hoy en día.
+[04:40:15] Let's go Racing, Welcome to the real time
+[04:40:19] Let's try.
+[04:40:28] Hoy en dia a
+[04:40:31] El aliado oficial de la Fórmula uno en la Fórmula uno, un carro de Fórmula uno genera más de 1 millón de datos cada minuto y es un deporte donde tomar decisiones rápido.
+[04:40:45] Inspeccionar esos datos, retroalimentar a los televidentes con los insights de la carrera y cómo van.
+[04:40:52] Eso es esencial.
+[04:40:53] Y ahí nosotros, en colaboración con Anthropic, también hemos hecho un trabajo muy increíble de cómo utilizamos agentes de inteligencia artificial para acelerar y mejorar las experiencias de los fanáticos, de tal forma de que la resolución de incidentes y cualquier novedad del deporte se pueda llevar en tiempo real a los clientes.
+[04:41:15] Eso era un poco el contenido que tenía para ustedes el día de hoy.
+[04:41:18] Para el resto de la sesión.
+[04:41:19] Me gustaría invitar a Manuel Quijano a que les haga 1/2 de El Laboratorio.
+[04:41:26] Quiero recomendarles que quiero también compartirles.
+[04:41:29] Manuel es uno de los especialistas y arquitectos que no solo ha trabajado con ustedes ya por bastante tiempo, sino que ha sido uno de los campeones de promover la cultura de ella y First dentro de Amazon en México.
+[04:41:48] Entonces, mucha de la estrategia que nosotros hemos definido a nivel Latinoamérica de cómo los amazonians en Amazon Web Services deben usar la inteligencia artificial en su día a día en Latinoamérica.
+[04:42:01] Manu ha sido parte del equipo que ha hecho Step up y que nos ha ayudado mucho a promover el uso de esta tecnología dentro de la empresa, de tal forma de que nosotros también hagamos walk the walk the talk y nosotros usemos eso también a la interna.
+[04:42:16] Entonces un privilegio tenerlo acá, un privilegio que también esté trabajando con ustedes.
+[04:42:21] Y bueno, lo dejo para que les muestre un poco estos ejercicios.
+[04:42:23] Muchísimas gracias por su tiempo y un placer conocerlos.
+[04:42:27] El iban al revés.
+[04:42:28] Gracias.
+[04:42:31] Por la.
+[04:42:31] Historia.
+[04:42:32] Sí, Hola!
+[04:42:35] Cómo estamos todos?
+[04:42:37] Estamos listos para ver algunas.
+[04:42:39] Demos algunos ejercicios en vivos.
+[04:42:42] Ok.
+[04:42:43] Clot Eh.
+[04:42:45] Por qué no me muestras mi agenda para el día de hoy?
+[04:42:49] Ok, Esto es lo primero que yo hago cuando uso Cloud.
+[04:42:53] Cuando me despierto, yo tengo cloud conectado a mi mi calendario de Gmail y lo que está haciendo a continuación.
+[04:43:00] Lo que están viendo es una integración de cloud con mi Gmail y lo que me va a mostrar es mi calendario.
+[04:43:05] Entonces esto es lo primero que yo hago al momento de despertarme.
+[04:43:09] Parece que tengo una charla de introducción de Cloud.
+[04:43:13] Tengo que entrar a un comité ejecutivo y tengo que preparar un reporte para indicadores financieros.
+[04:43:18] Pero esperen, antes de meterme realmente a trabajar, a mí siempre me gusta revisar mis inversiones.
+[04:43:26] Cloud.
+[04:43:27] Tú crees que me puedas ayudar a revisar mi portafolio de inversiones?
+[04:43:32] Yo tengo en mi portafolio de inversiones acciones de Amazon, acciones de Nvidia y también me encanta Bitcoin.
+[04:43:39] Yo he sido un láser desde el 2018.
+[04:43:43] Siempre he confiado en Bitcoin y también tengo Bitcoin en mi portafolio.
+[04:43:46] Entonces, a mí lo que siempre me encanta hacer es usar Klout para que vaya y revise lo que es mi portafolio de inversiones.
+[04:43:54] De hecho, veo ahí un movimiento de que Bitcoin se ha mantenido bastante estable, pero me interesa también muchísimo entender por qué Bitcoin está teniendo ese movimiento.
+[04:44:03] Entonces Cloud, por qué no me das las noticias más relevantes que han salido de Bitcoin el día de hoy?
+[04:44:11] Me gusta entender, obviamente, por qué se han movido lo que yo tengo en mi portafolio y también me va a ayudar con esto.
+[04:44:18] Entonces esto es lo que hago después en mi día y me hace un análisis y también es posible que me busque como las noticias más relevantes de por qué el precio de Bitcoin se ha movido.
+[04:44:29] Listo, ya acabé con las actividades más personales.
+[04:44:33] Finalmente le pregunto Dime qué pendientes tengo yo el día de hoy?
+[04:44:39] Entonces yo continúo obviamente usando Klout y le pregunto si tengo algún pendiente.
+[04:44:45] Vale, aquí lo estoy conectando con una herramienta que yo uso.
+[04:44:48] Esas son todas las integraciones que ya han visto, como las presentaciones lo conecta con mi asana.
+[04:45:02] Que yo lo uso para gestionar mi día a día y me dice que tengo varias, varias prioridades para el día de hoy.
+[04:45:09] Tengo prioridades laborales número uno, tengo que ir al Comité Ejecutivo número dos.
+[04:45:15] También tengo que ir al Comité de Marketing.
+[04:45:18] Y número tres también tengo que ir al Comité de Finanzas, pero también me gusta revisar mis pendientes más de mi vida personal.
+[04:45:30] Mucho gusto.
+[04:45:31] Yo soy Manuel Quijano y yo soy arquitecto de soluciones para el equipo de AWS.
+[04:45:37] Bien, como mencionaba Luis, yo llevo ya más de tres años especializado en todo el tema de usar la inteligencia artificial generativa para impulsar el desarrollo.
+[04:45:46] Yo he trabajado mucho con equipos de desarrollo, llevo más de diez años de experiencia en la industria y también he sido antes de estar en AWS y de que fuera arquitecto.
+[04:45:57] Era desarrollador.
+[04:45:58] Entonces tengo mucha experiencia en desarrollo.
+[04:46:01] Me encanta mi la NFL.
+[04:46:02] Si hay alguien aquí que sea fan de la NFL, me encantaría hablar un poco.
+[04:46:05] Soy un poco triste porque mis patriotas los destruyeron en el Superbowl pasado, pero bueno, eso es un poco de mi.
+[04:46:11] René, por favor.
+[04:46:12] Yo soy René Roldán.
+[04:46:13] Soy arquitecto de soluciones también en AWS.
+[04:46:16] Yo soy especialista en la parte de datos.
+[04:46:17] Tengo más de seis años trabajando con AWS y generalmente trabajo con proyectos de una cantidad o volumen de datos grande.
+[04:46:25] Ahora he estado especializándome en temas de inteligencia artificial generativa, justo para poder ayudar a los clientes a que puedan trabajar y desarrollar sus nuevas iniciativas.
+[04:46:34] Yo voy a estar operando laboratorio hoy por ustedes y voy a estar acompañando a Manuel en esta presentación y les vamos a enseñar en una demo en vivo cómo estamos trabajando directamente con inteligencia artificial generativa para ir cambiando nuestra vida y cómo nos va a asistir en resolver todas las tareas que tenemos en nuestras actividades.
+[04:46:51] Obviamente yo les voy a mostrar muchas funcionalidades, no se agobien, quiero que tomen un poco de todo lo que les voy a mostrar y vamos a cerrar con un taller práctico para que ustedes pierdan un poco el miedo, se ensucian las manos y empezamos a usar cloud para casos de uso reales dentro de la organización.
+[04:47:08] Vale, pero antes de arrancar me gustaría tener estos temas personales.
+[04:47:13] Si ustedes se dan cuenta, tengo un mensaje en mi aniversario de boda.
+[04:47:17] A mí de hecho se me acabó de olvidar que la próxima semana cumplo diez años de casado y mi esposa creo que me va a matar.
+[04:47:24] Entonces me ayudarías a encontrar vuelos y algún hotel en Cancún para la primera semana de junio para que yo me pueda ir a celebrar mi aniversario con mi esposa?
+[04:47:36] Lo que estamos viendo ahí es una integración de cloud directamente con Expedia.
+[04:47:40] Cloud va a usar un agente por debajo que va a salir, se va a conectar con Expedia y me va a encontrar.
+[04:47:47] Primero que nada, hoteles disponibles para la primera semana de junio en Cancún.
+[04:47:53] Además de hacer esto también no solo me va a encontrar hoteles, sino que también me va a buscar vuelos para esa primera semana de de junio, no?
+[04:48:05] Esto es súper poderoso y creo que lo ha mencionado en varias charlas que tenemos hoy.
+[04:48:09] Ustedes pueden hacer estas integraciones dentro de Cloud para que conectarlo con Expedia, conectarlo con TripAdvisor y también agilizarlo más como en tareas mundanas que ustedes hacen en su día a día, como por ejemplo hacer planear el viaje de aniversario con mi esposa.
+[04:48:27] Vale, me quedan ahí unos pendientes todavía antes de entrar más al tema laboral.
+[04:48:31] Y es que yo tenía pendiente comprar una moto.
+[04:48:35] Ok, también me estoy mudando recientemente, entonces quería validar si hay cobertura de totalplay de paquetes de 500 megabytes donde yo vivo.
+[04:48:44] Y tercero, también quiero enterarme de las últimas noticias del Mundial.
+[04:48:48] También soy un apasionado del fútbol.
+[04:48:50] Estoy siguiendo muy de cerca todas las noticias que están llevando hacia la Copa del Mundo.
+[04:48:54] Entonces lo que están viendo aquí es una integración de cloud en directamente en el navegador.
+[04:49:00] Ya sabían que hay una integración directa de cloud para usar en el navegador.
+[04:49:04] Una pregunta, pero lo pueden usar directamente en Chrome y pueden usarlo también para automatizar acciones en el browser.
+[04:49:11] Y yo le voy a decir quiero que navegues a la página de Elektra y me encuentres una moto.
+[04:49:17] No le di muchas especificaciones, obviamente es una demostración y me la agregues al carrito.
+[04:49:21] Todo lo que están viendo ustedes, la integración que yo tengo aquí de cloud en el navegador, es capaz de tomar control del navegador de manera automática.
+[04:49:31] Como les digo, navega a la página de Elektra.
+[04:49:34] Si ven.
+[04:49:35] René no está usando las manos, nada más muestra que no, no hay nada ahí de trampas.
+[04:49:40] Va a encontrar la moto en la página de Elektra y finalmente me la va a agregar al carrito.
+[04:49:44] Ok, entonces de una manera muy poderosa que ustedes pueden usar la extensión de Cloud dentro del navegador para automatizar esta navegación.
+[04:49:53] Cloud es una herramienta.
+[04:49:54] Muy poderosa que nos permite habilitar herramientas como por ejemplo el Agent e-commerce.
+[04:49:59] Qué quiere decir esto?
+[04:50:00] Que nosotros podamos darle herramientas directamente a nuestros usuarios que tal vez no tienen las capacidades técnicas o el tiempo para realizar una compra directa que nos van a permitir que nosotros también podamos ir a la competencia y analizar cuáles son los precios para mantenernos competitivos y nos van a permitir también generar herramientas para conectarnos ahora a todo este mundo auténtico.
+[04:50:22] Sí, algo muy importante, algo que ustedes tienen que considerar es preparar sus sitios web para que los agentes los puedan, puedan navegar.
+[04:50:35] En el pasado hablábamos mucho de aplicaciones responsivas que se vean bien desde el browser, desde el celular.
+[04:50:41] Ahorita lo que ustedes tienen que hacer es.
+[04:50:46] Preparar sus aplicaciones.
+[04:50:51] Va a navegar a la página de Totalplay.
+[04:50:53] Está evaluando todos los paquetes disponibles ahí que me está mostrando la página de Totalplay.
+[04:50:59] Yo como le especifiqué en el prompt, quiero que evalúe si el de 500 megabytes está disponible en mi casa.
+[04:51:06] BAZ va a tratar, va a ser me va a llevar aquí a la parte de check out.
+[04:51:11] Y finalmente, antes de que él haga el check, va a validar si este paquete está realmente disponible en mi casa.
+[04:51:20] Entonces él sigue trabajando aquí como lo vemos, y esto es lo que se llama en el browser.
+[04:51:27] Para nosotros es muy importante que tengan un concepto que es multimodal.
+[04:51:32] Cloud tiene modelos que son multimodales y eso quiere decir que básicamente nosotros podemos insertar texto y el modelo lo va a reconocer y también lo va a hacer a través de imágenes.
+[04:51:41] Cómo funciona Cloud cuando toma control de mi computadora es que empieza a tomar screenshots.
+[04:51:45] Estos screenshots se los va a pasar al modelo, los va a analizar y posteriormente va a tratar de resolver la tarea que le estoy dando a través de estas imágenes.
+[04:51:54] Si se fijan, nosotros simplemente le mandamos una dirección.
+[04:51:57] No le estamos diciendo en qué lugar tienes que ponerla.
+[04:51:59] Él está infiriendo por el nombre de los campos.
+[04:52:02] Después de eso, analiza la página web por detrás, extrae el contenido y va a inserta directamente toda esta información directamente en la página.
+[04:52:10] Eso es lo que lo vuelve a génico y es lo que hace que nos permita que podamos operar directamente con cualquier tipo de sitio y automatizar diferente tipo de tareas.
+[04:52:19] Vale, entonces aquí ya va a terminar de validar.
+[04:52:22] Alguien sabe si hay cobertura así nada más?
+[04:52:25] Esperemos que sí.
+[04:52:26] Porque está en vivo esto Entonces esperemos que no salga mal.
+[04:52:29] Entonces Cloud va a terminar de escribirme.
+[04:52:32] Me va a llenar el formulario y lo que finalmente va a hacer la página de Totalplay me va a responder diciendo si hay cobertura en mi casa, entonces vamos a darle.
+[04:52:42] Parece que no cuento con cobertura, desafortunadamente, pero bueno, no pasa nada, podemos intentar con otro paquete.
+[04:52:49] Pero bueno, este es un ejemplo de cómo podemos usar cloud para básicamente automatizar todas estas tareas dentro del navegador.
+[04:52:57] Ok, última tarea Se acuerdan cuál era?
+[04:53:01] Soy súper fan del Mundial, entonces quiero que navegue a la página de TV Azteca, busque las noticias más recientes del Mundial y nada más me haga como un resumen, no?
+[04:53:12] A mí me gusta estar muy enterado de qué jugador se ha lesionado, a quién han convocado y no sé, a ver qué, qué es lo que va a pasar, porque ya estamos a nada de que empiece el Mundial.
+[04:53:22] Entonces, muy similar a las otras dos demostraciones anteriores, navega a la página de TV Azteca, va a buscar la sección del Mundial como ustedes están viendo ahorita van a navegarla y lo que va a terminar haciendo aquí es dándome un resumen de todas las noticias más recientes del Mundial.
+[04:53:41] Entonces perfecto.
+[04:53:43] Aquí con estas tres demostraciones lo que hicimos fue número uno navegar a Elektra, dejar que me seleccionara una moto, me la agregará al carrito número dos.
+[04:53:53] Se fue al sitio de Totalplay, buscó el paquete de 500 megas, puso la dirección y validó si había cobertura.
+[04:54:00] Y número tres se fue a navegar a la página de TV Azteca para sacarme las noticias más recientes del Mundial.
+[04:54:08] Y esto es lo que se llama en el browser.
+[04:54:11] Aquí solamente quiero dejar algo sobre la mesa que es muy importante.
+[04:54:14] Nosotros cuando hemos desarrollado tal vez todas estas plataformas o estas páginas las hemos pensado directamente para que sea un humano el que está transitando o el que está dando clics.
+[04:54:23] Esto que nos que nos hace pensar que tenemos, que tal vez reinventar todas estas, estas aplicaciones y estas páginas con la intención de que sea un agente el que está viajando en ellas.
+[04:54:33] Entonces, cómo hacemos que este nuevo flujo para que la gente que está navegando dentro de nuestra página pueda encontrar la información, pueda responder o también podamos prevenirnos de cómo otros agentes están entrando en nuestra página y cómo podemos.
+[04:54:51] Protegerlas.
+[04:54:51] Vale, es un.
+[04:54:52] Es un nuevo paradigma y es una nueva forma en la cual nosotros tenemos que empezar a diseñar todos estos servicios que estamos desarrollando.
+[04:54:59] Excelente.
+[04:55:01] Bueno, con esto yo cubro todas esas pendientes que tenía más del lado personal.
+[04:55:07] Ahora es hora de atacar mis pendientes más laborales.
+[04:55:11] No sé si ustedes se acuerdan, pero cuando yo le pregunté a Cloud que me diera mi agenda, yo tenía el comité ejecutivo ok.
+[04:55:19] Y ese es el escenario.
+[04:55:21] Básicamente, yo tengo que ir hoy al Comité Ejecutivo, me dieron cuatro diferentes documentos, un documento que.
+[04:55:31] Que explica el IPS, el IPN, perdón, más reciente, un documento que también me va a hablar del roadmap, las notas de la reunión anterior o el último comité y también el.
+[04:55:46] Como les decía anteriormente, el IPN o el NET Promoter Score en inglés.
+[04:55:49] Entonces, qué es lo que voy a hacer a continuación?
+[04:55:52] Voy a crear un proyecto dentro de Cloud, en este caso es Cloud Cowork, en el cual yo ya le subí los cuatro documentos.
+[04:56:01] Yo tengo que preparar un brief ejecutivo para este comité, pero no, realmente no tengo tiempo para leerme los cuatro documentos y llegar con un resumen a ese comité.
+[04:56:11] Entonces, qué es lo que voy a hacer?
+[04:56:13] Creé un proyecto en Cloud Cowork y le pasé unas reglas.
+[04:56:18] Esta parte de las reglas es súper importante.
+[04:56:20] De hecho, cuando nosotros trabajamos con herramientas como Cloud, estas reglas me van a permitir que se comporta de una manera mucho más determinista.
+[04:56:29] Ok.
+[04:56:29] Qué es lo que pasa?
+[04:56:30] Que a veces los modelos sí pueden llegar a alucinar, pero si nosotros les pasamos reglas antes, esto puede puede hacer que el comportamiento sea como más determinista.
+[04:56:41] Y las reglas que les estoy diciendo es que para cualquier reporte que me genere dentro de este proyecto, me dé información, no opinión, me lo haga en formato bluf, o sea, que ponga la conclusión primero y luego me ponga los datos.
+[04:56:55] Cifras concretas.
+[04:56:56] Y esto son buenas prácticas que ustedes pueden empezar a adoptar, no cifras concretas, nunca.
+[04:57:01] Adjetivos vacíos.
+[04:57:03] Si llegara a detectar una contradicción entre los documentos, quisiera que me lo dijera.
+[04:57:08] Y finalmente, si encuentra, si no encuentra, o sea, que no me de información, que no están contenidos en esos documentos.
+[04:57:15] Súper importante y obviamente para que no usen anglicismos usa español de negocios y no uses anglicismos.
+[04:57:22] Entonces listo, he creado el proyecto, entonces ya tengo como mi proyecto dentro de cloud, ya les subí los cuatro documentos, ya puedo empezar a trabajar y el primer prompt que le voy a decir le voy a decir Oye, por qué no me cruzas los cuatro documentos que te acabé de subir y me generas un brief ejecutivo?
+[04:57:40] Yo necesito este brief para prepararme en el Comité Ejecutivo.
+[04:57:45] Entonces yo lo que hago es que le mando ese prompt de seguimiento y esto es súper poderoso.
+[04:57:49] Probablemente.
+[04:57:50] No sé ustedes díganme si yo hubiera hecho esto a mano, hubiera tenido que revisar todos los documentos que me pasaron para prepararme al comité.
+[04:57:58] Yo creo que me hubiera podido tardar más de cuatro horas.
+[04:58:01] Lo que estamos haciendo aquí es haciéndolo con Cloud en menos de cinco minutos o puede ser diez minutos, dependiendo de la cantidad de documentos que estoy usando.
+[04:58:10] Entonces le mando el prompt.
+[04:58:12] Quiero que me hagas este briefing ejecutivo para que yo me pueda preparar para mi comité y listo.
+[04:58:17] Me da como un resumen de las tres decisiones tomadas en el comité anterior.
+[04:58:22] Entonces lee la minuta del comité anterior y me da como un resumen también.
+[04:58:27] Después de eso me da como los puntos más importantes, no los tres riesgos que nadie está diciendo en voz alta.
+[04:58:36] Y esto lo detectó justamente este documento del IPN.
+[04:58:40] También aquí el riesgo número dos crédito nómina de 12% de participación.
+[04:58:45] Identifica los riesgos que encontró en estos documentos.
+[04:58:48] Ojo, estos documentos son ficticios, no son para nada reales, son.
+[04:58:53] Yo los creé ahorita nada más para hacer esta demostración.
+[04:58:55] Nada más quería aclarar esa parte.
+[04:58:58] Entonces, si seguimos un poco aquí, lo que me responde Cloud.
+[04:59:02] También me da recomendaciones de lo que yo pueda llevar al comité.
+[04:59:06] Entonces, si se dan cuenta es súper poderoso porque me está dando una preparación, un desglose de todos los puntos más importantes que yo pueda llevar a ese comité.
+[04:59:16] Listo, Pero no nos vamos a quedar hasta acá.
+[04:59:18] Ustedes sabían que Cloud Cowork al día de hoy puede generar documentos y entregables?
+[04:59:24] Le voy a pedir que me todo este desglose o este resumen que me hizo que me genere un documento de Word.
+[04:59:31] Ok?
+[04:59:32] O puede ser un brief que yo voy a llevar al comité con todo este resumen que me hizo, le voy a decir por favor de este resumen que acabaste de hacer generarme un brief ejecutivo en formato Word que yo pueda llevar al comité y esto es como ya donde vemos ya estas funcionalidades auténticas, no?
+[04:59:51] Anteriormente cuando arrancaron esas herramientas eran más como yo le hago una pregunta, me contesta, pregunta, respuesta Ya aquí con estas funcionalidades auténticas es capaz de generar un entregable y lo que vemos aquí es que me está generando un documento que yo puedo llevar y listo para este comité ejecutivo.
+[05:00:12] Entonces él es capaz de hacerme como estos entregables, documentos de Word, presentaciones de PowerPoint, excels o Spreadsheets.
+[05:00:21] Y lo poderoso aquí es que yo lo puedo descargar y también se lo puedo mandar a mi equipo, no?
+[05:00:26] Entonces un caso de uso súper poderoso el cual ustedes pueden adoptar para prepararse para comités, cruzar mucha información entre múltiples documentos, etcétera, etcétera Eso está súper bien.
+[05:00:41] A mí me gusta, pero para mí no es suficiente.
+[05:00:45] Qué es lo que pasa?
+[05:00:46] Que yo tengo que repetir esa tarea todos los lunes.
+[05:00:50] Es una tarea esa tarea de yo prepararme ante el comité es algo que todos los lunes me toca hacer.
+[05:00:57] Qué tal si la pudiera, como programar o calendarizar de cierta manera?
+[05:01:01] Y es aquí donde entra la siguiente funcionalidad que les voy a mostrar.
+[05:01:05] Ustedes pueden crear tareas agendadas en cloud para que, por ejemplo, todos los lunes a las siete am Cloud me repita esta tarea.
+[05:01:15] Entonces, yo ya la estoy automatizando.
+[05:01:18] Y si yo tengo mi computadora prendida, ojo, esto para que esto funcione tienen que tener su computadora prendida, pero si ustedes tienen su computadora prendida, lo que estamos haciendo aquí es creando una tarea programada que se va a ejecutar todos los lunes a las siete am.
+[05:01:36] Superpoderosa.
+[05:01:37] Una Un consejo que les daría.
+[05:01:39] Obviamente hay que mantener actualizado pues todos los documentos que me los suban a mi proyecto, pero si yo creo esta tarea programada, esto se va a ejecutar de manera automática todos los lunes a las siete am y listo, quedó mi tarea programada.
+[05:01:55] Me va a hacer unas preguntas y este es un caso de uso bastante poderoso que ustedes pueden adoptar en el día a día.
+[05:02:02] Vale?
+[05:02:03] Entonces, nada más para recapitular, vimos que creamos un proyecto, le subimos múltiples documentos, le mandamos un prompt para que cruzara la información entre los documentos.
+[05:02:13] Me generó un brief ejecutivo y un Word listo para presentar ante el comité y finalmente hicimos una tarea programada para que esto se se ejecute todos los lunes.
+[05:02:24] Y ahí está la tarea programada.
+[05:02:26] También esto lo pueden aprender a hacer ustedes dentro de Cloud Desktop.
+[05:02:31] Vale?
+[05:02:32] Listo.
+[05:02:33] Parece que hemos completado el primer comité, pero se acuerdan que mis pendientes.
+[05:02:38] Mi segunda reunión del día era el Comité de finanzas?
+[05:02:42] Ok.
+[05:02:42] Y tenemos un caso similar.
+[05:02:45] Me entregaron un Spreadsheet, un Excel, una hoja de Excel muy grande, como con 16 diferentes hojas, muchos reportes y me pidieron que llegara con un consolidado para el comité de Finanzas.
+[05:02:57] Uf, Ok.
+[05:02:58] Cómo podemos usar Cloud para resolver esto?
+[05:03:00] Entonces a mí lo que me hicieron aquí es que me entregaron una hoja, un spreadsheet bastante complicado.
+[05:03:07] Ok?
+[05:03:08] Y vamos a usar una funcionalidad aquí que se llama Cloud dentro de Excel.
+[05:03:12] No sé si ustedes sabían, pero ustedes ya pueden usar directamente en Excel.
+[05:03:17] Es muy.
+[05:03:18] Yo sé que probablemente ustedes no usan Excel en su día a día, pero muy posiblemente las personas que les reportan ustedes es una de las herramientas más utilizadas.
+[05:03:28] Entonces aquí hacemos un poquito viendo como la hoja que me dieron perdón tiene más de 16 hojas, es bastante compleja, pero lo que vamos a hacer a continuación es vamos a activar Cloud dentro de dentro de Excel y eso lo hacemos con esta pequeña funcionalidad que se llama Addins.
+[05:03:48] Instalamos el plugin o la extensión de cloud y eso me va a permitir usar Cloud dentro de Excel.
+[05:03:55] Qué tipo de actividades puede hacer Cloud dentro de Excel?
+[05:03:58] Bueno, vamos a intentar.
+[05:04:00] Vamos a mandarle un prompt cloud.
+[05:04:02] Quiero que me hagas un consolidado o un reporte ejecutivo de todas estas hojas que yo tengo en mi spreadsheet.
+[05:04:09] Quiero que me crees una nueva hoja que se llame el reporte ejecutivo y me hagas como un consolidado con KPIs, con gráficos de todas las hojas que a mí me entregaron.
+[05:04:21] Esto es todo para yo prepararme ante el Comité de Finanzas.
+[05:04:25] Entonces, esto en acción es en Excel y Cloud empieza hace como el empieza a analizar como todas mis hojas que tengo de mi spreadsheet y esto es muy, muy poderoso.
+[05:04:39] Qué puede hacer Cloud dentro de Excel?
+[05:04:42] Puede corregir datos, puede revisar números, puede darme análisis?
+[05:04:47] En este caso es un poco ambicioso, pero sí es capaz.
+[05:04:50] Le voy a decir que me haga un reporte ejecutivo.
+[05:04:53] Cloud empieza a pensar aquí a la derecha y aquí le puedo dejar un poquito la palabra a René, que nos explique cómo él empieza a construir ese dashboard ejecutivo.
+[05:05:03] Hoy en día, uno de los casos más poderosos de Cloud es como un asistente para el análisis de datos.
+[05:05:09] Regularmente, cuando nosotros tenemos que empezar a hacer un análisis, tenemos que iniciar con los exploratorios.
+[05:05:14] Tenemos que saber qué data tenemos, qué información está contenida en los archivos.
+[05:05:18] Muchas veces qué tipo de archivos estamos teniendo, porque ahora se complica mucho más el proceso.
+[05:05:23] Con esto de big data y nuevas formas de analizar los datos.
+[05:05:28] Entonces, qué es lo que está haciendo Cloud acá?
+[05:05:31] Nos está funcionando como si fuera un analista de datos, un analista de datos que no sabe hacer zoom, como se darán cuenta.
+[05:05:40] Pero ese es el.
+[05:05:41] Ese es el humano y eso es lo importante.
+[05:05:43] Entonces, básicamente lo que hace Cloud es ayudarnos o asistirnos principalmente a ir construyendo la información a ya sé, ir construyendo la información para que nosotros podamos empezar a analizarla poco a poco.
+[05:06:05] Sí.
+[05:06:06] Voy a cambiar resolución de pantalla.
+[05:06:08] Igual aquí a la derecha.
+[05:06:09] Esto es una demo en vivo, obviamente, y el spreadsheet es bastante complejo, pero les podemos mostrar el resultado final de cómo quedó ese esa hoja.
+[05:06:19] No?
+[05:06:20] Yo cuando obviamente cuando la probé previamente, este fue el dashboard que él me sacó, hizo como el cruce, analizó todas esas 16 hojas de cálculo, me sacó unos KPIs hasta arriba, luego me sacó unas gráficas hasta abajo y me las puso ahí de nuevo.
+[05:06:35] Esto es súper poderoso, sobre todo no tanto para ustedes, porque probablemente en el día a día no estamos usando Excel, pero para las personas que les reportan a ustedes integrar Cloud en Excel, definitivamente que puede ahorrar muchísimo tiempo.
+[05:06:48] Esto era podido tomar más de un día definitivamente y con Cloud lo logramos hacer en menos de diez minutos.
+[05:06:54] Obviamente la teníamos cocinada de antemano.
+[05:06:57] Son demos en vivo, pero este fue un poco como el dashboard que nos generó Cloud al usarlo en Excel.
+[05:07:03] Cloud es capaz de identificar.
+[05:07:04] Cuál es la mejor forma de visualización de datos.
+[05:07:07] Entonces automáticamente dice Estas son las cards o las tarjetas que voy a poner arriba con los indicadores de negocio más importantes.
+[05:07:13] En la parte inferior también se tomó la libertad, porque la verdad es que lo hizo basado en el análisis que él decidió de generar.
+[05:07:21] Cuáles son los movimientos más importantes en el mercado entonces?
+[05:07:24] Y con nuestros datos, obviamente.
+[05:07:26] Entonces lo que hace es principalmente poner estos semáforos que nos van a dar visibilidad.
+[05:07:30] A nosotros también nos está marcando las tendencias que tiene cada uno, que va a la alza, que va a la baja o que se está manteniendo y la funcionalidad más poderosa que tiene también es la de las visualizaciones.
+[05:07:41] Cloud puede ayudarnos a entender cuál es la mejor visualización que podemos utilizar para los datos.
+[05:07:46] En este caso es una comparativa.
+[05:07:48] La primera gráfica que estamos viendo.
+[05:07:50] Entonces Cloud elige que utilicemos una gráfica de barras porque nos va a permitir que nosotros podamos comparar 222 tipos de datos.
+[05:07:57] La siguiente es una gráfica de serie de tiempo que nos va a permitir que nosotros podamos hacer una comparativa de cómo se han ido moviendo los datos de.
+[05:08:09] Con el paso del tiempo, como han ido cambiando y como se van trazando.
+[05:08:13] Incluso comparar dos tipos de variables diferentes.
+[05:08:17] Excelente, Bueno, con eso ya creo que estoy listo para el comité de finanzas, pero ustedes se acuerdan cuál era el último comité que tenía que ir?
+[05:08:24] El comité de marketing.
+[05:08:26] Y ahí tengo una tarea también que me asignaron.
+[05:08:30] Ok, tengo que preparar la campaña de lanzamiento para tarjeta Jóvenes de Azteca.
+[05:08:36] Ok, número uno, Lo que tengo que hacer es hacer un análisis competitivo.
+[05:08:41] Me gustaría entender qué está haciendo la competencia número dos.
+[05:08:46] Necesito planear toda la campaña de marketing.
+[05:08:49] Y número tres, necesito generar imágenes para que yo las pueda poner en redes sociales, ponerlas en Instagram, ponerlas en Twitter, etcétera Entonces, qué es lo que vamos a usar?
+[05:08:59] Vamos a usar Klout de nuevo y les voy a mostrar esta funcionalidad que se llaman los pluggins.
+[05:09:07] Alguien aquí ya ha usado los plugins o tiene alguna idea más o menos de cómo funcionan los plugins?
+[05:09:12] Son como estas extensiones que yo puedo instalar dentro de Klout.
+[05:09:16] Lo van a encontrar ahí arriba, a la izquierda de su desktop.
+[05:09:19] Si ustedes se van a la parte de Customize, como nos están mostrando ahí y básicamente busco lo que son los plugins, yo puedo navegar y Anthropic ya me va a ofrecer varios plugins que ya están listos para instalarse dentro de Cloud.
+[05:09:35] Tengo plugins de marketing, plugins para ingenieros, plugins para productividad, plugins también para finanzas.
+[05:09:42] En este caso, a mí me interesa instalar lo que es el plugin de marketing, Ok, entonces voy a instalar el plugin de marketing y algo que les puedo recomendar aquí es que busquen plugins que tal vez se adecúen al rol o la posición que ustedes tengan dentro de la organización.
+[05:10:02] Vale, entonces listo, ya.
+[05:10:04] Cada uno de estos plugins también tiene herramientas preconfiguradas internas, entonces ustedes pueden entrar, revisarlos y saber qué capacidades adicionales les van a estar dando.
+[05:10:14] Vale?
+[05:10:14] Así pueden identificar qué podrían hacer con cada uno de ellos.
+[05:10:18] Listo, instalamos el plugin de marketing y vamos a usarlo.
+[05:10:22] Voy a decirle Cloth, me podrías hacer un análisis competitivo y investigar un poquito a mis competidores, sobre todo si yo estoy lanzando como esta campaña.
+[05:10:32] Entonces vamos a decirle y esta es la manera que nosotros activamos estos plugins con este formato de usar como la barra lateral, vamos a usar este que se llama el Competitive Brief.
+[05:10:43] Qué es el Competitive Brief?
+[05:10:45] Me va, Lo que va a hacer Cloud es va a ser un análisis competitivo.
+[05:10:49] Entonces yo le estoy diciendo por favor podrías analizar a mis principales competidores, a NU México, a Mercado Pago y Astori.
+[05:10:56] Quiero que me des mensajes de valor que tal vez ellos puedan tener campañas que ellos hayan lanzado en los últimos 90 días y al final quiero que me genere un brief y después de hacer como toda esta, este research o esta investigación con respecto a mis competidores.
+[05:11:18] Qué está pasando aquí por detrás?
+[05:11:20] Y este es un poco lo que empezamos a ver en la era Agéntica, en este caso Cowork va a arrancar sus agentes que me van a hacer esta investigación por detrás.
+[05:11:31] De hecho, él es capaz de hacerlos en paralelo y ahí arriba a la derecha siempre me va a mostrar los pasos que él va a tomar.
+[05:11:38] Los modelos hoy en día son bastante inteligentes en el sentido de que se paran, me hacen un paso a paso, parten un problema mucho más grande, como en diferentes pasos, y los va haciendo uno por uno.
+[05:11:50] Entonces, qué nos puso aquí?
+[05:11:53] Qué va a ser paso a paso?
+[05:11:54] Primero va a investigar a Nu México, va a ir a las páginas relacionadas de mi competencia, va a sacar información.
+[05:12:02] También va a buscar información sobre Mercado Pago.
+[05:12:05] Ok, y finalmente sobre Story.
+[05:12:07] Y lo que está haciendo aquí no es ningún secreto.
+[05:12:10] Está arrancando Subagentes por debajo para que vayan a internet y me puedan sacar esa información.
+[05:12:17] Entonces esta funcionalidad es muy poderosa.
+[05:12:19] No?
+[05:12:19] No solo siempre.
+[05:12:21] También nosotros podemos ver qué está haciendo la gente y esta es una buena práctica, Tiene un proceso de razonamiento, de pensado.
+[05:12:28] Entonces nosotros podemos entrar aquí, saber qué está haciendo, a qué páginas está entrando, porque nosotros tenemos que supervisar que el resultado sea el adecuado o el que estamos buscando.
+[05:12:38] Vale, te puedo interrumpir un segundo?
+[05:12:40] De hecho, se me había olvidado.
+[05:12:42] Pero si no les molesta.
+[05:12:43] Creen que me pueda tomar una selfie?
+[05:12:45] No, les.
+[05:12:46] No.
+[05:12:49] Perdón.
+[05:12:49] Esta es una.
+[05:12:50] La vamos a usar más adelante.
+[05:12:51] Ok.
+[05:12:52] Nada más que la quería mostrar para una actividad que vamos a hacer más adelante.
+[05:12:55] Vale.
+[05:12:57] Entonces.
+[05:12:57] Qué va a hacer aquí?
+[05:13:00] Cloud Cowork.
+[05:13:00] Ya está.
+[05:13:01] Ya terminó de hacer el análisis competitivo.
+[05:13:04] Ok.
+[05:13:05] Y lo último que me está haciendo es redactando este brief, muy similar a los casos de uso anteriores.
+[05:13:11] Y esto superpoderoso y yo les recomiendo y los invito a que lo hagan es que me genere este entregable, este documento con todo lo que investigo.
+[05:13:20] Entonces como el paso final, como vieron ya va tachando como el paso a paso y como paso final me va a generar este brief ejecutivo y de esta manera acabamos de hacer un análisis competitivo en menos de qué tres cuatro minutos, en donde analizó a mis competidores principales fue a todos sus sitios, buscó como toda esta información y finalmente me generó un brief.
+[05:13:44] Me va a generar un brief ejecutivo, vale, Y aquí miren, eso es como lo de story, etcétera, etcétera.
+[05:13:51] Entonces qué sigue?
+[05:13:53] Ok, ya hice como el análisis competitivo.
+[05:13:57] Ahora este plugin de marketing también me va a permitir hacer una campaña de marketing.
+[05:14:02] Yo quiero lanzar el producto de tarjeta Azteca Jóvenes para el viernes 13 de junio.
+[05:14:07] Tengo un presupuesto de 33 millones de pesos.
+[05:14:11] Ok?
+[05:14:11] Estos son los segmentos que voy a atacar y quiero que me entregue, Como toda esta campaña de marketing, lo que vamos a aprovechar aquí justamente es este plugin que ya habíamos instalado, algo que probablemente necesitaba antes.
+[05:14:25] No sé, tal vez una agencia o un equipo muy grande ya me lo está resolviendo en menos de diez minutos.
+[05:14:32] Lo que vemos aquí definitivamente es este poder que me va a ofrecer Cloud a través de estos plugins.
+[05:14:38] Quiero repetir rápidamente si ustedes son curiosos, que se metan a la sección de plugins dentro de Cloud y vean algún plugin que haga sentido o se adecúe a la posición o a la unidad de negocio donde ustedes estén trabajando.
+[05:14:54] En este prompt decidimos agregar más cosas y ser un poco más ambiciosos.
+[05:14:58] Estamos pidiendo un arco narrativo.
+[05:15:00] El arco narrativo tiene que tener la siguiente forma Tiene que tener un teaser, un lanzamiento, un refuerzo y una conversión.
+[05:15:06] También estamos agregando canales por segmento, un calendario editorial de 60 días y necesitamos saber cuáles van a ser las métricas de cada una de estas fases.
+[05:15:16] Adicionalmente, hay que considerar que estamos utilizando tres tipos de EH de usuarios diferentes, no?
+[05:15:22] María, 26 años, es una emprendedora que vive en Guadalajara.
+[05:15:25] Luis, 31 años, es un chofer de Ciudad de México y Ana, 22 años, es universitaria y está en Puebla.
+[05:15:33] Igual al ejemplo anterior, nada más para que se acuerden.
+[05:15:36] Cloud a la derecha me va a mostrar el paso a paso y aquí lo que está haciendo es me empieza a construir esta campaña.
+[05:15:42] De hecho esto va a ser bastante extenso, no me voy a detener aquí a analizarlo, pero miren todo lo que me está sacando el nombre de la campaña.
+[05:15:50] Ok.
+[05:15:50] Tenemos la idea, tenemos los perfiles por la audiencia en donde están enfocados, cada uno de ellos.
+[05:15:56] Tenemos también cuál va a ser el arco narrativo de estas cuatro semanas, cómo empieza, cómo vamos a llevar esta campaña y cuál es la historia que vamos a contar.
+[05:16:05] Y también tenemos la semana dos tres y cuatro.
+[05:16:11] Adicionalmente, después de esto entramos al canal por segmento, donde básicamente nos va a decir, dependiendo del segmento del usuario, cuál es el mejor lugar al que podemos llegar a él.
+[05:16:20] Por ejemplo, María va a ser un buen lugar llegar a través de TV abierta en otros lados.
+[05:16:25] Va a ser a través de Ads, TikTok, etcétera.
+[05:16:29] Y por último, vamos a tener el calendario editorial de 60 piezas que básicamente nos va a decir qué vamos a construir, qué día, cuándo lo publicamos y por qué deberíamos de estar publicando cada uno de estos y cada uno de estos contenidos enfocados directamente a cada uno de estos usuarios.
+[05:16:46] Excelente.
+[05:16:47] Y ya como último paso.
+[05:16:49] Ok, ya hice el análisis competitivo.
+[05:16:53] Me está terminando de generar la campaña de marketing bastante extensa.
+[05:16:57] Como vean, es capaz de hacerme un plan súper elaborado y súper extenso.
+[05:17:02] Ya como último paso voy a hacer una integración con una herramienta que se llama Canvas.
+[05:17:09] También quiero que me genere mis imágenes para esta campaña que yo pueda agregar directamente a redes sociales.
+[05:17:16] Entonces le vamos a mandar un prompt que me genere imágenes, esto es en vivo, vamos a ver cómo salen, pero que me genere unas imágenes que pueden estar listas para que yo pueda subir a redes sociales.
+[05:17:28] Y lo que vamos a ver aquí es de nuevo el poder que te va a ofrecer Klout de conectarlo a otras herramientas.
+[05:17:36] Hacer estas integraciones y aquí lo que va a hacer es conectarse, como les decía, con Canvas para lo que es generación de imágenes.
+[05:17:44] Y estas imágenes las voy a poder subir si me salen bien, Obviamente.
+[05:17:48] A lo que yo le recomendaría que yo no estoy haciendo aquí también es refinen ese prompt.
+[05:17:53] La calidad de las imágenes que les va a dar Klout también del resultado siempre va a depender de la calidad del prompt.
+[05:18:00] Si estas herramientas son capaces de ahorrarnos tanto tiempo, por favor tómense el tiempo de escribir un buen prompt.
+[05:18:07] A veces nos gusta ser como perezosos, pero si nos están ahorrando esta cantidad de tiempo, por favor tómense.
+[05:18:15] Tómense más de cinco minutos en elaborar un buen prompt y se van a dar cuenta que la calidad de lo que les va a regresar va a ser mucho mayor.
+[05:18:23] Tip Pueden utilizar a Cloud para construir sus prompts.
+[05:18:26] Entonces, a partir del prompt que tienen, si ustedes toman la respuesta, podrían decirle a Cloud Sabes qué Cloud?
+[05:18:33] Esta es la respuesta que me entregaste.
+[05:18:35] Ayúdame a ajustar el prompt para que mi respuesta sea de esta forma.
+[05:18:38] Vale, tampoco tienen que construirlo ustedes.
+[05:18:40] Aprovechen la inteligencia artificial generativa para que les ayude a resolver incluso ese tipo de trabajo.
+[05:18:46] Aquí lo que estamos haciendo es que estamos generando tres tipos de perfiles uno para cada uno de las personas que vamos, a que vamos a enfocar o targetear esta campaña, como se darán cuenta, está buscando si hay algún tipo de branding.
+[05:18:58] Qué quiere decir?
+[05:18:59] Que si nosotros ya tenemos un branding desarrollado y queremos seguir este branding, podemos utilizarlo aquí.
+[05:19:05] Como no existe, lo va a generar, Está tomando de hecho los los colores de Grupo Salinas, específicamente ahora de Banco Azteca.
+[05:19:12] Por qué?
+[05:19:12] Porque los buscó en Internet.
+[05:19:14] Nosotros podemos también elegir y decirle cuando podemos buscar en internet y cuando no, y eso va a depender de las tareas que estamos realizando.
+[05:19:22] Acá ya tenemos algunos resultados.
+[05:19:25] Exactamente, ya.
+[05:19:26] Nos empieza a generar algunas imágenes, digo, puede que tengan áreas de oportunidad o mejoras, pero ya me está creando como estas imágenes que yo ya puedo agarrar y estar listas para postear en redes sociales, no?
+[05:19:40] Y ese es el poder realmente.
+[05:19:41] Si yo uso cloud por si solo es bastante poderoso, pero intégrenlo integren estas herramientas de terceros para que?
+[05:19:50] Para realmente ver el poder que les puede dar.
+[05:19:53] Entonces nada más para recapitular aquí qué fue lo que hicimos?
+[05:19:56] Instalamos el plugin de marketing.
+[05:19:59] Si se acuerdan, le pedimos que me hiciera un análisis competitivo, que me generara también una campaña de marketing y finalmente que me generara imágenes para mi tarjeta Azteca Jóvenes, que esté lista para postearse a redes sociales y con esto terminamos lo que es los pendientes que tenía.
+[05:20:19] Si se acuerdan lo que les explicaba al principio tenía el comité ejecutivo que lo resolví creando un proyecto de cloud, haciendo una consolidación de documentos y que me diera el brief ejecutivo, el Comité de Finanzas, le puse Cloud en Excel, le pedí que me hiciera un dashboard ejecutivo y me lo creó.
+[05:20:36] Y finalmente, para este comité de marketing me hizo una campaña, me hizo esta campaña de marketing y me dejó lista las imágenes para yo postear a redes sociales.
+[05:20:46] Y con esto terminamos lo que es la primera sección, que son las demos.
+[05:20:51] Pero ahora les toca a ustedes.
+[05:20:54] Estamos listos para empezar a jugar un poco con Cloud.
+[05:20:58] Excelente, excelente.
+[05:21:00] Entonces vamos a empezar lo que es el taller de Cloud.
+[05:21:04] Creo que todos aquí tienen laptops ya con Cloud Desktop instalado, vamos a empezar a hacer unas pequeñas pruebas y empezar a jugar con él.
+[05:21:14] Ok?
+[05:21:15] Algo importante es que para el taller contamos con personas del equipo de DSI y de IT.
+[05:21:19] Me pueden ayudar a levantar la mano por favor ayúdenme a ubicarlos.
+[05:21:23] Están las personas de DSI.
+[05:21:25] También está el equipo de AWS.
+[05:21:26] Equipo de AWS Me ayuda a levantar manita, por favor.
+[05:21:29] Ellos dos los van a estar apoyando en las mesas.
+[05:21:31] Entonces cualquier tipo de asistencia que requieran durante este ejercicio, por favor alcen la mano.
+[05:21:37] Ellos se van a acercar con ustedes y los van a ayudar a resolver cualquier tipo de eventualidad o tema que encuentren.
+[05:21:44] Vale, súper importante.
+[05:21:45] En el correo de Jalmo les mandaron las instrucciones y el link de la carpeta que tenían que haber descargado previamente.
+[05:21:52] Si no lo hicieron, no se preocupen, los tenemos cubiertos.
+[05:21:55] Dentro del taller van a encontrar la carpeta de descargas.
+[05:21:59] Ahí van a venir también las instrucciones.
+[05:22:01] Entonces permítanme abrirlas para que todos las puedan ver.
+[05:22:06] Todo este taller está en una página web.
+[05:22:08] Entonces lo único que ustedes tienen que hacer es ir a el sitio, al link que les mandaron, el enlace que les mandaron, el correr de Jalmo y caer a este landing page.
+[05:22:19] De nuevo tenemos la asistencia, como les decíamos, pero vamos a También pueden acceder a través de este link por si alguien no tiene acceso al taller, lo puede.
+[05:22:30] Se puede meter desde aquí, Vale.
+[05:22:33] Estamos listos.
+[05:22:34] Un poquito de hands on.
+[05:22:35] Cambiar un poco ahora para que ustedes lo hagan.
+[05:22:37] Entonces vámonos al landing page del taller.
+[05:22:42] Ok, entonces este es un workshop con laboratorios y prácticas para que ustedes la puedan hacer.
+[05:22:49] El primer paso que necesitamos hacer es descargar los materiales.
+[05:22:54] Ustedes van a ver que el taller tiene ese botón rojo súper grande donde van a descargar los materiales que vamos a usar en el taller.
+[05:23:02] Ustedes no se preocupen, todos los documentos se los vamos a dar nosotros.
+[05:23:05] Ustedes no tienen que meter sus propios documentos.
+[05:23:08] Entonces el primer paso que por favor quiero que sigan es que descarguen los materiales para el taller.
+[05:23:15] Vale?
+[05:23:17] Una vez que los materiales se descarguen, vamos a darle aquí unos unos segundos para que esto termine.
+[05:23:26] Nos vamos a cambiar a Cloud, pero de hecho, muy importante, cuando ustedes descarguen ese contenido, esa carpeta va a estar comprimida.
+[05:23:37] Entonces lo único que tienen que hacer si están en Mac es darle doble clic y eso en automático va a descomprimir los archivos.
+[05:23:45] Ok, entonces asegúrense este ya va a terminar, Ok?
+[05:23:51] Abren la carpeta donde descargaron los archivos o los materiales para el taller y les dan doble clic.
+[05:23:58] Para los que tengan Windows igual pueden pedir apoyo, pero tienen que hacer un clic derecho y tienen que seleccionar, descomprimir o exportar.
+[05:24:06] Pero igual si necesitan ayuda, por favor pueden levantar la mano y de esta manera los pueden ayudar a descomprimir los archivos.
+[05:24:14] Vamos a analizar qué hay adentro porque son bastante sencillos de usar.
+[05:24:19] Vamos a darles un minutito en lo que terminan de descargar.
+[05:24:23] Todos recuerden que pueden levantar manita y se va a acercar a alguien a apoyarlos.
+[05:25:04] Perfecto, Entonces vamos a empezar a analizar lo que tenemos en las carpetas, ok?
+[05:25:10] Este el material es muy sencillo, nada más para que se ubiquen.
+[05:25:13] Está dividido por laboratorio.
+[05:25:16] El día de hoy solo vamos a cubrir el laboratorio uno que es los fundamentos de Cloud Chat y la carpeta va a tener lo que es el Lab uno y va a tener un documento de Word.
+[05:25:29] Ok?
+[05:25:30] Y esto es un dashboard ejecutivo donde tiene datos sobre experiencia del cliente.
+[05:25:34] Ok, solo vamos a usar un documento para lo que es este primer laboratorio, entonces ubíquense ahí un poquito, vean los documentos y aquí les voy a hacer una pequeña pausa también para que se ubiquen y vamos a continuar en unos segundos.
+[05:26:04] Algo también muy importante es que este laboratorio cuenta con versión de inglés y español, así que en la parte superior izquierda van a encontrar un un botón, pueden darle clic y con eso podrán cambiar el idioma.
+[05:26:18] Es básicamente un espejo.
+[05:26:19] Podrán utilizar el idioma con el que se sientan mucho más cómodos.
+[05:26:23] Yo estoy en English anybody here that would rather do it in english. You could always click on the
+[05:26:29] And change the workshop to English, and it's going to be exactly the same as the one in Spanish.
+[05:26:31] So we got you covered.
+[05:26:34] Okay.
+[05:26:35] Vamos a continuar de nuevo ayuda
+[05:26:39] Mano abajo en el landing page.
+[05:26:41] Nos vamos a mover al laboratorio.
+[05:26:43] Uno muy similar a las demos que yo les quería mostrar, que yo les mostré perdón.
+[05:26:50] Todas estas laboratorios empiezan con un caso de negocio.
+[05:26:55] Estamos tratando de que sea lo más real y lo más apegado al día a día de ustedes.
+[05:27:00] De nuevo estoy cenando con mi familia un domingo en la noche y me llega un WhatsApp del CEO de Grupo Salinas.
+[05:27:10] Mañana en la sesión de comité inicias tú tienes diez minutos para hablar acerca de cómo vamos a mejorar la experiencia de cliente en tu unidad de negocio.
+[05:27:19] Para la segunda mitad del 2026.
+[05:27:22] Enfócalo en un dolor específico con una propuesta.
+[05:27:30] Para resolverlo y una petición de ayuda para el comité.
+[05:27:34] Gracias.
+[05:27:35] Es domingo ocho 17 pm y esto lo tengo que entregar para el lunes a las diez am.
+[05:27:41] Lo que vamos a hacer a continuación es que vamos a usar Clot Chat para que me ayude de nuevo para prepararme para el comité.
+[05:27:49] Ok, entonces, cuáles son los objetivos de este taller y no igual este es el primer taller para que ustedes tengan como esa primera experiencia se quiten ese miedo de empezar a interactuar con chat.
+[05:28:02] Ok, entonces en los siguientes minutos ustedes van a aprender a hablarle, perdón, a chat como si fuera un colega de trabajo, van a aprender cómo cambiarle el estilo, en que te responda.
+[05:28:16] Chat tiene una funcionalidad en la cual yo le puedo ir cambiando, como los estilos, que me hable en modo normal, modo explicativo, razonamiento extendido y también estilo formal.
+[05:28:27] Entonces vamos a ver cómo también podemos hacer eso.
+[05:28:30] Y finalmente vamos a subirle un documento y decirle que me dé insights o me dé información acerca de ese documento que le vamos a subir.
+[05:28:41] Muy importante, ok?
+[05:28:43] Y esto lo vamos a se los voy a explicar a continuación.
+[05:28:46] Para todos estos ejercicios y se acuerdan esa diapositiva que tenía el doctor Luis Caro donde nos mostraba los diferentes modelos de antrópico?
+[05:28:54] Para este ejercicio vamos a usar Cloud High Q 4.5 y enseguida les voy a enseñar cómo cambiar esto, ok?
+[05:29:03] Entonces, antes de copiar el primer prompt les voy a dar un tour de Cloud Desktop.
+[05:29:09] Por favor píquenle a Cloud Desktop. Ahí
+[05:29:12] Esto les voy a abrir lo q es cloth desktop.
+[05:29:14] Les voy a dar un pequeño tour para que ustedes ubiquen Arriba a la izquierda.
+[05:29:18] Tienen las tres diferentes modalidades de Clock Desktop.
+[05:29:22] Tienen Clock Chat que está más especializado en preguntas y respuestas.
+[05:29:28] Vamos a tener cowork que tiene también funcionalidades más auténticas.
+[05:29:33] Y finalmente, aunque no se preocupen por esto, también tenemos Clock Code, que está más enfocado a lo que es el desarrollo de software.
+[05:29:40] Para este primer laboratorio nos vamos a enfocar en Cloud Chat.
+[05:29:46] Sí sabían que Cloud Chat.
+[05:29:48] Ustedes lo pueden correr desde la aplicación nativa de desktop, lo pueden correr en sus celulares y también lo pueden correr en el navegador y aquí a la izquierda les aparece como un resumen de lo que podemos hacer.
+[05:29:59] Pero para mí lo más importante es irnos al centro de la pantalla.
+[05:30:03] Les voy a dar como una guía de lo que tenemos aquí lo más importante de lo más importante es la opción para hacer selección de modelo.
+[05:30:11] Si nosotros le damos clic aquí nos aparecen los modelos disponibles.
+[05:30:17] El Opus 4.7 es el modelo más inteligente, más capaz y más inteligente de Anthropic.
+[05:30:23] Honestamente, para las tareas que vamos a hacer el día de hoy no lo requerimos.
+[05:30:28] Este es un modelo mucho más enfocado a, por ejemplo, el desarrollo de software o tareas de ese nivel de complejidad.
+[05:30:36] Tenemos el Sonet 4.6, que es un modelo un poquito que está abajo del 4.7.
+[05:30:43] También está muy enfocada a lo que es tareas como el desarrollo de software, no tan capaz como el 4.7 y finalmente el High 4.5.
+[05:30:53] Es aquí donde ustedes tienen que seleccionar la opción para usar High 4.5, unas recomendaciones y unos tips que yo les voy a dar.
+[05:31:03] El High 4.5 es un modelo mucho más rápido y mucho más eficiente y menos costoso que los demás.
+[05:31:11] Si ustedes ponen Cloud chat en lo que es Opus 4.7, probablemente se van a quemar sus tokens súper rápido y no van a.
+[05:31:20] No lo va a ameritar porque no estamos usándolo para tareas tan complicadas.
+[05:31:24] Entonces por favor elijan la opción que es High 4.5 y muy muy importante, apaguen el razonamiento extendido.
+[05:31:32] Probablemente ustedes lo tienen prendido en su aplicación de cloud, pero vamos a pagar el razonamiento extendido más adelante.
+[05:31:41] Vamos a ver de qué trata esta funcionalidad.
+[05:31:44] Vale?
+[05:31:45] Y aquí abajo, para los más curiosos, vamos a encontrar modelos más legados de antrópico.
+[05:31:51] Vamos a encontrar el Opus 4.6, el Opus tres y el 4.5.
+[05:31:56] Si ustedes también quieren jugar y explorar un poco los modelos, un poco más legados, vale en el símbolo de más.
+[05:32:04] Este también es súper importante.
+[05:32:06] También me va a dar ciertas funcionalidades.
+[05:32:08] Es aquí donde yo le puedo picar y puedo agregar archivos como las demos que yo hice.
+[05:32:14] Puedo ver mis habilidades, ver los conectores, por ejemplo.
+[05:32:18] Se acuerdan de ese conector que yo tenía de TripAdvisor de Expedia?
+[05:32:22] Pues bueno, lo vamos a ver aquí.
+[05:32:24] Es aquí donde vemos para los más curiosos.
+[05:32:27] Bueno, aquí es donde ustedes ya pueden hacer esas, esas integraciones y realmente sacarle el poder a Cloud.
+[05:32:33] Tenemos modo investigación.
+[05:32:35] De hecho vimos en la demo que en modo investigación es parecido a ese análisis competitivo que hicimos de marketing.
+[05:32:41] Y finalmente tenemos una opción para cambiarle el estilo y esto va a ser muy importante para este primer laboratorio.
+[05:32:49] Vale?
+[05:32:50] Este es como el el overview general de cómo está la interfaz gráfica de Cloud.
+[05:32:58] Les voy a dar aquí unos unos segundos menos de un minuto también para que ustedes se familiaricen con la interfaz gráfica de Cloud, porque a continuación vamos a empezar a mandarle unos prompts.
+[05:33:12] Recuerden súper importante cuál va a ser el modelo haiku 4.5.
+[05:33:26] En el.
+[05:33:26] Laboratorio van a encontrar botoncitos de copiar, así que ustedes pueden darle clic.
+[05:33:31] Les va a salir que fue copiado el prompt y podrían pegarlo directamente en el chat.
+[05:33:39] Vale ya si nos familiarizamos con la interfaz, vamos a regresar a nuestro navegador y efectivamente vamos a copiar el prompt.
+[05:33:48] Se acuerdan que nosotros, el caso de negocio que estábamos resolviendo aquí es que teníamos que abrir en comité, Entonces vamos a copiar ese primer prompt.
+[05:33:57] Como decía René, nada más le damos clic al botón de copiar.
+[05:34:02] Pero ojo, aquí vamos a hacer algo importante.
+[05:34:06] Primero denle copiar de nuevo.
+[05:34:07] Ustedes no tienen que escribir ningún prompt para este laboratorio.
+[05:34:11] Todo es copy paste.
+[05:34:12] Nosotros ya hicimos el trabajo por ustedes.
+[05:34:14] Entonces vamos a copiar.
+[05:34:16] Regresamos a Cloud Desktop, pero no manden el prompt todavía, vamos a pegarlo aquí en el centro y vamos a reemplazar los corchetes que tenemos ahí.
+[05:34:26] Y por favor, los invito a que ustedes lo reemplacen con base a lo que ustedes hacen aquí en la organización en Grupo Salinas.
+[05:34:35] Ok, yo reemplacé los corchetes, obviamente esto es falso.
+[05:34:38] Yo dije soy el director de producto de Banco Azteca como parte de Grupo Salinas y mi principal sector son jóvenes de 18 a 25 años que están buscando acceder a su primer crédito.
+[05:34:53] El CEO me acaba de pedir que abra el comité de mañana con un plan de cómo vamos a mejorar la experiencia de cliente para la segunda mitad del 2026.
+[05:35:04] Cómo podrías estructurar tú los primeros diez minutos?
+[05:35:07] Ok, entonces acuérdense, reemplacen los corchetes de acuerdo a la posición que ustedes tienen aquí en el grupo y vamos a mandarle el prompt importante.
+[05:35:18] Para esta tarea no vamos a utilizar razonamiento extendido.
+[05:35:21] Entonces asegúrense de que esté apagado.
+[05:35:26] Excelente, Ya que reemplazamos los corchetes y excelente, Veo que ahí todos ya están empezando a jugar.
+[05:35:31] Le vamos a mandar este primer prompt entonces vámonos.
+[05:35:38] Ok, entonces le mandamos aquí el primer prompt, un tip que yo les voy a decir.
+[05:35:42] Ven el logo de Anthropic como moviéndose?
+[05:35:46] Esa es la señal que está haciendo la inferencia o tomó mi prompt.
+[05:35:50] Entonces aquí me empieza a dar una respuesta y me empieza a dar recomendaciones de cómo yo podría estructurar los primeros diez minutos de este comité.
+[05:36:00] Me dice arranca por la apertura de un minuto.
+[05:36:02] Luego en los.
+[05:36:03] En los siguientes dos minutos, eh?
+[05:36:06] Empieza por el problema.
+[05:36:09] Ok.
+[05:36:11] Y vean un poquito cómo nos responde.
+[05:36:13] Y aquí les voy a dejar un poquito de tiempo para que ustedes también lo hagan.
+[05:36:18] Importante A veces la inteligencia artificial generativa puede demorarse o no responder inmediatamente.
+[05:36:25] Si ustedes ven que justo el logo de Cloud no está moviéndose, pueden hacerle una siguiente pregunta para decirle cómo BAZ?
+[05:36:31] En qué te atoraste?
+[05:36:32] Qué necesitas?
+[05:36:33] Podría ser que esté esperando también un input de ustedes para continuar con el análisis.
+[05:36:42] Si aquí le damos un poquito de tiempo para que ustedes también lo puedan hacer y obtener su primera respuesta.
+[05:36:53] Otra cosa importante es que, como ven, Cloud tiene un proceso de razonamiento.
+[05:36:57] Entonces lo que está haciendo es que nos está haciendo preguntas para que nosotros podamos hacer o agregar más información.
+[05:37:04] Por ejemplo, cuál es hoy el mayor abandono en el journey de estos jóvenes?
+[05:37:11] Entonces nos va a ayudar a robustecer y a entregar una mejor respuesta.
+[05:37:16] Dentro de Cloud.
+[05:37:20] Excelente.
+[05:37:20] Aquí también damos un poquito de tiempo también para que ustedes vean que ya varios lo completaron.
+[05:37:24] Felicidades para los que no habían mandado su primer prompt.
+[05:37:28] Ya, ya.
+[05:37:29] Después de esto logramos mandar nuestro primer prompt a Cloud.
+[05:37:37] Súper!
+[05:37:40] Vamos a pasar al segundo paso, entonces acuérdense, todas las instrucciones están en la página web, en el workshop y vamos a ir al paso número dos.
+[05:37:52] Vamos a hacer un pequeño cambio.
+[05:37:53] Vamos a copiar este prompt que nos dice Dame los tres factores más importantes o más que están influyendo más la experiencia de cliente en mi industria en 2026 describe cada uno de ellos.
+[05:38:09] Sustenta tus respuestas con datos, explicando su importancia en mi unidad de negocios y al final dime cuál es el más relevante para atender.
+[05:38:17] No manden el prompt todavía y no pasa nada si ya lo mandaron.
+[05:38:21] Lo que vamos a hacer a continuación es que vamos a cambiar el tono o la manera en que nos contesta Cloud.
+[05:38:30] Cómo vamos a hacer esto?
+[05:38:31] Si te regresas un poquito René, le vamos a dar clic al símbolo de más.
+[05:38:35] Se acuerdan que les había dicho que ahí podemos cambiar el modo en que me responde Cloud?
+[05:38:40] Vamos a darle clic aquí en el símbolo de más y nos vamos a ir a la opción que se llama Usar estilo.
+[05:38:48] Vamos a usar Modo explicativo Cloud.
+[05:38:53] Por defecto siempre está en modo normal.
+[05:38:56] Entonces si por favor pudieran elegir modo explicativo.
+[05:39:00] Si ven la hojita abajo en el chat, eso significa que lo que estamos activando modo explicativo y le vamos a mandar el prompt.
+[05:39:11] Entonces por favor, si lo pudieran hacer.
+[05:39:13] Qué es el modo explicativo Cloud?
+[05:39:15] Me va a dar respuesta mucho más elaboradas, mucho más largas de lo que me haría normalmente y lo que estamos tratando aquí de explicar es que ustedes, con esta configuración pueden cambiar el modo en el que les contesta Cloud volumen más rápido.
+[05:39:33] Okay, entonces vamos a.
+[05:39:37] Vamos a continuar con el taller.
+[05:39:38] Asegúrense que hagan esta parte y vamos a pasar al siguiente paso, que es el paso tres.
+[05:39:47] Acuérdense, siempre pueden regresar a la página web, verlo por números y ver dónde se quedaron ustedes.
+[05:39:54] Paso número tres Vamos a activar el razonamiento extendido.
+[05:40:02] Ok, entonces, muy importante, vamos a activar el razonamiento extendido y le vamos a mandar un prompt de seguimiento con base en el factor más relevante del paso anterior.
+[05:40:16] Esto va siendo como una mención al prompt anterior que yo le mandé.
+[05:40:20] Dame tres propuestas para mejorar la experiencia de cliente para la segunda mitad del 2026.
+[05:40:28] Para cada una dame los principales riesgos.
+[05:40:31] Y finalmente recomiéndame cuál debo tomar, Ok, Entonces vamos a copiar el prompt muy similar, muy importante.
+[05:40:41] Por favor desactiven el modo explicativo que fue el que activamos en el paso anterior.
+[05:40:48] Entonces vamos a quitar el modo explicativo y vamos a Vamos a encender Razonamiento extendido.
+[05:40:57] Qué es el razonamiento extendido?
+[05:40:59] Es una funcionalidad que cuando yo la prendo, el modelo va a razonar, se va a detener un segundo, va a analizar todos los pasos que él necesita tomar y lo va a partir en diferentes pasos y los va a atacar.
+[05:41:14] Muy similar a como el ejemplo que les mostraba anteriormente, donde él mostraba el progreso de ejemplo cuando yo le pedía como el análisis competitivo.
+[05:41:23] Entonces nada más acuérdense, apaguen el modo explicativo, prendan modo razonamiento extendido y le vamos a mandar ese prompt a Cloud.
+[05:41:36] Adelante René, y por favor analicen cómo responde distinto él.
+[05:41:42] Cuando encendemos el razonamiento extendido.
+[05:41:45] Ojo, cuando nosotros encendemos razonamiento extendido.
+[05:41:51] Cloud va a consumir más tokens.
+[05:41:52] Entonces cada inferencia o cada prompt que nosotros le estemos mandando va a resultar un poco más costoso.
+[05:42:03] Ok.
+[05:42:04] Finalmente.
+[05:42:09] Analicen un poco la respuesta.
+[05:42:11] Sé que puede llegar a ser un poco larga, pero aquí me da toda esta respuesta que puede ser súper útil para usar en el comité que me estoy preparando.
+[05:42:21] Y recuerden que también pueden pedirle.
+[05:42:22] A Cloud que les ayude a resumir esa respuesta o darle los puntos más importantes.
+[05:42:27] Entonces tienen que empezar a interactuar con Cloud para sentirse más cómodos con él y para acotarse o acercarse más al resultado que están buscando.
+[05:42:38] Siéntanse con la confianza de preguntarle y ajustar lo que quieran.
+[05:42:41] Cloud lo va a tratar de resolver de la mejor forma y pueden siempre analizar cómo está razonando, cómo está tratando de resolver este problema.
+[05:42:50] Excelente y felicidades!
+[05:42:52] Acabamos de aprender cómo encender lo que es razonamiento extendido dentro de Cloud.
+[05:42:57] Ok.
+[05:42:59] Por último, vamos a vamos a continuar y vamos a ir al siguiente paso.
+[05:43:03] Lo último que vamos a hacer de laboratorio guiado es Les voy a enseñar cómo subir un archivo y pedirle a Cloud que me analice ese archivo.
+[05:43:12] Entonces le voy a decir Te voy a adjuntar el Dashboard de Experiencia de Cliente de Banco Azteca de Q4 2025.
+[05:43:20] Esto es ficticio, esto no es real.
+[05:43:22] Y dame la apertura de 60 segundos que yo debería usar para mi comité de mañana, sobre todo en la experiencia del cliente.
+[05:43:30] Es una cifra un cliente del Dashboard como referencia, y esto es una súper recomendación.
+[05:43:36] No les ha pasado y seguro ahorita de que las respuestas son súper extensas en el prompt ustedes pueden limitar la respuesta de cloud diciéndole utiliza máximo 130 palabras.
+[05:43:47] Entonces de cierta manera estamos limitando, estamos siendo más económico con el consumo de tokens y cloud va a ser mucho más breve.
+[05:43:54] Entonces, qué vamos a hacer?
+[05:43:56] Vamos a copiar este prompt que ya es el último del último paso de este taller inicial.
+[05:44:04] Pero lo primero, se acuerdan que descargamos la carpeta con todos los archivos de los laboratorios?
+[05:44:09] Ok, vamos a subirle el documento de Word que se encuentra en la primera carpeta ok?
+[05:44:15] Entonces abran de nuevo.
+[05:44:19] Vamos a darle en el símbolo de más y aquí vamos a seleccionar Agregar un archivo o foto.
+[05:44:29] Seleccionen el documento de Word que está en el laboratorio uno.
+[05:44:35] Lo vamos a ver ahí.
+[05:44:36] Se llama Lab uno Cloud Chat y este documento se llama Dashboard Experiencia de Cliente Q4 2025.
+[05:44:44] Vale, vamos a subirselo a Cloud y le vamos a mandar el prompt ok?
+[05:44:52] Y lo que estamos haciendo aquí al final de cuentas es esto de poderle subir documentos a cloud y que me haga un análisis súper importante antes de que mandemos el prompt, apaguen el razonamiento extendido.
+[05:45:06] Si se acuerdan en el paso anterior yo había aprendido el razonamiento extendido.
+[05:45:11] Entonces asegúrense de que lo apaguen.
+[05:45:13] Acuérdense que esto va a generar más tokens y va a terminar siendo más costoso también para ustedes.
+[05:45:19] Ok, entonces le adjuntamos el documento.
+[05:45:25] Y él va a analizar el documento y me va a dar esta apertura de 60 segundos que yo debería usar en mi comité de mañana.
+[05:45:34] Por favor, esto los invito a que lo hagan si tienen documentos que quieren analizar con Cloud, ustedes se lo pegan, le cambian el modo de respuestas.
+[05:45:43] Y efectivamente lo que estamos viendo aquí es que me genera la apertura para el comité de mañana, una súper buena práctica, una recomendación.
+[05:45:52] Esto es un proceso iterativo.
+[05:45:54] Obviamente como estamos en un taller, es muy probable que la primera no me da el resultado esperado.
+[05:46:00] Entonces, a lo que yo les podría recomendar es que le manden un prompt de seguimiento para que ustedes puedan corregir, ver cosas que tal vez no les gustó y que refine este este inicio o esta apertura que me generó para este comité.
+[05:46:16] Vale.
+[05:46:20] Y vamos a adjuntar una.
+[05:46:26] Donde descargaste el golpe.
+[05:46:29] Último paso y ya con esto terminamos lo que es la introducción a Cloud Chat.
+[05:46:36] Ahora es su turno en esa misma carpeta que ustedes descargaron hay del laboratorio uno, hay una carpeta que se llama Materiales.
+[05:46:46] Si no las quieres enseñar.
+[05:46:47] René esa carpeta tiene tres reportes, uno de McKinsey sobre la adopción de inteligencia artificial.
+[05:46:56] Se llama Documentos de prueba.
+[05:46:58] Ahí van a encontrar algunos reportes.
+[05:47:00] Va a ser In Finance, el estado de la IA para capturar valor y el rendimiento.
+[05:47:05] Ok, lo que quiero que ustedes hagan y ya lo hagan por su propia cuenta.
+[05:47:09] Suban algunos de estos reportes y pídanle un resumen.
+[05:47:13] Pídanle que les dé los puntos más importantes, pídanle que les genere algo con base pues, a este documento.
+[05:47:19] Y ahora, si ustedes ya están un poco, eh, van a usar como todas estas técnicas que aprendimos en el taller y vamos a ver qué podemos generar a partir de subir estos documentos.
+[05:47:29] Entonces, por favor, adelante.
+[05:47:34] Te lo pones y dice haz un resumen de de ese documento y le puedes decir.
+[05:47:45] Bueno, es que ahorita vamos a.
+[05:47:46] Al ratito vamos a ir a la carpeta donde ya no un libro, un libro.
+[05:47:50] Yo ligas de internet y una cuenta de.
+[05:47:52] NFTS.
+[05:47:53] Pónganse creativos, cámbiele el modo en que les responde y si quieren cambiar el modelo, digo pueden probarlo también.
+[05:48:00] No pasa nada, obviamente.
+[05:48:01] Recomendación menos costoso usen AIC 4.5 para este tipo de tareas, principalmente.
+[05:48:07] Porque es una tarea sencilla.
+[05:48:09] Si fuera un análisis muy complicado, entonces ahí hace mucho sentido que cambiemos, utilicemos un modelo mucho más poderoso mientras ustedes están probando, nosotros nos tomamos la libertad de hacer un prompt con muchos esteroides.
+[05:48:24] Por qué?
+[05:48:25] Porque queremos enseñarles un poco el arte de lo posible, qué se puede hacer y hasta dónde podrían empezar a a llegar con este tipo de análisis o de ideas.
+[05:48:34] Muchas veces lo que pasa es que a partir de un documento tenemos que hacer una presentación al siguiente día.
+[05:48:38] Entonces yo lo que estoy haciendo es pedirle que me cree una presentación de tres slides, que sea muy impactante, que se enfoque en el estudio del rendimiento de la IA de PwC, que esté dirigida al CEO y que tenga cierta estructura.
+[05:48:53] Por ejemplo, el slide uno se va a llamar La Brecha, que fue separada a los ganadores.
+[05:48:57] Por qué?
+[05:48:58] Porque previamente le pedí que analizara el documento para decirme cuál es el contenido que este tiene.
+[05:49:05] El siguiente va a ser Insights clave.
+[05:49:09] Va a analizar también la inteligencia de la IA y quiero que también se enfoque en las estadísticas más impactantes.
+[05:49:19] Vale.
+[05:49:22] Entonces acá es.
+[05:49:24] Que logro hacerlo grande.
+[05:49:39] Acá les vamos a enseñar un poco el resultado, obviamente de.
+[05:49:44] De un prompt con esteroides, pero para que ustedes sepan cuál es el arte de lo posible, es una presentación.
+[05:49:51] La amplitud y el mapa de la ruta, Algo muy sencillo a partir del análisis completo que está haciendo sobre un documento, ustedes pueden iterar con el estilo que quieran.
+[05:50:01] Pueden traer los colores que ustedes necesiten y pueden decirle que construya basado en lo que necesiten o en o en los estilos, colores e motivo de la reunión, etcétera.
+[05:50:16] Exacto.
+[05:50:16] O sea, esto ya se lo pueden llevar ustedes.
+[05:50:19] Acuérdense que Cloud es capaz de hacerles entregables.
+[05:50:22] Entonces ustedes le piden que le haga una presentación de Power Point, él va a ser capaz y eso fue lo que nos acabó.
+[05:50:27] Digo, eso no fue en PowerPoint exactamente, pero fue exactamente lo que nos acabó de mostrar.
+[05:50:32] René.
+[05:50:32] Por último, ya vamos a cerrar y de verdad quiero agradecer muchísimo pues todo este tiempo las demos que mostramos, el hecho de que se hayan tomado el tiempo de probar el taller, tener como esta introducción general a Cloud Chat.
+[05:50:47] Se acuerdan que yo me tomé una selfie?
+[05:50:49] No sé si por ahí se acuerdan que yo me tomé una selfie.
+[05:50:51] Pues bueno, ese era un pequeño, una pequeña funcionalidad que les quiero mostrar en Cloud Code y se llama Dispatch Dispatch.
+[05:51:01] Es una funcionalidad avanzada que me permite controlar mi computadora desde mi celular.
+[05:51:06] En lo que René hablaba, seguro algunos dijeron es porque está mandando un whatsapp.
+[05:51:10] Me estaba mandando un WhatsApp, no agarré la selfie que me tomé y le mandé una petición a Cloud y le dije mira, a mí me.
+[05:51:19] Yo estoy aquí en un evento en Jalmolonga 28.
+[05:51:22] Quiero que usando esta foto me generes un blog y me escribas una entrada para mi blog personal.
+[05:51:28] A mí me encanta escribir blogs y básicamente lo que le dije a Cloud es que me generara una página web con esta foto y me escribiera este blog por mí.
+[05:51:38] Entonces lo que hizo Cloud en por detrás en todo esto es que me generó una con la imagen que yo me tomé un blog en HTML y eso es lo que vamos a hacer a continuación.
+[05:51:51] Lo que podemos ver aquí es que le puedes decir que te lo descargue y lo que hizo aquí Cloud por detrás fue generarme como este blog en HTML que puedo estar listo para publicar.
+[05:52:06] Entonces dale, si quieres descargame el HTML a mi escritorio a donde quieras, porque él me hizo como esta página web y me la hizo todo como en el en el en el fondo no?
+[05:52:16] Mientras yo estaba dando como toda esta charla.
+[05:52:18] Entonces vamos a decirle por favor describe Descargame esta imagen a mi escritorio.
+[05:52:25] Entonces nos vamos a mi escritorio y vamos a ver si lo logro.
+[05:52:30] Una demo en vivo.
+[05:52:32] Vamos a ver si vamos a mi escritorio.
+[05:52:33] Vamos a encontrar la imagen.
+[05:52:41] Workshop Guide. Puedes abrir a No, ese no
+[05:52:50] Quieres descargar
+[05:52:52] Pedirle cosas extras aquí a a Claude.
+[05:52:59] Entonces le va a decir Por favor descargame este blog.
+[05:53:01] Vamos a ver si fue capaz.
+[05:53:03] Demo en vivo.
+[05:53:04] Vamos a ver.
+[05:53:16] Ok, ahora sí, después de pedirle un poco
+[05:53:20] Chicago l h tml. Y ahi tienen la
+[05:53:24] Que me que me generó Clot acerca de mi asistencia aquí a Jalmo 28.
+[05:53:30] Soy pésimo tomando selfies.
+[05:53:31] Dios mío, no debería dedicarme a eso, pero bueno, me generó como una entrada de blog.
+[05:53:36] Todo esto lo hizo como en el fondo, entendiendo un poquito la audiencia, escribiendo.
+[05:53:41] Ojo, esto no, esto no está real, no lo voy a publicar.
+[05:53:44] Todo es aquí.
+[05:53:45] Pero bueno, aquí pueden ver realmente el poder de usar esta funcionalidad de dispatch, donde yo puedo mandarle comandos a mi computadora o a cloud en específico para que haga tareas por mí.
+[05:53:57] Casos de uso Para esto tengo un archivo en mi computadora que quiero accesar y hay algo en mi computadora que no tengo acceso.
+[05:54:05] Lo lo contactos de mi celular y esto lo hacen nada más.
+[05:54:09] Para cerrar quisiera decir que mañana vamos a continuar con el taller.
+[05:54:13] Espero que les haya gustado porque mañana vamos a ver funcionalidades un poco más avanzadas de cómo crear proyectos, por ejemplo, y también cómo hacer investigaciones usando Cloth.
+[05:54:24] De mi parte es todo.
+[05:54:26] De verdad que muchísimas gracias por la atención durante estas dos horas.
+[05:54:29] Yo soy Manuel Quijano y este es René.
+[05:54:32] Gracias, se los agradezco.

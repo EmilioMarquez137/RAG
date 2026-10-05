@@ -1,0 +1,44 @@
+{
+  "manifest_version": "1.0",
+  "pipeline": "talks-to-child-v1",
+  "source": {
+    "path": "data/processed/talks.jsonl",
+    "sha256": "63d162f98a4fc4a29cd1acd5a79dd5e8f48c99c648f977fc86b444856e125edc"
+  },
+  "config": {
+    "path": "config/child_v1.json",
+    "sha256": "2c2bb55c412bb20af31b01d88fa8bcec57bdfb5f12a67a51eff38b90b96ee4ee"
+  },
+  "statistics": {
+    "talk_count": 4,
+    "source_utterance_count": 2301,
+    "chunk_count": 140
+  },
+  "outputs": [
+    {
+      "path": "data/processed/chunks.jsonl",
+      "sha256": "89856512f48863eb889817884199d318c9285b024cbe7eadc7e67200f29f2d1d",
+      "bytes": 1057530
+    },
+    {
+      "path": "data/processed/chunks_validation.json",
+      "sha256": "59ac4edc1ade509a702230be4f316eabbd5d41e832a4ea7b558e6302ed74ba7c",
+      "bytes": 1344
+    },
+    {
+      "path": "data/analysis/child_v1_statistics.json",
+      "sha256": "11a9e2e9038ffba96bacebe9ae06cfca26da05de61f61ae4d8dd626ea7bf7de2",
+      "bytes": 14701
+    },
+    {
+      "path": "data/analysis/child_v1_statistics.md",
+      "sha256": "e7a88f265a9f7bb8b855f311610a13b03cbc1451ba995317408fc9df58b4dc91",
+      "bytes": 38226
+    }
+  ],
+  "excluded_scope": [
+    "parents",
+    "embeddings",
+    "qdrant"
+  ]
+}

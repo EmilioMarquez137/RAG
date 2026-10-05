@@ -1,0 +1,682 @@
+{
+  "statistics_version": "1.0",
+  "algorithm": "child-v1-nearest-complete-utterance",
+  "configuration": {
+    "target_tokens": 500,
+    "overlap_tokens": 100,
+    "target_includes_overlap": true,
+    "tokenizer": {
+      "library": "tiktoken",
+      "library_version": "0.14.0",
+      "encoding": "cl100k_base",
+      "definitive_for_embedding_model": false
+    },
+    "separator": "\n"
+  },
+  "global": {
+    "chunk_count": 140,
+    "token_count": {
+      "count": 140,
+      "min": 158,
+      "max": 533,
+      "mean": 494.44,
+      "p25": 493,
+      "median": 501,
+      "p75": 509,
+      "p90": 517,
+      "p95": 522.05,
+      "p99": 532
+    },
+    "absolute_target_deviation": {
+      "count": 140,
+      "min": 0,
+      "max": 342,
+      "mean": 16.73,
+      "p25": 4,
+      "median": 8,
+      "p75": 14.25,
+      "p90": 23.2,
+      "p95": 29.15,
+      "p99": 251.84
+    },
+    "relative_to_target": {
+      "below": 62,
+      "equal": 2,
+      "above": 76,
+      "below_percentage": 44.29,
+      "equal_percentage": 1.43,
+      "above_percentage": 54.29,
+      "maximum_overshoot": 33,
+      "maximum_undershoot": 342
+    },
+    "overlap_token_count": {
+      "count": 136,
+      "min": 100,
+      "max": 183,
+      "mean": 118.35,
+      "p25": 105,
+      "median": 110.5,
+      "p75": 128.5,
+      "p90": 140.5,
+      "p95": 153.75,
+      "p99": 175.3
+    },
+    "overlap_utterance_count": {
+      "count": 136,
+      "min": 1,
+      "max": 11,
+      "mean": 4.54,
+      "p25": 3,
+      "median": 4.5,
+      "p75": 5,
+      "p90": 6,
+      "p95": 8,
+      "p99": 9.65
+    },
+    "new_content_token_count": {
+      "count": 140,
+      "min": 20,
+      "max": 532,
+      "mean": 379.48,
+      "p25": 367.75,
+      "median": 388,
+      "p75": 401,
+      "p90": 411.1,
+      "p95": 418,
+      "p99": 497.71
+    },
+    "utterance_count": {
+      "count": 140,
+      "min": 9,
+      "max": 40,
+      "mean": 20.85,
+      "p25": 17,
+      "median": 21,
+      "p75": 24,
+      "p90": 27,
+      "p95": 30.05,
+      "p99": 37.22
+    },
+    "new_utterance_count": {
+      "count": 140,
+      "min": 2,
+      "max": 35,
+      "mean": 16.44,
+      "p25": 13,
+      "median": 17,
+      "p75": 19,
+      "p90": 22,
+      "p95": 24.05,
+      "p99": 30.66
+    },
+    "closure_reasons": {
+      "closest_after": 71,
+      "closest_before": 58,
+      "end_of_talk": 4,
+      "exact_target": 2,
+      "tie_include": 5
+    }
+  },
+  "non_final_chunks": {
+    "chunk_count": 136,
+    "token_count": {
+      "count": 136,
+      "min": 471,
+      "max": 533,
+      "mean": 501.83,
+      "p25": 493.75,
+      "median": 502,
+      "p75": 509,
+      "p90": 517,
+      "p95": 522.25,
+      "p99": 532
+    },
+    "absolute_target_deviation": {
+      "count": 136,
+      "min": 0,
+      "max": 33,
+      "mean": 9.67,
+      "p25": 3.75,
+      "median": 8,
+      "p75": 14,
+      "p90": 20.5,
+      "p95": 26,
+      "p99": 32
+    },
+    "relative_to_target": {
+      "below": 58,
+      "equal": 2,
+      "above": 76,
+      "below_percentage": 42.65,
+      "equal_percentage": 1.47,
+      "above_percentage": 55.88,
+      "maximum_overshoot": 33,
+      "maximum_undershoot": 29
+    },
+    "overlap_token_count": {
+      "count": 132,
+      "min": 100,
+      "max": 183,
+      "mean": 118.08,
+      "p25": 105,
+      "median": 110,
+      "p75": 127.25,
+      "p90": 139.9,
+      "p95": 155.15,
+      "p99": 175.38
+    },
+    "overlap_utterance_count": {
+      "count": 132,
+      "min": 1,
+      "max": 11,
+      "mean": 4.52,
+      "p25": 3,
+      "median": 4,
+      "p75": 5,
+      "p90": 6,
+      "p95": 8,
+      "p99": 9.69
+    },
+    "new_content_token_count": {
+      "count": 136,
+      "min": 319,
+      "max": 532,
+      "mean": 387.23,
+      "p25": 372.75,
+      "median": 388.5,
+      "p75": 401.25,
+      "p90": 411.5,
+      "p95": 418,
+      "p99": 498.15
+    },
+    "utterance_count": {
+      "count": 136,
+      "min": 10,
+      "max": 40,
+      "mean": 21.14,
+      "p25": 17,
+      "median": 21,
+      "p75": 24,
+      "p90": 27,
+      "p95": 30.25,
+      "p99": 37.3
+    },
+    "new_utterance_count": {
+      "count": 136,
+      "min": 7,
+      "max": 35,
+      "mean": 16.75,
+      "p25": 13,
+      "median": 17,
+      "p75": 19,
+      "p90": 22,
+      "p95": 24.25,
+      "p99": 30.9
+    },
+    "closure_reasons": {
+      "closest_after": 71,
+      "closest_before": 58,
+      "exact_target": 2,
+      "tie_include": 5
+    }
+  },
+  "by_talk": {
+    "ricardo-salinas-mensaje-apertura": {
+      "chunk_count": 16,
+      "token_count": {
+        "count": 16,
+        "min": 158,
+        "max": 517,
+        "mean": 482.19,
+        "p25": 500.5,
+        "median": 502,
+        "p75": 505.75,
+        "p90": 510.5,
+        "p95": 513.25,
+        "p99": 516.25
+      },
+      "absolute_target_deviation": {
+        "count": 16,
+        "min": 1,
+        "max": 342,
+        "mean": 26.19,
+        "p25": 2,
+        "median": 4,
+        "p75": 8.25,
+        "p90": 14.5,
+        "p95": 98.25,
+        "p99": 293.25
+      },
+      "relative_to_target": {
+        "below": 4,
+        "equal": 0,
+        "above": 12,
+        "below_percentage": 25.0,
+        "equal_percentage": 0.0,
+        "above_percentage": 75.0,
+        "maximum_overshoot": 17,
+        "maximum_undershoot": 342
+      },
+      "overlap_token_count": {
+        "count": 15,
+        "min": 102,
+        "max": 142,
+        "mean": 114.2,
+        "p25": 103.5,
+        "median": 106,
+        "p75": 121.5,
+        "p90": 138,
+        "p95": 139.2,
+        "p99": 141.44
+      },
+      "overlap_utterance_count": {
+        "count": 15,
+        "min": 3,
+        "max": 11,
+        "mean": 6.53,
+        "p25": 5,
+        "median": 7,
+        "p75": 8,
+        "p90": 9.6,
+        "p95": 10.3,
+        "p99": 10.86
+      },
+      "new_content_token_count": {
+        "count": 16,
+        "min": 20,
+        "max": 502,
+        "mean": 375.12,
+        "p25": 377.75,
+        "median": 397,
+        "p75": 402,
+        "p90": 409.5,
+        "p95": 436.75,
+        "p99": 488.95
+      },
+      "utterance_count": {
+        "count": 16,
+        "min": 9,
+        "max": 40,
+        "mean": 28.44,
+        "p25": 25.5,
+        "median": 28,
+        "p75": 31.5,
+        "p90": 37,
+        "p95": 38.5,
+        "p99": 39.7
+      },
+      "new_utterance_count": {
+        "count": 16,
+        "min": 2,
+        "max": 35,
+        "mean": 22.31,
+        "p25": 20.75,
+        "median": 22.5,
+        "p75": 25.25,
+        "p90": 27,
+        "p95": 29,
+        "p99": 33.8
+      },
+      "closure_reasons": {
+        "closest_after": 11,
+        "closest_before": 3,
+        "end_of_talk": 1,
+        "tie_include": 1
+      }
+    },
+    "agustin-laje-batalla-cultural": {
+      "chunk_count": 39,
+      "token_count": {
+        "count": 39,
+        "min": 275,
+        "max": 527,
+        "mean": 495.64,
+        "p25": 493,
+        "median": 502,
+        "p75": 508.5,
+        "p90": 517.4,
+        "p95": 519.6,
+        "p99": 526.24
+      },
+      "absolute_target_deviation": {
+        "count": 39,
+        "min": 1,
+        "max": 225,
+        "mean": 15.64,
+        "p25": 5,
+        "median": 8,
+        "p75": 16,
+        "p90": 20.2,
+        "p95": 26.1,
+        "p99": 149.76
+      },
+      "relative_to_target": {
+        "below": 18,
+        "equal": 0,
+        "above": 21,
+        "below_percentage": 46.15,
+        "equal_percentage": 0.0,
+        "above_percentage": 53.85,
+        "maximum_overshoot": 27,
+        "maximum_undershoot": 225
+      },
+      "overlap_token_count": {
+        "count": 38,
+        "min": 100,
+        "max": 152,
+        "mean": 116.26,
+        "p25": 105.25,
+        "median": 111,
+        "p75": 124.75,
+        "p90": 137.2,
+        "p95": 147.75,
+        "p99": 152
+      },
+      "overlap_utterance_count": {
+        "count": 38,
+        "min": 1,
+        "max": 8,
+        "mean": 3.97,
+        "p25": 3,
+        "median": 4,
+        "p75": 5,
+        "p90": 6,
+        "p95": 6,
+        "p99": 7.26
+      },
+      "new_content_token_count": {
+        "count": 39,
+        "min": 128,
+        "max": 487,
+        "mean": 382.36,
+        "p25": 377.5,
+        "median": 386,
+        "p75": 403,
+        "p90": 409.6,
+        "p95": 415.3,
+        "p99": 460.78
+      },
+      "utterance_count": {
+        "count": 39,
+        "min": 10,
+        "max": 25,
+        "mean": 19.15,
+        "p25": 17,
+        "median": 20,
+        "p75": 22,
+        "p90": 23.2,
+        "p95": 24,
+        "p99": 24.62
+      },
+      "new_utterance_count": {
+        "count": 39,
+        "min": 7,
+        "max": 21,
+        "mean": 15.28,
+        "p25": 13,
+        "median": 16,
+        "p75": 18,
+        "p90": 19.2,
+        "p95": 20.1,
+        "p99": 21
+      },
+      "closure_reasons": {
+        "closest_after": 19,
+        "closest_before": 17,
+        "end_of_talk": 1,
+        "tie_include": 2
+      }
+    },
+    "adrian-villasenor-liderazgo-ia": {
+      "chunk_count": 30,
+      "token_count": {
+        "count": 30,
+        "min": 309,
+        "max": 532,
+        "mean": 496.4,
+        "p25": 492.25,
+        "median": 499,
+        "p75": 513.25,
+        "p90": 518.9,
+        "p95": 529.75,
+        "p99": 532
+      },
+      "absolute_target_deviation": {
+        "count": 30,
+        "min": 1,
+        "max": 191,
+        "mean": 16.73,
+        "p25": 3,
+        "median": 9,
+        "p75": 14.75,
+        "p90": 29.3,
+        "p95": 32,
+        "p99": 144.89
+      },
+      "relative_to_target": {
+        "below": 16,
+        "equal": 0,
+        "above": 14,
+        "below_percentage": 53.33,
+        "equal_percentage": 0.0,
+        "above_percentage": 46.67,
+        "maximum_overshoot": 32,
+        "maximum_undershoot": 191
+      },
+      "overlap_token_count": {
+        "count": 29,
+        "min": 100,
+        "max": 183,
+        "mean": 121.45,
+        "p25": 105,
+        "median": 110,
+        "p75": 128,
+        "p90": 155.4,
+        "p95": 173.6,
+        "p99": 180.48
+      },
+      "overlap_utterance_count": {
+        "count": 29,
+        "min": 2,
+        "max": 5,
+        "mean": 3.59,
+        "p25": 3,
+        "median": 3,
+        "p75": 5,
+        "p90": 5,
+        "p95": 5,
+        "p99": 5
+      },
+      "new_content_token_count": {
+        "count": 30,
+        "min": 205,
+        "max": 532,
+        "mean": 379,
+        "p25": 364.5,
+        "median": 384.5,
+        "p75": 398.5,
+        "p90": 411.9,
+        "p95": 421.65,
+        "p99": 500.39
+      },
+      "utterance_count": {
+        "count": 30,
+        "min": 11,
+        "max": 24,
+        "mean": 16.5,
+        "p25": 15,
+        "median": 16,
+        "p75": 19,
+        "p90": 20,
+        "p95": 20.55,
+        "p99": 23.13
+      },
+      "new_utterance_count": {
+        "count": 30,
+        "min": 7,
+        "max": 21,
+        "mean": 13.03,
+        "p25": 11,
+        "median": 12.5,
+        "p75": 15.75,
+        "p90": 17,
+        "p95": 18.1,
+        "p99": 20.42
+      },
+      "closure_reasons": {
+        "closest_after": 14,
+        "closest_before": 15,
+        "end_of_talk": 1
+      }
+    },
+    "luis-caro-manuel-quijano-taller-claude": {
+      "chunk_count": 55,
+      "token_count": {
+        "count": 55,
+        "min": 231,
+        "max": 533,
+        "mean": 496.09,
+        "p25": 492.5,
+        "median": 501,
+        "p75": 508.5,
+        "p90": 517,
+        "p95": 521.3,
+        "p99": 527.6
+      },
+      "absolute_target_deviation": {
+        "count": 55,
+        "min": 0,
+        "max": 269,
+        "mean": 14.75,
+        "p25": 4,
+        "median": 8,
+        "p75": 15,
+        "p90": 22,
+        "p95": 25.3,
+        "p99": 141.56
+      },
+      "relative_to_target": {
+        "below": 24,
+        "equal": 2,
+        "above": 29,
+        "below_percentage": 43.64,
+        "equal_percentage": 3.64,
+        "above_percentage": 52.73,
+        "maximum_overshoot": 33,
+        "maximum_undershoot": 269
+      },
+      "overlap_token_count": {
+        "count": 54,
+        "min": 100,
+        "max": 176,
+        "mean": 119.3,
+        "p25": 106,
+        "median": 113,
+        "p75": 132.25,
+        "p90": 138,
+        "p95": 161.8,
+        "p99": 172.29
+      },
+      "overlap_utterance_count": {
+        "count": 54,
+        "min": 2,
+        "max": 9,
+        "mean": 4.91,
+        "p25": 4,
+        "median": 5,
+        "p75": 6,
+        "p90": 6,
+        "p95": 6.35,
+        "p99": 8.47
+      },
+      "new_content_token_count": {
+        "count": 55,
+        "min": 111,
+        "max": 491,
+        "mean": 378.96,
+        "p25": 366.5,
+        "median": 388,
+        "p75": 397,
+        "p90": 408.6,
+        "p95": 416.3,
+        "p99": 451.58
+      },
+      "utterance_count": {
+        "count": 55,
+        "min": 12,
+        "max": 35,
+        "mean": 22.22,
+        "p25": 20,
+        "median": 22,
+        "p75": 24.5,
+        "p90": 27,
+        "p95": 28,
+        "p99": 33.92
+      },
+      "new_utterance_count": {
+        "count": 55,
+        "min": 7,
+        "max": 33,
+        "mean": 17.4,
+        "p25": 15,
+        "median": 18,
+        "p75": 19,
+        "p90": 22,
+        "p95": 23.3,
+        "p99": 29.76
+      },
+      "closure_reasons": {
+        "closest_after": 27,
+        "closest_before": 23,
+        "end_of_talk": 1,
+        "exact_target": 2,
+        "tie_include": 2
+      }
+    }
+  },
+  "payload_totals": {
+    "total_chunk_payload_tokens": 69222,
+    "total_new_content_tokens": 53127,
+    "total_overlap_tokens_measured_separately": 16095,
+    "payload_to_new_content_ratio": 1.303
+  },
+  "last_chunk_by_talk": [
+    {
+      "talk_id": "ricardo-salinas-mensaje-apertura",
+      "chunk_id": "ricardo-salinas-mensaje-apertura_c0015",
+      "token_count": 158,
+      "new_content_token_count": 20,
+      "utterance_count": 9,
+      "new_utterance_count": 2
+    },
+    {
+      "talk_id": "agustin-laje-batalla-cultural",
+      "chunk_id": "agustin-laje-batalla-cultural_c0038",
+      "token_count": 275,
+      "new_content_token_count": 128,
+      "utterance_count": 11,
+      "new_utterance_count": 7
+    },
+    {
+      "talk_id": "adrian-villasenor-liderazgo-ia",
+      "chunk_id": "adrian-villasenor-liderazgo-ia_c0029",
+      "token_count": 309,
+      "new_content_token_count": 205,
+      "utterance_count": 12,
+      "new_utterance_count": 7
+    },
+    {
+      "talk_id": "luis-caro-manuel-quijano-taller-claude",
+      "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0054",
+      "token_count": 231,
+      "new_content_token_count": 111,
+      "utterance_count": 12,
+      "new_utterance_count": 7
+    }
+  ],
+  "decision_scope": {
+    "parents_created": false,
+    "embeddings_created": false,
+    "qdrant_used": false
+  }
+}

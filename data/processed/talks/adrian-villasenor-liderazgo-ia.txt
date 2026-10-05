@@ -1,0 +1,399 @@
+Evento: JALMO 28
+Ponencia: Liderazgo empresarial en la era de la inteligencia artificial
+Ponente(s): Adrián Villaseñor
+Rango: 03:32:34 - 04:19:54
+ID: adrian-villasenor-liderazgo-ia
+
+---
+
+[03:32:34] Y ahora vamos a recibir a
+[03:32:37] Yasmina Q es el c o the big simple. I
+[03:32:42] O como dice el señor Salinas, la cosa inteligente y lista que nos va a platicar sobre liderazgo empresarial en la era de la inteligencia artificial.
+[03:32:52] Vamos a recibirlo, por favor.
+[03:32:54] Gracias.
+[03:32:56] Bienvenido.
+[03:32:56] Encantado de estar aquí.
+[03:32:58] Y Ricardo, muchísimas gracias por la invitación.
+[03:33:01] Estoy muy emocionado de estar con todos aquí.
+[03:33:04] Y si ponen aquí la presentación para que empecemos, vamos a hablar de inteligencia artificial.
+[03:33:09] Pero si ven aquí el título de Pues cómo se llama esta conferencia?
+[03:33:13] No estoy hablando de IA, sino estoy hablando de ideas.
+[03:33:17] Think Big bots, start simple.
+[03:33:20] Y así es que voy a empezar un poco mi historia.
+[03:33:22] Y antes de meternos al tema Inteligencia artificial, les quiero platicar un poquito de mí y cómo fue que me metí al mundo de tecnología y la historia de cómo acabé en el mundo de tecnología.
+[03:33:33] Todo empezó con una gallina, tal cual, así como lo ven, no?
+[03:33:38] Yo pues en el inicio de mi carrera, mi abuelo fundó una de las empresas más grandes de distribución de bienes de consumo en México y yo pensaba que eventualmente iba a trabajar en empresa de la familia.
+[03:33:47] Entonces dije oye, si eventualmente quiero trabajar ahí, pues empecé trabajando como consultor especializado en bienes de consumo, porque dije eventualmente pues quiero hacer esto con la empresa de la familia, no?
+[03:33:57] Y por casi cuatro años me tocó trabajar en alrededor de 13 países, muchos en Sudamérica, algunos en Europa, principalmente para cerveceras y Coca-Cola, entendiendo cómo vender mejor, cómo subir precios, cómo ser más efectivo en las tienditas.
+[03:34:13] Y cuando iba todos estos países redefiniendo las estrategias de estas empresas, me tocaba estar subido en los camiones para entender realmente la operación y me volví como muy famoso en el mundo de consultoría.
+[03:34:24] Como latinoamericano que iba de país en país y ni conocí a su novia ni a sus amigos porque estaba trepado en un avión todo el día y de repente la realidad es que pues yo no estudié tecnología, yo no soy desarrollador, yo no soy ingeniero, sino que aquí fue donde empezó mi historia.
+[03:34:41] Y esa historia dio un cambio bastante interesante.
+[03:34:44] En 2011, cuando estaba yo trabajando en Paraguay en uno de estos proyectos y me habla el director general de esta firma de consultoría y me dice Adrián, acabamos de recibir una llamada de otro lugar del mundo, a ver si quieres ir para ver si hacemos lo mismo.
+[03:35:00] Parecido de lo que ya se visto en Latinoamérica.
+[03:35:02] Este lugar eran las oficinas centrales de Coca-Cola para Kenia y Tanzania, África Subsahariana.
+[03:35:08] Y me hablan y me dicen Oye Adrián, es que quieren que vayas tú porque has visto algo muy replicable en los demás países.
+[03:35:14] Pero esta experiencia en África tiene un Kvyat muy diferente a lo que hemos visto.
+[03:35:20] Nos están pidiendo que entendamos cómo podemos integrar a la cadena de suministro Coca-Cola.
+[03:35:25] El tema de pagos móviles 2011.
+[03:35:29] En 2011 solamente había una penetración de smartphones más o menos del 10% en África.
+[03:35:34] Si el global era 10%, en África probablemente era 0%.
+[03:35:38] Y la realidad de África en cuanto a teléfonos se veía como esta.
+[03:35:41] No había smartphones, eran feature phones.
+[03:35:44] Yo les decía y todo mundo les decían los teléfonos de chicles.
+[03:35:47] Y cuando me dijeron pues pagos móviles, yo dije me están choreando.
+[03:35:52] La verdad no creo que esto vaya a tener un impacto, pero si me están pagando ir para allá seguramente voy a aprender mucho.
+[03:35:57] Va a estar interesante.
+[03:35:58] Todavía no estaba casado y me fui y literal, aterrizando en Nairobi un lunes.
+[03:36:03] El martes me subo a un camión de Coca-Cola como normalmente lo hacía y me voy a una ruta rural.
+[03:36:08] Este a dos horas de Nairobi, que de hecho ya estamos planeando ir a rutas para entender cómo se hace el proceso de cobranza.
+[03:36:13] Estamos platicando aquí con el señor Tanus en la mañana y este y me subo a este camión dos horas a las afueras de Nairobi para ver una tiendita rural que era lo que más me interesaba.
+[03:36:24] Me bajo y veo esta imagen.
+[03:36:27] Una persona con un teléfono de chicles pagándole a otra persona con otro teléfono de chicles, una gallina.
+[03:36:35] Y para mí ese fue un momento de realmente realización, donde lo primero que pensé fue qué fui yo al entender que mi preconcepción de qué era la tecnología, porque vivía yo en un mundo donde según esto somos avanzados, estaba tan alejado de la realidad.
+[03:36:50] Después entendí que en 2011 y por esas épocas, el tema de pagos móviles en África, pues era un tema que estaba mucho más adelante que lo demás, pero ese momento fue totalmente coyuntural, donde dije papá, no voy a trabajar en la empresa familiar eventualmente, aunque ni lo tenía seguro.
+[03:37:05] Quiero entender cómo puedo estar realmente en en el centro de cómo las tecnologías pueden generar valor, transformación y realmente hacer un cambio brutal y generar oportunidades y negocio, no?
+[03:37:20] Y ahí fue un momento importantísimo de cambio, de coyuntura.
+[03:37:24] Y le suelto una pregunta a ustedes cuándo fue la última vez que realmente con un tema de tecnología se quedaron completamente sorprendidos que les hizo cambiarse las concepciones de negocio o las concepciones sociales que tenemos?
+[03:37:39] La realidad es que hoy, absolutamente todos los días están pasando momentos como el que para mí fue esa gallina, pero mil veces más grande con lo que estamos viendo en el mundo de la inteligencia artificial.
+[03:37:55] Y cuando hablo de mil veces más grande, solamente vean este número, 1.000.000.000 de personas.
+[03:38:00] Ese es el número de personas que ya utilizan aplicaciones de inteligencia artificial de forma semanal, no que la bajaron una vez para preguntar algo random, no que la bajaron una vez para hacer una estrategia de negocio una vez semanal, cuando tú ya estás utilizando algo semanal, quiere decir que tú ya estás cambiando la forma de hacer las cosas, estás cambiando patrones, estás cambiando pensamiento y es impresionante que estamos apenas hace cuatro años del momento que lo empezó todo.
+[03:38:25] Este tweet, como muchas cosas en la era de Donald Trump, que empiezan con un tweet de OpenAI, la empresa que inventó Chatgpt y que la historia de por qué el lanzamiento de Chatgpt fue algo sin bombo y platillo y sin muchos gritos ni mucho menos.
+[03:38:40] Por qué fue nada más un tweet?
+[03:38:41] Fue por dos cosas.
+[03:38:43] La primera es que era algo que todavía no estaban seguros de cuál iba a ser el impacto era algo experimental.
+[03:38:50] Y la segunda es que se quieran adelantar a Cloud Anthropic, que les venía pisando los talones y querían ser los primeros en el mercado.
+[03:38:58] Y de ahí empezó un cambio que hoy en día todavía estamos tratando de entender qué significa.
+[03:39:04] Pero ese cambio a nivel personal, ya no a nivel ecosistema.
+[03:39:07] A nivel personal a mí me llegó de alguna u otra forma.
+[03:39:10] Era finales de 2023, principios de 2024 y la empresa de mi familia, desgraciadamente en algún momento pues se fue a concurso mercantil, entraron nuevos inversionistas y en ese proceso los nuevos inversionistas pues desgraciadamente no nos entendimos.
+[03:39:25] Problemas legales de un lado, problemas legales del otro lado y llevábamos en ese momento ocho años, pues abogados y abogados, y me acerco con mi papá y le digo Papá, yo sé que nunca he estado involucrado en la empresa, pero explícame dónde están las cosas, a ver si puedo ayudar.
+[03:39:40] De alguna forma Me explicó la situación.
+[03:39:43] Dije bueno, voy a ver qué puedo hacer Y lo primero que hice fue seguir la ruta del dinero.
+[03:39:48] Pues si hay un fondo arriba, hay inversionistas arriba del fondo, los famosos LPs.
+[03:39:52] Logré hablar con uno de los LPs y era el martes diciembre recibo otra llamada llamada.
+[03:40:00] Son bien importantes en esta historia.
+[03:40:02] Era este fondo de inversión en Miami y me dicen Adrián, estamos dispuestos a por lo menos abrir negociaciones.
+[03:40:09] Queremos que vengas a Miami este viernes.
+[03:40:11] No queremos que vengas con nadie de tu familia porque tú eres alguien externo a todo este desmadre.
+[03:40:17] Queremos que vengas abogados, nada más.
+[03:40:19] Tú a negociar.
+[03:40:20] Y de repente me encuentro con el siguiente reto Reto.
+[03:40:23] Uno no podía decir que no cuando la vida en los negocios o en la vida en general te abre una ventana de oportunidad, tú no te importa si hay un precipicio al otro lado, Qué hay del otro lado?
+[03:40:34] Tú tienes que meter la cabeza, los hombros, la rodilla, lo que sea para mantener, para mantener esa ventana abierta, porque se cierra y muchas veces no se vuelve a abrir.
+[03:40:43] No puede decir que no.
+[03:40:44] Segundo problema no tenía, pero ni remotamente poquito contexto de lo que había pasado en esos ocho años.
+[03:40:50] Más que conversaciones familiares.
+[03:40:52] Y ahora tenía que llevar una negociación en tres días y ser un experto en esa negociación.
+[03:40:57] Tercer problema tampoco era un abogado experto.
+[03:41:00] Llevo ya para ese entonces ya me dedicaba, ya llevaba dedicado ocho años.
+[03:41:03] Ser emprendedor en tecnología y era algo muy lejano a ser un abogado experto.
+[03:41:08] Y 4.º problema tampoco era un negociador experto, pero más o menos en lo incipiente que estaba el mundo de la inteligencia artificial hacia finales del 2023 2024 ya había empezado yo a desarrollar una mentalidad de inteligencia artificial que me forzó en ese momento a entender qué es lo que estaba pasando, a frenar y decir cómo lo puedo hacer con mayor rigor, cómo lo puedo hacer con mayor velocidad, cómo lo puedo hacer?
+[03:41:33] Con mucho mejor especialización y cómo lo puedo hacer de una forma que realmente pueda llegar al objetivo que humanamente hubiera sido imposible si no existiera la inteligencia artificial?
+[03:41:42] Y qué fue lo que hice?
+[03:41:43] Pues me armé un hito dentro de Chatgpt todavía Cloud.
+[03:41:48] Como que no escuchamos mucho de esto, lo alimenté, lo que había de la documentación legal, de la bronca de la familia y le dije entrénate con los fundamentos que existen en este libro, que en mi opinión es una de las Biblias de cómo hacer negociaciones efectivas y conviértete en mi contrincante en la negociación.
+[03:42:06] Y qué fue lo que hice en los dos días siguientes?
+[03:42:09] Literal pegarle a la tecla, estar negociando con una computadora que sí tenía el conocimiento perfecto del problema legal, que sí tenía el conocimiento perfecto de estrategias de negociación.
+[03:42:21] Y en esas conversaciones con un agente rudimentario, pude entender mis puntos ciegos, pude entender cómo tirar bolas curvas, pude entender cómo generar mayor empatía en esa conexión de esa conversación.
+[03:42:32] Y me encantaría decir que esa negociación.
+[03:42:35] Resolví todo en una sentada.
+[03:42:36] Eso es utópico?
+[03:42:37] Es imposible, pero fue la mejor negociación que humanamente posible pude haber llevado.
+[03:42:45] No porque fui más inteligente, porque entendí que el mundo ya había cambiado, las herramientas ya habían cambiado y fundamentalmente mi forma de abordar retos y pensar deberían de cambiar ahí mismo.
+[03:42:56] Y regresando a mi oficina fue cuando dije sí, pude hacer esto con una negociación.
+[03:43:01] Qué tengo que estar pensando para cambiar la forma en que yo ejerzo Mi posición como CEO de una empresa tecnología?
+[03:43:08] Qué tengo que hacer?
+[03:43:10] Y lo primero que hice fue sacar una libreta.
+[03:43:12] Y después de que abrí esa libreta, lo apunté con pluma y puño.
+[03:43:18] Cuáles eran las diez cosas más importantes que yo hacía de forma recurrente?
+[03:43:22] Preparar reportes para inversionistas, hacer análisis financiero, hacer tener conversaciones difíciles, construir cultura, tareas administrativas.
+[03:43:32] Y dije no sé cómo, pero ya que tengo esas diez cosas, me voy a forzar a tratar de entender cómo la inteligencia artificial me ayuda a borrarlas de mi lista, no para que no las haga, sino para que reduzca el 80% y con ese 20% las puedo hacer exponencialmente mejor.
+[03:43:49] Y traté, fallé, Traté.
+[03:43:52] Fallé hasta que taché una.
+[03:43:54] Hasta que taché dos.
+[03:43:55] Hasta que taché tres.
+[03:43:57] Y me di cuenta que realmente podía convertirme en un CEO que podía hacer tres, cuatro, diez veces más y generar mucho más valor de forma sistémica.
+[03:44:07] Y me llevé aquí una primera lección de transformación de liderazgo en el tema de inteligencia artificial.
+[03:44:12] A veces pensamos que este cambio que tenemos que dar con el tema de inteligencia artificial es porque vimos una cosa muy flashy en algún lado ya se pueden hacer videos chistosos que puedes realmente utilizarlos para marketing o ya se puede hacer ese dashboard que me va a permitir tener todos los insights?
+[03:44:28] Eso es importante porque la sensibilización es importante, pero el cambio empieza con disciplina.
+[03:44:35] Suena mucho más aburrido, pero así lo es porque la disciplina es lo que se requiere para hacer un cambio de hábito tratar, fallar, tratar, fallar, aprender.
+[03:44:45] Y desde esta perspectiva fue que empecé a dar yo ese cambio personal en mi transformación, pues de líder en el mundo, la artificial.
+[03:44:53] Y en ese proceso, mientras yo estaba cambiando, que de hecho dejo la dirección general de esa empresa que que lideré por siete años para fundar otra empresa de inteligencia artificial, más o menos en 2025, fue que el fue el punto de quiebre en el ecosistema de inteligencia artificial.
+[03:45:08] Fue donde las cosas cambiaron tanto para los líderes, para los individuos y para las empresas.
+[03:45:12] Fue cuando los modelos de IA desarrollaron este concepto que se llama Deep Reasoning.
+[03:45:17] Razonamiento profundo porque antes de 2025, mucho de lo que leíamos a nivel empresas es no estamos generando resultados, estamos haciendo demos bonitas, pero no funcionan para mucho.
+[03:45:28] Pero en 2025 empezaron los modelos a tener profundidad de razonamiento mucho más asertiva y entonces pasó algo que les voy a explicar qué es que estamos viendo aquí atrás.
+[03:45:42] Es un cielo estrellado que podríamos ver inclusive aquí en Jalmolonga, con el ojo pelón para ver las estrellas que hay allá afuera de noche.
+[03:45:49] No?
+[03:45:51] Esta segunda imagen también es un cielo estrellado, probablemente en el firmamento existen exactamente las mismas estrellas en la slide anterior que en esta estrella.
+[03:46:01] Pero aquí estamos, cambiando de óptica.
+[03:46:04] Estamos entendiendo y viendo texturas que antes no veíamos.
+[03:46:07] Estamos entendiendo y viendo patrones que antes no identificábamos que estaban ahí, aunque ya existían, pero no éramos capaces de verlos.
+[03:46:15] Y aquí fue en una conversación que tuve con un director general que ahorita les voy a platicar, que llegamos a esta realización, que antes de meternos a platicar de agentes y de automatización en el core de ejercer o usar inteligencia artificial como líder, tenemos que pensar que la inteligencia artificial es un telescopio para el pensamiento.
+[03:46:34] Hablando de pensamiento que me encantó la plática anterior.
+[03:46:38] Y por qué?
+[03:46:39] Porque exactamente la inteligencia artificial nos permite encontrar los unknown Unknowns, los famosos desconocidos desconocidos, esas oportunidades que probablemente ya existían en nuestros negocios, en nuestros emprendimientos, pero no teníamos esa capacidad de entender las texturas, los puntos hilarlas y poder generar valor.
+[03:47:01] Y déjenme platicarles esta historia porque ata muy bien.
+[03:47:05] Con esto también tengo tengo la fortuna de ser consejero externo, miembro del consejo de Administración de cuatro empresas.
+[03:47:12] Una de ellas es un conglomerado bastante grande que tiene negocios de banca, bueno, de Sofom tiene un negocio de plásticos, negocio de jabones, negocio realstate, hoteles, bastante diversificado y estaba teniendo una conversación con el CEO de del grupo de empresas y me dice Adrián, es que yo soy fanático de la inteligencia artificial.
+[03:47:32] Y yo Ay, a ver, a ver qué me va a decir.
+[03:47:34] Es que hablo con Chatgpt todo el día y yo dije no, pues seguramente está haciendo lo mismo que hace mi mamá o algo.
+[03:47:41] Habla con todo el día y hablando con chatgpt todo el día sin hacer algo más, sin construir agentes.
+[03:47:48] Logramos identificar 5 millones de dólares a Levitt en un año, sin hacer un centavo adicional de inversión y estamos perfilando que sean cercano a 20 millones de dólares en el año 2 cero.
+[03:47:58] Inversión por platicar con Chatgpt.
+[03:48:00] Y ahí sí le dije tienes toda mi atención, qué hiciste?
+[03:48:05] Y me dijo mira, pues somos un grupo bastante diversificado en lo que hacemos, tenemos muchas unidades de negocio, todas haciendo cosas diferentes, pero una particular que es de agricultura.
+[03:48:15] Generamos una cantidad toneladas impresionantes de desperdicio de hueso, de aguacate y de cáscara de aguacate.
+[03:48:21] Y aunque no es la unidad de negocio principal, por muchos, por muchos años, decíamos cómo podemos capitalizar la cáscara de aguacate y el hueso de aguacate de forma efectiva pero sin invertir ahí?
+[03:48:31] Porque el capital allocation lo estamos haciendo en otras empresas y sabíamos que eventualmente podíamos ser aceite de aguacate, pero teníamos que hacer inversiones fuertes y no estábamos dispuestos a hacerlas.
+[03:48:41] Y entonces durante un mes le platiqué a qué procesos productivos teníamos, qué maquinaria teníamos, qué procesos teníamos, qué hacíamos, de qué forma y al final del mes le pregunté qué fregados podemos hacer con el hueso de aguacate y la cáscara de aguacate?
+[03:48:56] Y este CEO es un ingeniero químico sofisticado y le arroja una receta, se la pasa a sus ingenieros químicos, la revisan, la prueban y después de seis años que estaban tratando de hacer pruebas y solo sacaban aceite de aguacate como chapopote que no se podía vender más que en toneladas, Sacan una primera prueba de aceite de aguacate ultra transparente.
+[03:49:18] La segunda receta sacan un polímero de plástico que se puede se puede hacer con aceite con hueso de aguacate.
+[03:49:25] La tercera empiezan a construir tarimas basadas con el desperdicio de aguacate, que esa es la oportunidad más grande que lo está generando.
+[03:49:32] Casi 300 millones de pesos.
+[03:49:33] Es este la exposición sin un centavo de inversión?
+[03:49:39] Este CEO, este líder de negocio?
+[03:49:42] No necesitó ser más inteligente.
+[03:49:47] Lo que necesitó fue ver mejor y entender que para ver mejor.
+[03:49:51] Hay tenemos exactamente esas herramientas que nos permiten ver mejor y que antes probablemente no existían.
+[03:50:00] Pero hay una oportunidad brutal de entender cómo esto fue una conversación.
+[03:50:05] No fue algo mucho más sofisticado.
+[03:50:08] Y también regresando a esta historia, porque estamos todavía en 2025, en 2025 fue donde ya en el ecosistema grande general de Inteligencia Artificial, surge un caso de uso como el inesperado ganador que hoy tiene casi, casi que el 70% de market share en el uso empresarial de la inteligencia artificial, que es cómo se utiliza la inteligencia artificial para desarrollo de software, para generación de código.
+[03:50:33] Y ahorita les voy a explicar por qué este caso de uso es importante como reflexión general, pero si vemos esa gráfica, esa gráfica básicamente habla de cuántas veces la inteligencia artificial es mejor desarrollando retos complejos de desarrollo de código que los humanos.
+[03:50:49] En 2023 eran dos de cada 100 retos y seguramente en 2023 los desarrolladores de software decían esto de ley es algo bien interesante que va a servir para nada.
+[03:51:00] No nos preocupemos, tampoco nos apliquemos porque las cosas no van a cambiar.
+[03:51:05] Dos años después, 78 de cada 100.
+[03:51:09] Hoy estamos probablemente ya en 88 de cada 100.
+[03:51:13] Quiere decir que ya en una grandísima mayoría de ocasiones estamos llegando al punto que la inteligencia artificial es mejor que el humano en desarrollar.
+[03:51:24] Los desarrolladores van a seguir necesitándose, claro, pero los roles van a cambiar.
+[03:51:29] Pero por qué quiero utilizar este ejemplo para algo general?
+[03:51:32] Si ustedes tienen empresas de desarrollo pero son una empresa diversificada que no nada más desarrollan, es por este mensaje.
+[03:51:39] No es el mensaje, es los desarrolladores se van a acabar.
+[03:51:43] Vean el mensaje más arriba de esto que está haciendo la inteligencia artificial está construyendo un puente totalmente un puente entre lo que antes creíamos que era posible que podíamos hacer como individuos y lo que ahora.
+[03:52:02] Somos capaces de crear y utilicemos este concepto de la innovación.
+[03:52:07] Antes pensamos que la innovación, desde la perspectiva de innovar en software, era para los que llevaban toda la vida aprendiendo software, era para los ingenieros, era para los que realmente entendían la abstracción de cómo se tiene que hacer eso.
+[03:52:21] Hoy la IA cree ese puente y yo que al final soy emprendedor de tecnología, pero no soy técnico o desarrollo de software, una parte importante de mi equipo de desarrollo no tienen la preparación de desarrollo y pueden desarrollar software.
+[03:52:37] Empezamos a unir un futuro que antes pensábamos que solo estaba reservado para unos pocos.
+[03:52:44] Y si tenemos las capacidades y el interés de hacerlo, podemos empezar a mover por ese puente para cerrar esas brechas y abordarlo.
+[03:52:54] Esos límites, esas excusas, esos.
+[03:52:57] No tengo el conocimiento y las capacidades se empiezan a borrar y en el centro de este cambio y borrar está un cambio de paradigma.
+[03:53:07] Porque pensemos exactamente con este ejemplo qué significa ese cambio de paradigma?
+[03:53:11] Desarrollo de software Paradigma anterior Qué pasaba antes?
+[03:53:15] Tú tenías una idea que querías desarrollar software.
+[03:53:17] Para innovar algo tenías que contratar un ejército de desarrolladores, tenías que construir porque era extremadamente complejo, tenías que lanzar y el cuello de botella era el acceso a capital, el talento técnico, el tiempo, porque costaba mucho tiempo.
+[03:53:35] Paradigma de ahora tú tienes una muy buena idea.
+[03:53:38] Tus agentes de inteligencia artificial te pueden desarrollar un MVP, un mínimo viable, Product probablemente no algo terminado.
+[03:53:45] Ahí sí necesitas el apoyo de la gente técnica, pero un MVP que te permita acortar los tiempos sustantivamente, que te permite validar, que te permite escalar y cuál es el nuevo bottleneck?
+[03:53:58] La calidad de las ideas.
+[03:54:00] Porque en el centro de cómo podemos como usuarios generar valor en el uso de la inteligencia artificial están las ideas, Está el entender un problema, está el poder entender una solución, el poder argumentarlo, romperlo en cachos y crear valor.
+[03:54:18] Y a mí me encanta decir que por primera vez estamos en un momento de la historia, que la tecnología está realmente generando un acceso democrático a poder construir el futuro, porque todos, o al menos muchos o la mayoría o espero que el 100% de los que estamos aquí tenemos capacidad de pensar de forma crítica y si tenemos capacidad de pensar de forma crítica, podemos realmente construir un futuro.
+[03:54:43] Valor, negocio, crecimiento alrededor de la inteligencia artificial.
+[03:54:48] Eso es lo que estamos viendo hoy en día.
+[03:54:51] Y si 2025 fue el año del razonamiento, este barco no va a parar y el tren sigue avanzando rapidísimo.
+[03:54:57] 2026 se está perfilando para ser el año de la ejecución, ya no la inteligencia artificial, que está pensando que está definiendo el cómo podemos innovar, sino que lo está haciendo por nosotros.
+[03:55:08] El año de los agentes y otro punto de quiebre, que es el último que voy a mencionar hoy, se dio en febrero de 2026 con el lanzamiento de este agente que ven allá abajo esta langosta que se llama Open Cloud, que fue el primer agente ya real lanzado al mercado y que aparte fue open source disponible para todos, que literal ya funciona como alguien que puedes contratar en tu empresa como si fuera tu Chief of Staff, tu asistente personal que lo conectas a las herramientas que tú usas todos los días, a tu calendario, a tu whatsapp, a tus reportes, a tus datos, le escribes como si fuera una persona.
+[03:55:45] Trabaja por ti, desarrolla por ti.
+[03:55:48] Y aquí empezó a cambiar de nuevo otro paradigma el tema de cómo las organizaciones, personas, agentes e IA van a convivir hacia adelante.
+[03:55:58] Pero si esto fuera solamente miel sobre hojuelas y fuera únicamente valor incremental de lo que podemos crear, pues todas las empresas deberíamos estar boyantes.
+[03:56:09] Todas las empresas deberían de estar creciendo a órdenes de magnitud.
+[03:56:12] Por qué?
+[03:56:13] Porque están las herramientas, porque el hay resuelve, porque entonces sí, Si todo mundo podemos hacer esto, dónde está el valor?
+[03:56:20] Deberíamos de estar arriba.
+[03:56:22] La realidad es completamente diferente.
+[03:56:24] Y esto fue de un estudio de McKinsey de este año de abril de 2026, donde decían un estudio de un grupo particular de Estados Unidos que decían El 75% de las empresas ya están utilizando AI y ya lo están utilizando de forma sistémica.
+[03:56:37] Muchas de ellas, Sin embargo, solamente el 20% está teniendo un impacto real medible en más de un de 5 a 10% de vida, solamente el 20%.
+[03:56:51] Y después la Universidad de Stanford hizo otro estudio que trataba de entender exactamente cuáles eran las razones y consistentemente empezaba a surgir esta razón.
+[03:57:04] El problema no es la tecnología.
+[03:57:06] Desde mediados de 2025, finales de 2025, la tecnología ya está en un estado que ya permite, sí, generar el brinco de resultados que podemos estar generando antes.
+[03:57:17] Todavía no estamos llegando ahí, pero empieza a verse que el principal cuello de botella para generar estos resultados es un tema de liderazgo, es un tema de cultura, es un tema que puede empezar con nosotros cuando cuatro de cada cinco problemas de falta de creación de valor tienen que ver con gente, tienen que ver con personas, Resistencia al cambio.
+[03:57:40] No tengo los skills adecuados, tengo miedo, tengo sesgos porque la realidad, como vimos, este tema de historia, de cómo se fue moviendo la evolución de la inteligencia artificial es que han sido cambios brutalmente grandes a lo largo de los últimos cuatro años.
+[03:57:55] Pero regresemos a esto.
+[03:57:56] Si la tecnología ha tenido estos cambios tan brutales en los últimos cuatro años, tú te has hecho estas preguntas.
+[03:58:03] Tú has cambiado, Has cambiado tú la forma en la que piensas?
+[03:58:07] Has cambiado la forma en la que lideras, Has cambiado la forma en la que decides porque existe la inteligencia artificial o existe, la hay, pero tú sigues haciendo lo mismo.
+[03:58:18] Porque si esa es la situación, entonces no esperes que se pueda generar un impacto y una realidad diferente a la que estás viviendo hoy en día.
+[03:58:27] Porque la realidad es que hay cosas que no van a cambiar.
+[03:58:30] Como líderes de negocios, ustedes tienen que tener visión estratégica.
+[03:58:33] Eso va a seguir siendo consistente, van a seguir, van a seguir tomando decisiones críticas y profundas todo el tiempo.
+[03:58:41] Vamos a tener que construir cultura, eso es un hecho también y al final vamos a seguir teniendo la responsabilidad final de lo que hagamos.
+[03:58:50] El día no va a ser responsable de los resultados.
+[03:58:52] Tú BAZ a seguir siendo responsable de esos resultados, pero si bien hay cosas que no cambian, hay cosas que sí cambian y cosas que sí están cambiando.
+[03:59:01] Ya antes, en 2020, los equipos estaban tomando decisiones basadas en reportes mensuales.
+[03:59:07] El reporte mensual es algo que ya pasó, ya no puedes hacer nada de lo que pasó.
+[03:59:11] Los equipos que están construyendo sobre inteligencia artificial están empezando a tomar decisiones informadas en tiempo real.
+[03:59:18] Antes la innovación pasaba en ciclos de 12 a 18 meses.
+[03:59:21] Por qué?
+[03:59:22] Porque era costoso.
+[03:59:23] Porque era difícil, porque tomaba tiempo innovar.
+[03:59:27] Hoy los equipos están innovando en ciclos de semanas, constante.
+[03:59:32] Antes las empresas tomaban y definían su estrategia en Offsite.
+[03:59:37] Hoy las estrategias deben de ser dinámicas porque tienes el telescopio que te permite entender y ver y en el centro de esto está el entendimiento que tenemos que convertirnos.
+[03:59:47] Cada uno de ustedes y Grupo Salinas quiere realmente avanzar en First Leaders.
+[03:59:53] Y qué es convertirte en un líder?
+[03:59:56] Es entender que en el centro de la creación de valor, la inteligencia artificial, primero tienes que empezar por ti.
+[04:00:01] Tú, como usuario de ti.
+[04:00:02] No esperes que tu área, que tu departamento, que la empresa que lideras en Grupo Salinas se.
+[04:00:09] Forme Si tú al inicio no eres alguien que estás utilizando la.
+[04:00:13] De forma intensiva para entender.
+[04:00:14] Por eso en el centro tú sí, entonces el líder tiene esa capacidad de aprender y cambiar.
+[04:00:19] Puedes ya cambiar la parte de la empresa y por qué no, tu mundo?
+[04:00:23] Y no estoy hablando del mundo como este globo efímero, tu mundo, algo personal.
+[04:00:28] Y quiero entonces platicarles el cómo se ve esto de forma específica.
+[04:00:32] Primero, cómo pueden ustedes construir este liderazgo de personal como usuarios?
+[04:00:39] Y fue que realmente lo puse esto en cinco escalones del nivel de sofisticación que vamos avanzando en el uso de la inteligencia artificial y quiero que cada quien piense cuando los describa, dónde sienten ustedes que se acomodan y no se desanimen si están en los primeros?
+[04:00:52] Más bien, quiero que se emocionen para entender que hay más escalones hacia adelante y empecemos con esto.
+[04:00:59] El primer escalón es al que yo le llamo el consumidor accidental.
+[04:01:05] Es el que abre su aplicación de IA porque le abre normalmente en el teléfono le pregunta a Chatgpt porque normalmente tienen chatgpt y le dicen cuáles son las tendencias de marketing digital para 2025?
+[04:01:18] Chatgpt te responde una respuesta shakesperiana y básicamente la lees y dices Ya sé perfectamente qué hacer con marketing.
+[04:01:25] Cierra la conversación de y no haces nada diferente.
+[04:01:29] Lo estás utilizando como un Google glorificado?
+[04:01:32] No, no está cambiando tu capacidad cognitiva, no está cambiando tu capacidad de pensar y descomponer un problema.
+[04:01:38] Estás googleando respuestas más profundas que antes.
+[04:01:42] Todos empezamos ahí.
+[04:01:44] Quién es el paso dos?
+[04:01:46] El paso dos es lo que yo le llamo el pensador estructurado.
+[04:01:50] Y durante 2024 y 2025.
+[04:01:52] Todo mundo era lo único que hablábamos es que tienes que estructurar buenos prompts, es que tienes que saber el rol, el objetivo, el contexto, la tarea y si ya sabes escribir buenos prompts, ya sabes usar AI, no te tienes que preocupar nada.
+[04:02:07] Prompts, prompts, prompts no?
+[04:02:09] Y la verdad que esa era la realidad.
+[04:02:11] 2024 Estábamos en esta fase donde estábamos entendiendo que deconstruyendo un reto, una oportunidad en qué es lo que quiero resolver, cómo lo quiero resolver, qué rol quiero que tome la inteligencia artificial?
+[04:02:23] La inteligencia artificial empezaba a dar mejores resultados porque le estaba dando el contexto correcto, le estaba dando las tareas correctas, le estaba asignando el rol correcto.
+[04:02:32] Aquí empieza a haber un cambio cognitivo y empieza a haber un cambio de cómo pensamos, porque ya nada más no está tratando de resolver algo con una pregunta.
+[04:02:39] Estás descomponiendo la forma en la que piensas para tratar de llegar a una solución.
+[04:02:45] Pero en 2025 cambiaron las cosas y aquí ya no es donde tenemos que quedarnos y tenemos que pensar qué es lo que sigue hacia adelante.
+[04:02:53] Y por eso me voy al tercer eslabón.
+[04:02:58] Que es el arquitecto de contenido.
+[04:03:01] Listo.
+[04:03:06] Cuál es el líder que llega al tercer eslabón, que es el arquitecto de contexto?
+[04:03:10] El arquitecto de contexto es el cuate que ve un reto, ve una oportunidad, ve algo y no lo quiere resolver rápido con ella.
+[04:03:17] Ahí dice me voy a frenar para entender cómo más bien sistematizo la forma de resolver esto.
+[04:03:26] Una vez, para resolverlo de raíz.
+[04:03:30] No tener que utilizar cada vez que lo quiero resolver.
+[04:03:32] Entender que es algo que va a tener recurrencia, que puedo sistematizar, Por ejemplo oye, tengo que recopilar datos, analizar oportunidades, identificar riesgos.
+[04:03:41] Por qué resolverlo una vez, si puedo sistematizarlo, resolverlo para siempre y para adelante, liberar tiempo que me permita pensar mejor, vender más, agregar más valor, pensamiento estratégico.
+[04:03:53] Y te BAZ quitando tareas.
+[04:03:54] Yo siempre digo que si recuerdan la película de Matrix en la imagen donde a Neo está tratando de aprender artes marciales y que le meten un chip en la cabeza para que aprenda artes marciales porque antes no sabía nada.
+[04:04:06] Este es es esa similitud cuando la inteligencia artificial le enseñas y van a tener un taller de clown y esto es un tema que van a ver hoy o mañana.
+[04:04:15] Dentro de clown le enseñas con skills cómo sistematizar algo que tú haces y siempre hacer esto y estás generando leverage, apalancamiento.
+[04:04:24] Y ustedes saben que el apalancamiento crea valor y aquí estás generando apalancamiento sobre tu tiempo porque estás liberándolo para enfocarte en lo que importa.
+[04:04:34] El 4.º punto es el líder conectado.
+[04:04:37] Es el que empieza realmente a operar con inteligencia artificial, ya no como asistente, sino como modelo operativo.
+[04:04:46] Conectas a tu sesión de cloud, por ejemplo, tu mail, Slack o tus herramientas internas, tu calendario, lo que puedas tú conectar y empiezas a operar la forma en la que haces las cosas en el día a día.
+[04:05:00] Desde la inteligencia artificial Cloud Revísame los últimos 60 correos que tengo en mi bandeja, quiero que analices todos los correos que tengo de Ricardo.
+[04:05:10] Quiero entender cuáles son todas las prioridades que Ricardo está comunicando para estar seguros que tenemos realmente todas las tareas bien hechas.
+[04:05:17] Quiero que identifique si hay brechas.
+[04:05:19] Esas brechas me las mandes al CRM.
+[04:05:21] Después de que lo mandaste al CRM, quiero que detones correos a todos los involucrados para que realmente estemos arriba de las cosas que tenemos que hacer.
+[04:05:29] Estás escribiéndole directamente ahí a Cloud?
+[04:05:33] No tienes que estar haciendo cosas en los diferentes sistemas y Cloud se vuelve ese sistema operativo personal que te permite generar valor, cambiar resultados.
+[04:05:43] Y esto es algo que hay literal.
+[04:05:45] Otra vez, de nuevo con Cloud lo podemos hacer mañana y si llegamos ahí, el último eslabón que queda es este, que por mucho es el más importante y es algo que de hecho mencionaba Ricardo al inicio de la sesión, no?
+[04:06:00] El líder que logra llegar al punto cinco es el Native Builder.
+[04:06:05] Y siempre digo que si una empresa tiene a una persona, una que logra llegar a este nivel, es una empresa que tiene la posibilidad de generar un valor exponencial brutal y esta persona ya no es la persona que utiliza ya ahí, sino que realmente está pensando en organizaciones, está entendiendo cómo se tiene que reconfigurar la organización del futuro, donde tenemos entendido que hacia adelante las organizaciones van a cambiar roles, los van a tomar la inteligencia artificial, roles los vamos a tener las personas y vamos a entender.
+[04:06:39] O ese builder va a estar Arquitectura como las organizaciones del futuro, donde personas, agentes van a convivir.
+[04:06:48] Y aquí es donde regresamos a lo que dice Sam Altman o Dario Amodei.
+[04:06:52] Va a haber organizaciones que con personas más limitadas o con las mismas van a potencializar resultados multimillonarios.
+[04:07:00] Inclusive vamos a ver empresas de dos o tres personas que valgan 1 billón de dólares.
+[04:07:05] Esos son arquitectos de organizaciones, son los que realmente entienden que la inteligencia artificial, ya en el nivel que tenemos que verla hacia el futuro, sí va a transformar cómo trabajamos.
+[04:07:15] Sí va a transformar los procesos.
+[04:07:17] Si los agentes, pero al final va a transformar las organizaciones.
+[04:07:21] Desde esta perspectiva.
+[04:07:23] Y esto es la parte individual, Ese fue el centro que decía del yo, pero realmente para que ustedes puedan realmente ir avanzando del escalón uno al dos, al tres, al cuatro, eventualmente al cinco, les voy a pedir algo incómodo que no les va a gustar y que van a sacar a salir de aquí diciendo Pinche Adrián, por qué no está diciendo esto?
+[04:07:43] Van a tener que desaprender lo que saben y más importante, en lo que ustedes creen que son buenos, porque ahí es donde nos cuesta más trabajo.
+[04:07:51] Vamos a tener que desaprender la forma en la que hacemos finanzas para hacer finanzas con ella.
+[04:07:55] Ahí vamos a tener que desaprender la forma en la que hacemos cobranza para hacer cobranza con ella.
+[04:08:00] Vamos a desaprender la forma en la que hacemos cultura para también ver cómo la IA nos potencializa y ese tema de desaprender para aprender es el reto más grande que tenemos.
+[04:08:11] Cuando ya llegamos a ser líderes, Porque tú si ya llegaste a ser líder, dices llegué aquí porque tengo lo que se necesita.
+[04:08:19] El futuro cambió las reglas del juego, lo que se necesita cambió.
+[04:08:23] Para llegar ahí tienes que incomodarte y hacer esta tarea porque la IA no cambia lo que hacemos, pero sí cambia cómo lo hacemos.
+[04:08:33] Cómo analizamos, cómo decidimos, cómo al final construimos.
+[04:08:40] Pero este fue el yo.
+[04:08:42] Ya cambiaste tú.
+[04:08:43] Imaginemos que ya lo logramos hacer aquí.
+[04:08:45] Estamos en un grupo de empresas increíble que tiene un impacto y que realmente tiene una influencia importantísima en el país.
+[04:08:53] Cómo cambias el sistema donde trabajas?
+[04:08:56] Y aquí es donde ya no podemos hablar nada más de lo que yo puedo hacer con la inteligencia artificial.
+[04:09:00] Aquí sí tenemos que empezar a pensar en cosas un poco más complejas, que son los sistemas y los habilitadores, porque todas las empresas quieren hacer lo que está del lado izquierdo.
+[04:09:09] Creemos que tenemos todo listo para tener una gente que revisa las finanzas, identifica las brechas, hace cobranza solita y atiende a todos y todos.
+[04:09:16] Y decimos es que hay que hacer agentes por todos lados.
+[04:09:19] Si todo mundo queremos estar ahí.
+[04:09:21] Pero también la realidad de muchas empresas.
+[04:09:23] Desgraciadamente la mayoría estamos del lado derecho.
+[04:09:26] Datos desconectados, herramientas aisladas, contexto incompleto.
+[04:09:32] Y si tenemos contexto incompleto y data incompleta, ese es el alimento realmente ya para que la implementación es a nivel escala de IA en las empresas se puedan hacer, pero inclusive aquí también hay una metodología y una forma y yo si hay una empresa que realmente me emociona ver cómo ha sido el efecto transformacional que ha tenido, de cómo han implementado IA Si hay una que escogieron el mundo se llama Ramp, es una fintech de Estados Unidos que todo el programa que implementaron se llama Glass y entendieron que la inteligencia artificial a escala a nivel organizacional requiere uno.
+[04:10:03] Si de tener una base de datos limpios, conectados, accesibles, confiables, que si lo tienes después arriba de esta puedas conectar tus herramientas, tu CRM, mail, documentos, todas las herramientas que necesitas tener.
+[04:10:16] Y en el nivel de arriba es donde empiezas a pensar cómo entra la IA, cómo entra el agente que se llama todo lo que vive alrededor de los modelos de IA.
+[04:10:25] Porque si tienes la parte tres pero no tienes la uno y la dos, no sirve de mucho, y esta parte sí le toca a los departamentos de TI.
+[04:10:33] Si es un habilitador.
+[04:10:35] Pero después regresamos otra vez a lo que requiere, a lo que se requiere de los líderes de las áreas de negocio, que es el entendimiento de lo que realmente hacemos, de cómo trabajamos, de cómo son nuestros procesos, de cómo realmente tenemos resultados, de cómo agregamos valor.
+[04:10:51] Y aquí los responsables realmente de generar el valor real de la IA.
+[04:10:57] No estoy de ti, es un habilitador del proceso, es el que realmente es, el dueño del resultado del proceso, porque teniendo esos tres habilitadores, lo que queda para construir los agentes es entender cómo crear valor desde el proceso que tú lideras.
+[04:11:13] Con esas tres capas listas, tú podrías casi casi que describir tu trabajo, describir tu proceso y la IA lo convierte en agentes ejecutables.
+[04:11:23] Y Ricardo mencionó que era un agente para los que no entienden muy bien esto, pues un agente es algo que se ve como esto.
+[04:11:29] Tienes entradas que son data a lo que estás conectado.
+[04:11:32] Oye, el cliente historial, interacciones, el pipeline de ventas, productos, precios, comunicaciones.
+[04:11:39] Tienes a la gente que la gente tiene un set de instrucciones y reglas que no le ponen tantos límites, pero al menos le delimitan cuál es la ruta a seguir.
+[04:11:47] Y el agente después decide, prioriza, recomienda, genera, comunica y a través de estar conectado a los sistemas, impacta.
+[04:11:56] No implementen agentes de IA que no toquen la parte de abajo.
+[04:12:00] KPIs claves.
+[04:12:02] El agente va a generar mayor conversión sí o no?
+[04:12:05] Ciclos más cortos de ventas, Mayor ingreso si no toca ingreso o costo, no va.
+[04:12:12] Y la realidad es que el cambio organizacional, cuando un agente tiene un impacto y una persona lo usa, se crea un agente y tiene valor.
+[04:12:21] La.
+[04:12:21] El ejemplo de RAMP, que realmente es el mejor ejemplo que existe, les invito a que lo lean, de ahí diez lo usan y personas empiezan a crear sus propios agentes porque los habilitadores ya existen, de ahí 100 lo mejoran y de ahí entonces explota el que realmente es.
+[04:12:36] A productividad efímera que se menciona realmente se haga y sea una realidad en el mundo.
+[04:12:42] La inteligencia artificial así se transforma en las organizaciones, Así realmente, regresando al estudio de McKinsey y decía ese 20% que sí genera resultados, estos se ven los números 20% son evitas dos x en recuperación de inversión, 3 $ por cada dólar invertido.
+[04:13:02] Pero el camino no es fácil.
+[04:13:03] El camino requiere de personas, requiere de habilitadores para llegar ahí y requiere de liderazgo.
+[04:13:10] Y finalmente, hablemos un poco más del mundo, porque al final vivimos en un mundo porque sí, este es el presente.
+[04:13:18] Les digo que lo que se viene hacia el futuro no es incremental, es exponencial.
+[04:13:26] Computación cuántica.
+[04:13:27] Hoy estamos al inicio de la.
+[04:13:28] Realmente el nivel de madurez de hoy.
+[04:13:30] Cómo se ve el futuro y todas las conversaciones que hay hoy en el mundo de inteligencia artificial?
+[04:13:35] Dicen que hay una bifurcación potencial hacia adelante.
+[04:13:38] Un futuro donde realmente la productividad que podamos crear cree realmente estructuras que nos permitan tener un futuro increíble y algunas otras posturas que dicen que esa productividad puede llevar un mundo?
+[04:13:48] Pues que los empleos, la desigualdad.
+[04:13:51] Hay un hecho que es cierto la inteligencia va a ser abundante.
+[04:13:57] Lo que estamos viendo hoy del estatus de dónde está el nivel de madurez de hoy es un espejo chiquitito de lo que va a ser en diez años el que la inteligencia sea abundante.
+[04:14:09] No está el debate, eso no está en debate.
+[04:14:11] Lo que está en debate es entender que el impacto real de generación de valor, de negocios, de crecimiento económico, no lo va a definir tanto la tecnología de sociedad, de política, que también hablamos, no va a definir tanto la tecnología.
+[04:14:28] La tecnología es un hecho que va a estar ahí, lo va a definir.
+[04:14:30] Las decisiones que tomemos con la misma y si ven estamos regresando a un ciclo completo, regresando otra vez al rol de líder.
+[04:14:40] La tecnología, si bien va a ser fundamental, va a ser abundante y va a ser gigante, va a seguir siendo una habilitador de nuestras decisiones y cómo queremos realmente generar ese futuro que queremos ver.
+[04:14:54] Y aquí quiero empezar a terminar con un par de reflexiones.
+[04:14:57] Primero, con esta frase de Darío.
+[04:15:00] Day es el fundador de Anthropic y yo personalmente la persona que más admiro en el mundo de inteligencia artificial Es el fundador de Crowd y Dario dice El miedo es un motivador y hoy en día todos hablamos del miedo, de ay, es que tengo que aprender hoy porque voy a perder mi chamba, tengo que aprender hoy porque me voy a quedar atrás, tengo que aprender hoy porque si no voy a perder competitividad.
+[04:15:21] Y Darío dice El miedo es un motivador, pero no es suficiente.
+[04:15:25] Necesitamos esperanza.
+[04:15:28] Esperanza que podemos crear mejores negocios, esperanza que podemos crear, mejor valor económico, esperanza que podemos generar mejores líderes hacia adelante que puedan construir esto.
+[04:15:40] Esperanza de también, por qué no impactar aunque sea algo chiquito nuestro mundo?
+[04:15:46] Y voy a terminar con una última historia de cómo.
+[04:15:49] Y esta para mí es la historia más importante que tengo yo en mi experiencia de del uso de la inteligencia artificial.
+[04:15:54] Cómo yo pude cambiar un cachito chiquito de mi mundo?
+[04:15:57] Uno de mis amigos más queridos y más entrañables que conocí en la maestría en Harvard, desgraciadamente tuvo un tema brutalmente complicado médico en los últimos meses, algo complicadísimo.
+[04:16:10] Y él es un emprendedor también.
+[04:16:11] Él es un CEO de una startup también increíble y desgraciadamente por este tema médico no va a poder él operar su negocio ni con las manos ni con los pies hacia el futuro.
+[04:16:23] Y hace más o menos dos meses que salió de terapia intensiva.
+[04:16:26] Voy y lo visito al hospital y platicando con él no fuimos a platicar de oye, qué difícil es el mundo hacia adelante, platicamos como amigos y en esa conversación casual me salió decirle literal del corazón y de lo más profundo de mi ser.
+[04:16:41] No lo tengo completamente claro cómo, pero en el momento que tú quieras regresar a ser el CEO de tu empresa a ejercer y a generar valor, como lo estás haciendo con inteligencia Artificial, voy a habilitar y te voy a ayudar que lo puedas hacer.
+[04:16:57] Y quiero decirles que eso lo dije con una completa responsabilidad porque hubiera sido extremadamente irresponsable de mi parte hacer esa promesa en alguien que está en una situación extremadamente frágil.
+[04:17:09] Y lo hice con esa responsabilidad porque hoy entendí y tenía ya el conocimiento que para cosas que antes pensábamos que eran fantasías, podemos empezar a hacer promesas accionables, promesas de algo que realmente sí puede ser.
+[04:17:24] Y hoy pues ya le instalé su Open Cloud, ya lo conecté a todas sus herramientas, no está al 100%, pero sí está a un 70%.
+[04:17:33] Y esto.
+[04:17:33] Y con esto voy a empezar a concluir, es realmente por qué hago lo que hago y realmente todo lo que hago?
+[04:17:39] Y las empresas que lidero están fundamentadas en este pensamiento.
+[04:17:43] Think Big Start simple, Think Big en el mundo de la inteligencia artificial es entender que estamos al inicio de una década de una coyuntura que muchos de los retos más difíciles y más importantes como sociedad cambio climático, el encontrar solución para ciertas enfermedades, no dicho por mí, sino por dicho por los grandes exponentes de la tecnología de hoy, vamos a poder resolver muchas de estas, pero es más importante la frase de abajo, Think simple start simple perdón.
+[04:18:08] Entender que aunque sean cosas muy grandes, luego la mente humana es tan chiquita que no entendemos y nos sentimos ajenos y nos sentimos espectadores de algo tan grande que está pasando.
+[04:18:18] Pero regresemos al tema de que la IA es tan democrática que requiere de pensamiento crítico y todos podemos pensar bien para cambiar nuestros negocios.
+[04:18:26] La forma en que lideramos nuestro impacto, que si empezamos de forma sencilla.
+[04:18:35] Podemos ser parte de un cambio mucho más grande que se ve allá arriba.
+[04:18:41] En 2011.
+[04:18:42] Un chavo que soy yo sin idea de tecnología, veía una transacción con un pollo en Kenia.
+[04:18:49] Esa transacción, lo que realmente despertó en mí fue una curiosidad profunda de realmente entender cómo la tecnología podía impactar, crear valor económico, cambiar negocios.
+[04:19:02] Ese momento que yo viví hoy lo están viviendo cada uno de ustedes, porque estamos en ese momento donde la IA está presentando esas oportunidades todos los días El telescopio que existe ya existe, la IA ya está en ese momento, ya tenemos las herramientas, el telescopio ya está ahí, las estrellas también están ahí.
+[04:19:28] Esas oportunidades de negocio, esos patrones que antes no veíamos, esas formas de hacer cosas diferentes, hoy las podemos abordar.
+[04:19:36] La decisión de mirar a través del telescopio esa decisión sí es nada más de ustedes y de nadie más.
+[04:19:46] Es el lunes, son las 09:00.
+[04:19:50] Qué fregados BAZ a hacer?
+[04:19:54] Muchas gracias.

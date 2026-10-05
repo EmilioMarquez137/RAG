@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "algorithm": "child-v1-nearest-complete-utterance",
+  "source": "data/processed/talks.jsonl",
+  "tokenizer": {
+    "library": "tiktoken",
+    "library_version": "0.14.0",
+    "encoding": "cl100k_base",
+    "definitive_for_embedding_model": false
+  },
+  "target_tokens": 500,
+  "overlap_tokens": 100,
+  "separator": "\n",
+  "target_includes_overlap": true,
+  "crossing_rule": "closest_to_target",
+  "tie_breaker": "include",
+  "minimum_new_utterances": 1,
+  "final_chunk_policy": "emit_without_merging"
+}
+

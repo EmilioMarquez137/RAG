@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.1",
+  "event": {
+    "event_id": "jalmo-28",
+    "title": "JALMO 28",
+    "date": "2026-05-21",
+    "languages": ["es", "en"]
+  },
+  "talks": [
+    {
+      "talk_id": "ricardo-salinas-mensaje-apertura",
+      "title": "Mensaje de apertura",
+      "primary_speaker": "Ricardo Salinas Pliego",
+      "speakers": ["Ricardo Salinas Pliego"],
+      "start_time": "01:12:34",
+      "start_marker": "Y ya para para dar inicio a estas sesiones vamos a darle la bienvenida a mi papá Ricardo Salinas Pliego.",
+      "end_time": "01:48:35",
+      "end_marker": "Bienvenidos a Jalmo 28 y vámonos para adelante."
+    },
+    {
+      "talk_id": "agustin-laje-batalla-cultural",
+      "title": "La batalla cultural",
+      "primary_speaker": "Agustín Laje",
+      "speakers": ["Agustín Laje"],
+      "start_time": "01:48:51",
+      "start_marker": "Y ahora nos toca escuchar a Agustín Laje con el tema La batalla Cultural.",
+      "end_time": "02:56:03",
+      "end_marker": "Muchísimas gracias."
+    },
+    {
+      "talk_id": "adrian-villasenor-liderazgo-ia",
+      "title": "Liderazgo empresarial en la era de la inteligencia artificial",
+      "primary_speaker": "Adrián Villaseñor",
+      "speakers": ["Adrián Villaseñor"],
+      "start_time": "03:32:34",
+      "start_marker": "Y ahora vamos a recibir a",
+      "end_time": "04:19:54",
+      "end_marker": "Muchas gracias."
+    },
+    {
+      "talk_id": "luis-caro-manuel-quijano-taller-claude",
+      "title": "Introducción y taller de Claude",
+      "primary_speaker": "Luis Caro y Manuel Quijano",
+      "speakers": ["Luis Caro", "Manuel Quijano"],
+      "start_time": "04:20:32",
+      "start_marker": "Y ahora, eh, vamos a recibir a Luis Caro y a Manu Quijano para comenzar con el primer módulo del taller de Cloth.",
+      "end_time": "05:54:32",
+      "end_marker": "Gracias, se los agradezco."
+    }
+  ]
+}
+

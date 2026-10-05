@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "pipeline": "raw-to-talks",
+  "source": {
+    "path": "data/Transcripts_PlainText/Transcripts_Text/transcripts/Text_Transcript_original_AOKA-8157.txt",
+    "sha256": "160a140dc5d353fb32a7a03a6bdc1aeeb80557ffbeddfa76f879f3dcf6df9813",
+    "immutable": true
+  },
+  "config": {
+    "path": "config/talks.json",
+    "sha256": "42c875734c4fded354e50e05dd776e9280c90506cfbe377aede2f3ceda67665e"
+  },
+  "statistics": {
+    "talk_count": 4,
+    "parsed_utterances": 2470,
+    "selected_utterances": 2301,
+    "excluded_utterances": 169
+  },
+  "outputs": [
+    {
+      "path": "data/processed/talks.jsonl",
+      "sha256": "63d162f98a4fc4a29cd1acd5a79dd5e8f48c99c648f977fc86b444856e125edc",
+      "bytes": 691655
+    },
+    {
+      "path": "data/processed/talks/ricardo-salinas-mensaje-apertura.txt",
+      "sha256": "6148c829c26cc59c50bfaf65e3b47215e6d128127f38098860f899a38d48538e",
+      "bytes": 26196
+    },
+    {
+      "path": "data/processed/talks/agustin-laje-batalla-cultural.txt",
+      "sha256": "d7a05c0ba7e8b05bcd2ca34f36518fe44098af27413e4e17d58b8abf4e88b5b8",
+      "bytes": 65279
+    },
+    {
+      "path": "data/processed/talks/adrian-villasenor-liderazgo-ia.txt",
+      "sha256": "bd3b8e18a63350e519b7ed0b91b9f071575195758825ebc70ebd5ba5dea4201c",
+      "bytes": 50867
+    },
+    {
+      "path": "data/processed/talks/luis-caro-manuel-quijano-taller-claude.txt",
+      "sha256": "4317245f7903b8ae405f15f5595688db24bfa221d12678b2c89e1b7f4d7946ab",
+      "bytes": 94782
+    }
+  ]
+}

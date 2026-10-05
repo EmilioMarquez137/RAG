@@ -1,0 +1,928 @@
+{
+  "report_version": "1.0",
+  "scope": "Child V1 dense embeddings and local cosine smoke retrieval",
+  "source": {
+    "path": "data/processed/chunks.jsonl",
+    "sha256_before": "89856512f48863eb889817884199d318c9285b024cbe7eadc7e67200f29f2d1d",
+    "sha256_after": "89856512f48863eb889817884199d318c9285b024cbe7eadc7e67200f29f2d1d",
+    "modified": false,
+    "chunk_count": 140,
+    "input": "exact Child.text; no prefix, metadata or truncation"
+  },
+  "configuration": {
+    "path": "config/gte_embedding_baseline.json",
+    "sha256": "851d7677fe2d092846fd0725bb05cf16e3e9db124913d2df6bbcd3ad24911797"
+  },
+  "model": {
+    "model_id": "Alibaba-NLP/gte-multilingual-base",
+    "model_revision": "9bbca17d9273fd0d03d5725c7a4b0f6b45142062",
+    "remote_code_repo": "Alibaba-NLP/new-impl",
+    "remote_code_revision": "40ced75c3017eb27626c9d4ea981bde21a2662f4",
+    "trust_remote_code": true,
+    "remote_code_files_sha256": {
+      "configuration.py": "3411088045ffb8a9a0aa9936eae275896b39983a2ee5b08f091b44e6289e4fe4",
+      "modeling.py": "374670b416fcc82f081c9cd28b5fd61c2bd91bbe18eb4798fcc48a81f9c250a0"
+    },
+    "remote_code_review": "Pinned configuration.py and modeling.py were inspected before execution; imports are limited to Python typing/dataclasses/math, torch and transformers, with no shell, network or filesystem operations in the reviewed files."
+  },
+  "runtime": {
+    "backend": "PyTorch + Transformers AutoModel; official CLS pooling reproduced explicitly",
+    "device": "cpu",
+    "dtype": "float32",
+    "batch_size": 4,
+    "pooling": "cls",
+    "normalize_embeddings": true,
+    "model_class": "NewModel",
+    "tokenizer_class": "XLMRobertaTokenizerFast",
+    "torch_threads": 12,
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.13",
+    "libraries": {
+      "numpy": "2.5.3",
+      "torch": "2.8.0+cpu",
+      "transformers": "4.57.3",
+      "sentence_transformers": "5.1.2",
+      "tokenizers": "0.22.2",
+      "sentencepiece": "0.2.1"
+    }
+  },
+  "validation": {
+    "status": "passed",
+    "checks": {
+      "embedding_count_is_140": true,
+      "matrix_row_count_matches_ids": true,
+      "dimension_is_expected": true,
+      "no_nan": true,
+      "no_inf": true,
+      "chunk_ids_unique": true,
+      "one_to_one_with_chunks": true,
+      "same_order_as_chunks": true,
+      "vectors_l2_normalized": true
+    },
+    "embedding_count": 140,
+    "shape": [
+      140,
+      768
+    ],
+    "dtype": "float32",
+    "nan_count": 0,
+    "inf_count": 0,
+    "duplicate_chunk_id_count": 0,
+    "norms": {
+      "min": 0.99999988,
+      "mean": 1.0,
+      "median": 1.0,
+      "max": 1.00000012,
+      "max_absolute_deviation_from_one": 1.2e-07
+    }
+  },
+  "timings": {
+    "model_load_seconds": 2.5483,
+    "corpus_inference_seconds": 115.6809,
+    "corpus_texts_per_second": 1.2102,
+    "corpus_batches": 35,
+    "maximum_corpus_tokens_seen": 495,
+    "artifact_save_seconds": 0.0089,
+    "smoke_query_inference_seconds": 0.249,
+    "smoke_search_total_seconds": 0.003211,
+    "total_seconds": 124.0297
+  },
+  "artifacts": {
+    "embeddings": {
+      "path": "data/derived/embeddings/gte_multilingual_base_child_v1.npz",
+      "sha256": "661c4010c0e8b31caaa768f2b3421beea9a240383bacfe814a1efce3e6df52e1",
+      "bytes": 455244,
+      "format": "NumPy NPZ with non-pickle arrays: chunk_ids[str], embeddings[float32]"
+    },
+    "mapping": [
+      {
+        "row_index": 0,
+        "chunk_id": "ricardo-salinas-mensaje-apertura_c0000"
+      },
+      {
+        "row_index": 1,
+        "chunk_id": "ricardo-salinas-mensaje-apertura_c0001"
+      },
+      {
+        "row_index": 2,
+        "chunk_id": "ricardo-salinas-mensaje-apertura_c0002"
+      },
+      {
+        "row_index": 3,
+        "chunk_id": "ricardo-salinas-mensaje-apertura_c0003"
+      },
+      {
+        "row_index": 4,
+        "chunk_id": "ricardo-salinas-mensaje-apertura_c0004"
+      },
+      {
+        "row_index": 5,
+        "chunk_id": "ricardo-salinas-mensaje-apertura_c0005"
+      },
+      {
+        "row_index": 6,
+        "chunk_id": "ricardo-salinas-mensaje-apertura_c0006"
+      },
+      {
+        "row_index": 7,
+        "chunk_id": "ricardo-salinas-mensaje-apertura_c0007"
+      },
+      {
+        "row_index": 8,
+        "chunk_id": "ricardo-salinas-mensaje-apertura_c0008"
+      },
+      {
+        "row_index": 9,
+        "chunk_id": "ricardo-salinas-mensaje-apertura_c0009"
+      },
+      {
+        "row_index": 10,
+        "chunk_id": "ricardo-salinas-mensaje-apertura_c0010"
+      },
+      {
+        "row_index": 11,
+        "chunk_id": "ricardo-salinas-mensaje-apertura_c0011"
+      },
+      {
+        "row_index": 12,
+        "chunk_id": "ricardo-salinas-mensaje-apertura_c0012"
+      },
+      {
+        "row_index": 13,
+        "chunk_id": "ricardo-salinas-mensaje-apertura_c0013"
+      },
+      {
+        "row_index": 14,
+        "chunk_id": "ricardo-salinas-mensaje-apertura_c0014"
+      },
+      {
+        "row_index": 15,
+        "chunk_id": "ricardo-salinas-mensaje-apertura_c0015"
+      },
+      {
+        "row_index": 16,
+        "chunk_id": "agustin-laje-batalla-cultural_c0000"
+      },
+      {
+        "row_index": 17,
+        "chunk_id": "agustin-laje-batalla-cultural_c0001"
+      },
+      {
+        "row_index": 18,
+        "chunk_id": "agustin-laje-batalla-cultural_c0002"
+      },
+      {
+        "row_index": 19,
+        "chunk_id": "agustin-laje-batalla-cultural_c0003"
+      },
+      {
+        "row_index": 20,
+        "chunk_id": "agustin-laje-batalla-cultural_c0004"
+      },
+      {
+        "row_index": 21,
+        "chunk_id": "agustin-laje-batalla-cultural_c0005"
+      },
+      {
+        "row_index": 22,
+        "chunk_id": "agustin-laje-batalla-cultural_c0006"
+      },
+      {
+        "row_index": 23,
+        "chunk_id": "agustin-laje-batalla-cultural_c0007"
+      },
+      {
+        "row_index": 24,
+        "chunk_id": "agustin-laje-batalla-cultural_c0008"
+      },
+      {
+        "row_index": 25,
+        "chunk_id": "agustin-laje-batalla-cultural_c0009"
+      },
+      {
+        "row_index": 26,
+        "chunk_id": "agustin-laje-batalla-cultural_c0010"
+      },
+      {
+        "row_index": 27,
+        "chunk_id": "agustin-laje-batalla-cultural_c0011"
+      },
+      {
+        "row_index": 28,
+        "chunk_id": "agustin-laje-batalla-cultural_c0012"
+      },
+      {
+        "row_index": 29,
+        "chunk_id": "agustin-laje-batalla-cultural_c0013"
+      },
+      {
+        "row_index": 30,
+        "chunk_id": "agustin-laje-batalla-cultural_c0014"
+      },
+      {
+        "row_index": 31,
+        "chunk_id": "agustin-laje-batalla-cultural_c0015"
+      },
+      {
+        "row_index": 32,
+        "chunk_id": "agustin-laje-batalla-cultural_c0016"
+      },
+      {
+        "row_index": 33,
+        "chunk_id": "agustin-laje-batalla-cultural_c0017"
+      },
+      {
+        "row_index": 34,
+        "chunk_id": "agustin-laje-batalla-cultural_c0018"
+      },
+      {
+        "row_index": 35,
+        "chunk_id": "agustin-laje-batalla-cultural_c0019"
+      },
+      {
+        "row_index": 36,
+        "chunk_id": "agustin-laje-batalla-cultural_c0020"
+      },
+      {
+        "row_index": 37,
+        "chunk_id": "agustin-laje-batalla-cultural_c0021"
+      },
+      {
+        "row_index": 38,
+        "chunk_id": "agustin-laje-batalla-cultural_c0022"
+      },
+      {
+        "row_index": 39,
+        "chunk_id": "agustin-laje-batalla-cultural_c0023"
+      },
+      {
+        "row_index": 40,
+        "chunk_id": "agustin-laje-batalla-cultural_c0024"
+      },
+      {
+        "row_index": 41,
+        "chunk_id": "agustin-laje-batalla-cultural_c0025"
+      },
+      {
+        "row_index": 42,
+        "chunk_id": "agustin-laje-batalla-cultural_c0026"
+      },
+      {
+        "row_index": 43,
+        "chunk_id": "agustin-laje-batalla-cultural_c0027"
+      },
+      {
+        "row_index": 44,
+        "chunk_id": "agustin-laje-batalla-cultural_c0028"
+      },
+      {
+        "row_index": 45,
+        "chunk_id": "agustin-laje-batalla-cultural_c0029"
+      },
+      {
+        "row_index": 46,
+        "chunk_id": "agustin-laje-batalla-cultural_c0030"
+      },
+      {
+        "row_index": 47,
+        "chunk_id": "agustin-laje-batalla-cultural_c0031"
+      },
+      {
+        "row_index": 48,
+        "chunk_id": "agustin-laje-batalla-cultural_c0032"
+      },
+      {
+        "row_index": 49,
+        "chunk_id": "agustin-laje-batalla-cultural_c0033"
+      },
+      {
+        "row_index": 50,
+        "chunk_id": "agustin-laje-batalla-cultural_c0034"
+      },
+      {
+        "row_index": 51,
+        "chunk_id": "agustin-laje-batalla-cultural_c0035"
+      },
+      {
+        "row_index": 52,
+        "chunk_id": "agustin-laje-batalla-cultural_c0036"
+      },
+      {
+        "row_index": 53,
+        "chunk_id": "agustin-laje-batalla-cultural_c0037"
+      },
+      {
+        "row_index": 54,
+        "chunk_id": "agustin-laje-batalla-cultural_c0038"
+      },
+      {
+        "row_index": 55,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0000"
+      },
+      {
+        "row_index": 56,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0001"
+      },
+      {
+        "row_index": 57,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0002"
+      },
+      {
+        "row_index": 58,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0003"
+      },
+      {
+        "row_index": 59,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0004"
+      },
+      {
+        "row_index": 60,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0005"
+      },
+      {
+        "row_index": 61,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0006"
+      },
+      {
+        "row_index": 62,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0007"
+      },
+      {
+        "row_index": 63,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0008"
+      },
+      {
+        "row_index": 64,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0009"
+      },
+      {
+        "row_index": 65,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0010"
+      },
+      {
+        "row_index": 66,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0011"
+      },
+      {
+        "row_index": 67,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0012"
+      },
+      {
+        "row_index": 68,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0013"
+      },
+      {
+        "row_index": 69,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0014"
+      },
+      {
+        "row_index": 70,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0015"
+      },
+      {
+        "row_index": 71,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0016"
+      },
+      {
+        "row_index": 72,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0017"
+      },
+      {
+        "row_index": 73,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0018"
+      },
+      {
+        "row_index": 74,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0019"
+      },
+      {
+        "row_index": 75,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0020"
+      },
+      {
+        "row_index": 76,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0021"
+      },
+      {
+        "row_index": 77,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0022"
+      },
+      {
+        "row_index": 78,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0023"
+      },
+      {
+        "row_index": 79,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0024"
+      },
+      {
+        "row_index": 80,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0025"
+      },
+      {
+        "row_index": 81,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0026"
+      },
+      {
+        "row_index": 82,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0027"
+      },
+      {
+        "row_index": 83,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0028"
+      },
+      {
+        "row_index": 84,
+        "chunk_id": "adrian-villasenor-liderazgo-ia_c0029"
+      },
+      {
+        "row_index": 85,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0000"
+      },
+      {
+        "row_index": 86,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0001"
+      },
+      {
+        "row_index": 87,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0002"
+      },
+      {
+        "row_index": 88,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0003"
+      },
+      {
+        "row_index": 89,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0004"
+      },
+      {
+        "row_index": 90,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0005"
+      },
+      {
+        "row_index": 91,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0006"
+      },
+      {
+        "row_index": 92,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0007"
+      },
+      {
+        "row_index": 93,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0008"
+      },
+      {
+        "row_index": 94,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0009"
+      },
+      {
+        "row_index": 95,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0010"
+      },
+      {
+        "row_index": 96,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0011"
+      },
+      {
+        "row_index": 97,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0012"
+      },
+      {
+        "row_index": 98,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0013"
+      },
+      {
+        "row_index": 99,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0014"
+      },
+      {
+        "row_index": 100,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0015"
+      },
+      {
+        "row_index": 101,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0016"
+      },
+      {
+        "row_index": 102,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0017"
+      },
+      {
+        "row_index": 103,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0018"
+      },
+      {
+        "row_index": 104,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0019"
+      },
+      {
+        "row_index": 105,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0020"
+      },
+      {
+        "row_index": 106,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0021"
+      },
+      {
+        "row_index": 107,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0022"
+      },
+      {
+        "row_index": 108,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0023"
+      },
+      {
+        "row_index": 109,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0024"
+      },
+      {
+        "row_index": 110,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0025"
+      },
+      {
+        "row_index": 111,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0026"
+      },
+      {
+        "row_index": 112,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0027"
+      },
+      {
+        "row_index": 113,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0028"
+      },
+      {
+        "row_index": 114,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0029"
+      },
+      {
+        "row_index": 115,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0030"
+      },
+      {
+        "row_index": 116,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0031"
+      },
+      {
+        "row_index": 117,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0032"
+      },
+      {
+        "row_index": 118,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0033"
+      },
+      {
+        "row_index": 119,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0034"
+      },
+      {
+        "row_index": 120,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0035"
+      },
+      {
+        "row_index": 121,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0036"
+      },
+      {
+        "row_index": 122,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0037"
+      },
+      {
+        "row_index": 123,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0038"
+      },
+      {
+        "row_index": 124,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0039"
+      },
+      {
+        "row_index": 125,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0040"
+      },
+      {
+        "row_index": 126,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0041"
+      },
+      {
+        "row_index": 127,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0042"
+      },
+      {
+        "row_index": 128,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0043"
+      },
+      {
+        "row_index": 129,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0044"
+      },
+      {
+        "row_index": 130,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0045"
+      },
+      {
+        "row_index": 131,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0046"
+      },
+      {
+        "row_index": 132,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0047"
+      },
+      {
+        "row_index": 133,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0048"
+      },
+      {
+        "row_index": 134,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0049"
+      },
+      {
+        "row_index": 135,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0050"
+      },
+      {
+        "row_index": 136,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0051"
+      },
+      {
+        "row_index": 137,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0052"
+      },
+      {
+        "row_index": 138,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0053"
+      },
+      {
+        "row_index": 139,
+        "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0054"
+      }
+    ],
+    "manifest": {
+      "path": "data/derived/embeddings/gte_multilingual_base_child_v1_manifest.json",
+      "sha256": "5118fe066904bd9b5ee7f3eadb12fdfd435f2d2a9f3af2d88461fc17ba6a5dc2",
+      "bytes": 15911
+    }
+  },
+  "smoke_tests": [
+    {
+      "query": "¿Cuál es el origen y la historia de Grupo Salinas?",
+      "top_k": 5,
+      "search_seconds": 0.001494,
+      "results": [
+        {
+          "rank": 1,
+          "cosine_similarity": 0.80727816,
+          "chunk_id": "ricardo-salinas-mensaje-apertura_c0000",
+          "talk_id": "ricardo-salinas-mensaje-apertura",
+          "title": "Mensaje de apertura",
+          "primary_speaker": "Ricardo Salinas Pliego",
+          "start_sequence_index": 0,
+          "end_sequence_index": 23,
+          "preview": "Y ya para para dar inicio a estas sesiones vamos a darle la bienvenida a mi papá Ricardo Salinas Pliego. Muy bien! Buen día! Qué gusto verlos aquí a todos. Una vez más el equipo potente de Grupo Salinas se junta y estoy…"
+        },
+        {
+          "rank": 2,
+          "cosine_similarity": 0.67138088,
+          "chunk_id": "ricardo-salinas-mensaje-apertura_c0001",
+          "talk_id": "ricardo-salinas-mensaje-apertura",
+          "title": "Mensaje de apertura",
+          "primary_speaker": "Ricardo Salinas Pliego",
+          "start_sequence_index": 18,
+          "end_sequence_index": 47,
+          "preview": "Y ahí decimos que nace el Grupo Salinas, porque la fábrica se llama Salinas y Rocha, fábrica de Camas. Y hace 20 años aquí con Mario San Román, se nos ocurrió hacer la celebración de los 100 años de Grupo Salinas. Hace…"
+        },
+        {
+          "rank": 3,
+          "cosine_similarity": 0.64103645,
+          "chunk_id": "adrian-villasenor-liderazgo-ia_c0017",
+          "talk_id": "adrian-villasenor-liderazgo-ia",
+          "title": "Liderazgo empresarial en la era de la inteligencia artificial",
+          "primary_speaker": "Adrián Villaseñor",
+          "start_sequence_index": 211,
+          "end_sequence_index": 234,
+          "preview": "Tú BAZ a seguir siendo responsable de esos resultados, pero si bien hay cosas que no cambian, hay cosas que sí cambian y cosas que sí están cambiando. Ya antes, en 2020, los equipos estaban tomando decisiones basadas en…"
+        },
+        {
+          "rank": 4,
+          "cosine_similarity": 0.55091393,
+          "chunk_id": "adrian-villasenor-liderazgo-ia_c0010",
+          "talk_id": "adrian-villasenor-liderazgo-ia",
+          "title": "Liderazgo empresarial en la era de la inteligencia artificial",
+          "primary_speaker": "Adrián Villaseñor",
+          "start_sequence_index": 133,
+          "end_sequence_index": 143,
+          "preview": "Logramos identificar 5 millones de dólares a Levitt en un año, sin hacer un centavo adicional de inversión y estamos perfilando que sean cercano a 20 millones de dólares en el año 2 cero. Inversión por platicar con Chat…"
+        },
+        {
+          "rank": 5,
+          "cosine_similarity": 0.54183221,
+          "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0039",
+          "talk_id": "luis-caro-manuel-quijano-taller-claude",
+          "title": "Introducción y taller de Claude",
+          "primary_speaker": "Luis Caro y Manuel Quijano",
+          "start_sequence_index": 661,
+          "end_sequence_index": 684,
+          "preview": "Ok, solo vamos a usar un documento para lo que es este primer laboratorio, entonces ubíquense ahí un poquito, vean los documentos y aquí les voy a hacer una pequeña pausa también para que se ubiquen y vamos a continuar…"
+        }
+      ]
+    },
+    {
+      "query": "¿Qué significa la batalla cultural y por qué es importante?",
+      "top_k": 5,
+      "search_seconds": 0.00064,
+      "results": [
+        {
+          "rank": 1,
+          "cosine_similarity": 0.89180744,
+          "chunk_id": "agustin-laje-batalla-cultural_c0001",
+          "talk_id": "agustin-laje-batalla-cultural",
+          "title": "La batalla cultural",
+          "primary_speaker": "Agustín Laje",
+          "start_sequence_index": 15,
+          "end_sequence_index": 36,
+          "preview": "Yo me dedico a impulsar las ideas de la libertad a nivel continental. De hecho, mañana me tengo que ir a Colombia, donde tenemos elecciones el 31 de mayo. A impulsar a nuestro hombre allí, que es Abelardo de la Espriell…"
+        },
+        {
+          "rank": 2,
+          "cosine_similarity": 0.85309631,
+          "chunk_id": "agustin-laje-batalla-cultural_c0004",
+          "talk_id": "agustin-laje-batalla-cultural",
+          "title": "La batalla cultural",
+          "primary_speaker": "Agustín Laje",
+          "start_sequence_index": 57,
+          "end_sequence_index": 73,
+          "preview": "En ese sentido evoca una serie de componentes que van a ver y estudiar tanto los antropólogos como los sociólogos, tales como el lenguaje, los signos, las historias, los mitos, los ritos, las costumbres, los valores, to…"
+        },
+        {
+          "rank": 3,
+          "cosine_similarity": 0.8250314,
+          "chunk_id": "agustin-laje-batalla-cultural_c0005",
+          "talk_id": "agustin-laje-batalla-cultural",
+          "title": "La batalla cultural",
+          "primary_speaker": "Agustín Laje",
+          "start_sequence_index": 69,
+          "end_sequence_index": 90,
+          "preview": "Decíamos el concepto ilustrado de cultura. Qué tipo de instituciones están en relación con este concepto? Bueno, la literatura, las escuelas, las universidades, los grupos intelectuales. Ahí se van a desarrollar dos tip…"
+        },
+        {
+          "rank": 4,
+          "cosine_similarity": 0.77102768,
+          "chunk_id": "agustin-laje-batalla-cultural_c0009",
+          "talk_id": "agustin-laje-batalla-cultural",
+          "title": "La batalla cultural",
+          "primary_speaker": "Agustín Laje",
+          "start_sequence_index": 127,
+          "end_sequence_index": 147,
+          "preview": "Al contrario, si uno tiene, por ejemplo, Batalla cultural pero no tiene batalla política, puede cambiar el entorno. Pero al final los candidatos políticos van a ser de los otros y eso tarde o temprano se va a caer porqu…"
+        },
+        {
+          "rank": 5,
+          "cosine_similarity": 0.74660236,
+          "chunk_id": "agustin-laje-batalla-cultural_c0002",
+          "talk_id": "agustin-laje-batalla-cultural",
+          "title": "La batalla cultural",
+          "primary_speaker": "Agustín Laje",
+          "start_sequence_index": 34,
+          "end_sequence_index": 50,
+          "preview": "Cultura es tan difícil como concepto que hace algunos años a la Universidad de Oxford se le ocurrió publicar un libro donde compilaran todos los sentidos, todos los significados más disímiles que tenía la palabra cultur…"
+        }
+      ]
+    },
+    {
+      "query": "¿Qué retos plantea la inteligencia artificial para el liderazgo empresarial?",
+      "top_k": 5,
+      "search_seconds": 0.000567,
+      "results": [
+        {
+          "rank": 1,
+          "cosine_similarity": 0.79624653,
+          "chunk_id": "adrian-villasenor-liderazgo-ia_c0007",
+          "talk_id": "adrian-villasenor-liderazgo-ia",
+          "title": "Liderazgo empresarial en la era de la inteligencia artificial",
+          "primary_speaker": "Adrián Villaseñor",
+          "start_sequence_index": 100,
+          "end_sequence_index": 115,
+          "preview": "Preparar reportes para inversionistas, hacer análisis financiero, hacer tener conversaciones difíciles, construir cultura, tareas administrativas. Y dije no sé cómo, pero ya que tengo esas diez cosas, me voy a forzar a…"
+        },
+        {
+          "rank": 2,
+          "cosine_similarity": 0.77918655,
+          "chunk_id": "adrian-villasenor-liderazgo-ia_c0022",
+          "talk_id": "adrian-villasenor-liderazgo-ia",
+          "title": "Liderazgo empresarial en la era de la inteligencia artificial",
+          "primary_speaker": "Adrián Villaseñor",
+          "start_sequence_index": 290,
+          "end_sequence_index": 308,
+          "preview": "Si los agentes, pero al final va a transformar las organizaciones. Desde esta perspectiva. Y esto es la parte individual, Ese fue el centro que decía del yo, pero realmente para que ustedes puedan realmente ir avanzando…"
+        },
+        {
+          "rank": 3,
+          "cosine_similarity": 0.76981521,
+          "chunk_id": "adrian-villasenor-liderazgo-ia_c0016",
+          "talk_id": "adrian-villasenor-liderazgo-ia",
+          "title": "Liderazgo empresarial en la era de la inteligencia artificial",
+          "primary_speaker": "Adrián Villaseñor",
+          "start_sequence_index": 199,
+          "end_sequence_index": 215,
+          "preview": "Todavía no estamos llegando ahí, pero empieza a verse que el principal cuello de botella para generar estos resultados es un tema de liderazgo, es un tema de cultura, es un tema que puede empezar con nosotros cuando cua…"
+        },
+        {
+          "rank": 4,
+          "cosine_similarity": 0.75877273,
+          "chunk_id": "adrian-villasenor-liderazgo-ia_c0017",
+          "talk_id": "adrian-villasenor-liderazgo-ia",
+          "title": "Liderazgo empresarial en la era de la inteligencia artificial",
+          "primary_speaker": "Adrián Villaseñor",
+          "start_sequence_index": 211,
+          "end_sequence_index": 234,
+          "preview": "Tú BAZ a seguir siendo responsable de esos resultados, pero si bien hay cosas que no cambian, hay cosas que sí cambian y cosas que sí están cambiando. Ya antes, en 2020, los equipos estaban tomando decisiones basadas en…"
+        },
+        {
+          "rank": 5,
+          "cosine_similarity": 0.74751341,
+          "chunk_id": "adrian-villasenor-liderazgo-ia_c0023",
+          "talk_id": "adrian-villasenor-liderazgo-ia",
+          "title": "Liderazgo empresarial en la era de la inteligencia artificial",
+          "primary_speaker": "Adrián Villaseñor",
+          "start_sequence_index": 306,
+          "end_sequence_index": 319,
+          "preview": "Y aquí es donde ya no podemos hablar nada más de lo que yo puedo hacer con la inteligencia artificial. Aquí sí tenemos que empezar a pensar en cosas un poco más complejas, que son los sistemas y los habilitadores, porqu…"
+        }
+      ]
+    },
+    {
+      "query": "¿Cómo puede Claude ayudar a trabajar con documentos y presentaciones?",
+      "top_k": 5,
+      "search_seconds": 0.00051,
+      "results": [
+        {
+          "rank": 1,
+          "cosine_similarity": 0.68624735,
+          "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0023",
+          "talk_id": "luis-caro-manuel-quijano-taller-claude",
+          "title": "Introducción y taller de Claude",
+          "primary_speaker": "Luis Caro y Manuel Quijano",
+          "start_sequence_index": 383,
+          "end_sequence_index": 401,
+          "preview": "Entonces, si seguimos un poco aquí, lo que me responde Cloud. También me da recomendaciones de lo que yo pueda llevar al comité. Entonces, si se dan cuenta es súper poderoso porque me está dando una preparación, un desg…"
+        },
+        {
+          "rank": 2,
+          "cosine_similarity": 0.6664722,
+          "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0054",
+          "talk_id": "luis-caro-manuel-quijano-taller-claude",
+          "title": "Introducción y taller de Claude",
+          "primary_speaker": "Luis Caro y Manuel Quijano",
+          "start_sequence_index": 945,
+          "end_sequence_index": 956,
+          "preview": "Todo esto lo hizo como en el fondo, entendiendo un poquito la audiencia, escribiendo. Ojo, esto no, esto no está real, no lo voy a publicar. Todo es aquí. Pero bueno, aquí pueden ver realmente el poder de usar esta func…"
+        },
+        {
+          "rank": 3,
+          "cosine_similarity": 0.65577316,
+          "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0040",
+          "talk_id": "luis-caro-manuel-quijano-taller-claude",
+          "title": "Introducción y taller de Claude",
+          "primary_speaker": "Luis Caro y Manuel Quijano",
+          "start_sequence_index": 682,
+          "end_sequence_index": 702,
+          "preview": "Lo que vamos a hacer a continuación es que vamos a usar Clot Chat para que me ayude de nuevo para prepararme para el comité. Ok, entonces, cuáles son los objetivos de este taller y no igual este es el primer taller para…"
+        },
+        {
+          "rank": 4,
+          "cosine_similarity": 0.65420479,
+          "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0052",
+          "talk_id": "luis-caro-manuel-quijano-taller-claude",
+          "title": "Introducción y taller de Claude",
+          "primary_speaker": "Luis Caro y Manuel Quijano",
+          "start_sequence_index": 907,
+          "end_sequence_index": 925,
+          "preview": "Pueden traer los colores que ustedes necesiten y pueden decirle que construya basado en lo que necesiten o en o en los estilos, colores e motivo de la reunión, etcétera. Exacto. O sea, esto ya se lo pueden llevar ustede…"
+        },
+        {
+          "rank": 5,
+          "cosine_similarity": 0.64028507,
+          "chunk_id": "luis-caro-manuel-quijano-taller-claude_c0024",
+          "talk_id": "luis-caro-manuel-quijano-taller-claude",
+          "title": "Introducción y taller de Claude",
+          "primary_speaker": "Luis Caro y Manuel Quijano",
+          "start_sequence_index": 397,
+          "end_sequence_index": 420,
+          "preview": "Que yo tengo que repetir esa tarea todos los lunes. Es una tarea esa tarea de yo prepararme ante el comité es algo que todos los lunes me toca hacer. Qué tal si la pudiera, como programar o calendarizar de cierta manera…"
+        }
+      ]
+    }
+  ],
+  "score_interpretation": "cosine_similarity is a ranking similarity, not a probability; no thresholds applied",
+  "anomalies": [
+    "`sentence-transformers==5.1.2` was installed but its top-level import requires Pillow; Windows denied reads from the installed PIL package. Pillow was removed because this text-only pipeline does not need it. Inference therefore uses Transformers directly with the model's official CLS pooling configuration.",
+    "The model requires `trust_remote_code=True`; both the model revision and the external `Alibaba-NLP/new-impl` code revision are pinned and their two Python files were reviewed.",
+    "Transformers reported that `classifier.weight` and `classifier.bias` were unused when initializing `NewModel`. This is expected for embedding inference because the base encoder is loaded without the checkpoint's task-specific classifier head."
+  ],
+  "excluded_scope": [
+    "qdrant",
+    "parents",
+    "llm",
+    "thresholds",
+    "formal_evaluation"
+  ]
+}

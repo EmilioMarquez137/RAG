@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "policy": {
+    "canonical_order": "source_line",
+    "timestamps": "metadata_only",
+    "overlapping_blocks": "preserved_without_automatic_reordering_or_removal"
+  },
+  "checks": {
+    "source_parsed": true,
+    "talk_ids_unique": true,
+    "talk_ranges_non_overlapping": true,
+    "boundary_markers_matched": true,
+    "talks_nonempty": true,
+    "unicode_feff_removed": true,
+    "baz_preserved": true,
+    "source_line_canonical_order": true,
+    "sequence_indexes_consecutive": true
+  },
+  "diagnostics": {
+    "source_sha256": "160a140dc5d353fb32a7a03a6bdc1aeeb80557ffbeddfa76f879f3dcf6df9813",
+    "source_bytes": 257723,
+    "source_lines": 2474,
+    "parsed_utterances": 2470,
+    "ignored_nonempty_lines": [
+      {
+        "source_line": 1,
+        "text": "JALMO 28: AOKA-8157 - ricardo.villanuevac@ferreryasociados.mx - jueves, 21 de mayo de 2026 9:02 - 355 minutes"
+      },
+      {
+        "source_line": 3,
+        "text": "Participant: Jalmo28_D1 [J] Spanish (LatAm)"
+      }
+    ],
+    "timestamp_inversions": [
+      {
+        "previous_source_line": 261,
+        "previous_time": "01:27:31",
+        "source_line": 262,
+        "time": "01:27:24",
+        "delta_seconds": -7
+      },
+      {
+        "previous_source_line": 455,
+        "previous_time": "01:46:11",
+        "source_line": 456,
+        "time": "01:45:53",
+        "delta_seconds": -18
+      },
+      {
+        "previous_source_line": 1516,
+        "previous_time": "04:21:13",
+        "source_line": 1517,
+        "time": "04:20:53",
+        "delta_seconds": -20
+      }
+    ],
+    "selected_utterances": 2301,
+    "excluded_utterances": 169,
+    "talk_count": 4
+  }
+}

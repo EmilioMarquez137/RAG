@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "algorithm": "child-v1-nearest-complete-utterance",
+  "checks": {
+    "chunks_nonempty": true,
+    "chunk_ids_unique": true,
+    "talk_boundaries_respected": true,
+    "chunk_indexes_consecutive": true,
+    "utterances_consecutive": true,
+    "text_reproducible": true,
+    "token_counts_reproducible": true,
+    "content_hashes_reproducible": true,
+    "traceability_boundaries_match": true,
+    "at_least_one_new_utterance": true,
+    "overlap_matches_previous_suffix": true,
+    "overlap_is_minimal_suffix_reaching_target": true,
+    "closure_rule_respected": true,
+    "new_utterance_coverage_exactly_once": true,
+    "no_parent_fields": true
+  },
+  "coverage_by_talk": {
+    "ricardo-salinas-mensaje-apertura": {
+      "source_utterances": 357,
+      "new_utterances_in_chunks": 357,
+      "covered_exactly_once": true
+    },
+    "agustin-laje-batalla-cultural": {
+      "source_utterances": 596,
+      "new_utterances_in_chunks": 596,
+      "covered_exactly_once": true
+    },
+    "adrian-villasenor-liderazgo-ia": {
+      "source_utterances": 391,
+      "new_utterances_in_chunks": 391,
+      "covered_exactly_once": true
+    },
+    "luis-caro-manuel-quijano-taller-claude": {
+      "source_utterances": 957,
+      "new_utterances_in_chunks": 957,
+      "covered_exactly_once": true
+    }
+  },
+  "errors": []
+}
