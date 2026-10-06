@@ -1,0 +1,83 @@
+{
+  "report_version": "1.0",
+  "experiment_id": "exp_002_dense_gte_bm25",
+  "status": "passed",
+  "source": {
+    "path": "data/processed/chunks.jsonl",
+    "sha256_before": "89856512f48863eb889817884199d318c9285b024cbe7eadc7e67200f29f2d1d",
+    "sha256_after": "89856512f48863eb889817884199d318c9285b024cbe7eadc7e67200f29f2d1d",
+    "modified": false,
+    "input": "exact Child.text"
+  },
+  "configuration": {
+    "path": "experiments/retrieval/exp_002_dense_gte_bm25/config.json",
+    "sha256": "a8b484d929be0ddbce7a0fbe0ae7d966d84d5055ad97087b8443051720363dff"
+  },
+  "implementation": "local_bm25_okapi_v1",
+  "parameters": {
+    "k1": 1.5,
+    "b": 0.75,
+    "idf": "ln(1 + (N - df + 0.5) / (df + 0.5))",
+    "query_term_frequency": "linear_multiplier",
+    "score_normalization": null,
+    "threshold": null
+  },
+  "preprocessing": {
+    "unicode_normalization": "NFC",
+    "lowercase": true,
+    "token_pattern": "[^\\W_]+",
+    "punctuation": "separator_and_discarded",
+    "stopwords": "none",
+    "accents": "preserved",
+    "stemming": "none",
+    "lemmatization": "none"
+  },
+  "statistics": {
+    "document_count": 140,
+    "vocabulary_size": 4826,
+    "document_tokens": {
+      "minimum": 110,
+      "mean": 338.5285714285714,
+      "median": 344.5,
+      "maximum": 389,
+      "total": 47394
+    },
+    "average_document_length_used_by_bm25": 338.5285714285714
+  },
+  "validation": {
+    "status": "passed",
+    "checks": {
+      "exactly_expected_document_count": true,
+      "exactly_140_children_indexed": true,
+      "chunk_ids_unique": true,
+      "no_children_missing": true,
+      "no_unexpected_children": true,
+      "one_to_one_in_source_order": true,
+      "no_empty_documents_after_preprocessing": true,
+      "document_lengths_complete": true,
+      "postings_well_formed": true,
+      "postings_reconstruct_document_lengths": true,
+      "idf_and_posting_terms_match": true
+    },
+    "missing_chunk_ids": [],
+    "unexpected_chunk_ids": []
+  },
+  "index_artifact": {
+    "path": "experiments/retrieval/exp_002_dense_gte_bm25/results/bm25_index.json",
+    "sha256": "54cd88067e3f5cb87010c69bc998d8a54389fbf6001e805ea2d1f0747f6e9bef",
+    "bytes": 1430769,
+    "format": "UTF-8 JSON; no pickle"
+  },
+  "elapsed_seconds": 0.088472,
+  "excluded_scope": [
+    "dense_vs_bm25_comparison",
+    "fusion",
+    "rrf",
+    "new_evaluation_queries",
+    "thresholds",
+    "reranking",
+    "parents",
+    "qdrant",
+    "llm"
+  ]
+}

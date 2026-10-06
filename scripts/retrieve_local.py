@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import textwrap
 import time
 from pathlib import Path
 
@@ -24,7 +25,7 @@ from gte_embedding_common import (
 )
 
 
-def render_text(payload: dict) -> str:
+def render_text(payload: dict, full_text: bool = False) -> str:
     lines = [
         f"Query: {payload['query']}",
         (
@@ -39,21 +40,28 @@ def render_text(payload: dict) -> str:
         "",
     ]
     for item in payload["results"]:
-        lines.extend(
-            [
-                f"{item['rank']}. cosine={item['cosine_similarity']:.8f}",
-                f"   chunk_id: {item['chunk_id']}",
-                f"   talk_id: {item['talk_id']}",
-                f"   título: {item['title']}",
-                f"   ponente: {item['primary_speaker']}",
-                (
-                    f"   sequence_index: {item['start_sequence_index']}–"
-                    f"{item['end_sequence_index']}"
-                ),
-                f"   preview: {item['preview']}",
-                "",
-            ]
-        )
+        result_lines = [
+            f"{item['rank']}. cosine={item['cosine_similarity']:.8f}",
+            f"   chunk_id: {item['chunk_id']}",
+            f"   talk_id: {item['talk_id']}",
+            f"   título: {item['title']}",
+            f"   ponente: {item['primary_speaker']}",
+            (
+                f"   sequence_index: {item['start_sequence_index']}–"
+                f"{item['end_sequence_index']}"
+            ),
+        ]
+        if full_text:
+            result_lines.extend(
+                [
+                    "   texto completo:",
+                    textwrap.indent(item["text"], "      "),
+                ]
+            )
+        else:
+            result_lines.append(f"   preview: {item['preview']}")
+        result_lines.append("")
+        lines.extend(result_lines)
     return "\n".join(lines)
 
 
@@ -66,6 +74,11 @@ def main() -> None:
     parser.add_argument("--embeddings", type=Path, default=DEFAULT_EMBEDDINGS)
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
     parser.add_argument("--json", action="store_true", dest="as_json")
+    parser.add_argument(
+        "--full-text",
+        action="store_true",
+        help="Muestra el texto completo de cada Child en lugar del preview",
+    )
     parser.add_argument("--local-files-only", action="store_true")
     args = parser.parse_args()
 
@@ -110,6 +123,9 @@ def main() -> None:
         chunks_by_id,
         args.top_k,
     )
+    if args.full_text:
+        for result in results:
+            result["text"] = chunks_by_id[result["chunk_id"]]["text"]
     search_seconds = time.perf_counter() - search_started
     payload = {
         "query": args.query,
@@ -129,7 +145,7 @@ def main() -> None:
     if args.as_json:
         print(json.dumps(payload, ensure_ascii=False, indent=2))
     else:
-        print(render_text(payload))
+        print(render_text(payload, full_text=args.full_text))
 
 
 if __name__ == "__main__":

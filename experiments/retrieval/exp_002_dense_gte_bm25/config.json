@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "exp_002_dense_gte_bm25",
+  "source": {
+    "path": "data/processed/chunks.jsonl",
+    "sha256": "89856512f48863eb889817884199d318c9285b024cbe7eadc7e67200f29f2d1d",
+    "expected_document_count": 140,
+    "id_field": "chunk_id",
+    "input_field": "text"
+  },
+  "dense": {
+    "baseline_experiment": "experiments/retrieval/exp_001_dense_gte",
+    "config_path": "experiments/retrieval/exp_001_dense_gte/config.json",
+    "unchanged": true
+  },
+  "bm25": {
+    "implementation": "local_bm25_okapi_v1",
+    "k1": 1.5,
+    "b": 0.75,
+    "idf": "ln(1 + (N - df + 0.5) / (df + 0.5))",
+    "query_term_frequency": "linear_multiplier",
+    "score_normalization": null,
+    "threshold": null
+  },
+  "preprocessing": {
+    "unicode_normalization": "NFC",
+    "lowercase": true,
+    "token_pattern": "[^\\W_]+",
+    "punctuation": "separator_and_discarded",
+    "stopwords": "none",
+    "accents": "preserved",
+    "stemming": "none",
+    "lemmatization": "none"
+  },
+  "outputs": {
+    "index": "experiments/retrieval/exp_002_dense_gte_bm25/results/bm25_index.json",
+    "validation": "experiments/retrieval/exp_002_dense_gte_bm25/results/bm25_validation.json"
+  },
+  "excluded_scope": [
+    "dense_vs_bm25_comparison",
+    "fusion",
+    "rrf",
+    "new_evaluation_queries",
+    "thresholds",
+    "reranking",
+    "parents",
+    "qdrant",
+    "llm"
+  ]
+}

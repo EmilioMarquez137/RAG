@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "exp_001_dense_gte",
+  "snapshot_type": "references_with_sha256",
+  "artifacts": [
+    {
+      "path": "data/derived/embeddings/gte_multilingual_base_child_v1.npz",
+      "bytes": 455244,
+      "sha256": "661c4010c0e8b31caaa768f2b3421beea9a240383bacfe814a1efce3e6df52e1"
+    },
+    {
+      "path": "data/derived/embeddings/gte_multilingual_base_child_v1_manifest.json",
+      "bytes": 15911,
+      "sha256": "5118fe066904bd9b5ee7f3eadb12fdfd435f2d2a9f3af2d88461fc17ba6a5dc2"
+    },
+    {
+      "path": "data/analysis/gte_embedding_validation.json",
+      "bytes": 32839,
+      "sha256": "e8cf30c772dafd64a0a616d27e3817ef09042d5a10c7cdd6d4d197bb2c27f17d"
+    },
+    {
+      "path": "data/analysis/gte_embedding_validation.md",
+      "bytes": 4988,
+      "sha256": "c51ac02ead55f070bf2e1780fcc139d5d76664cbe664415f4b52cfdab7a3f90b"
+    }
+  ],
+  "canonical_source": {
+    "path": "data/processed/chunks.jsonl",
+    "sha256": "89856512f48863eb889817884199d318c9285b024cbe7eadc7e67200f29f2d1d",
+    "modified": false
+  }
+}

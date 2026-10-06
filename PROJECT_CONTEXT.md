@@ -34,8 +34,10 @@ RAW inmutable
 ```
 
 Child V1 está congelado como unidad de retrieval. Ya existe un baseline local
-de embeddings densos GTE y cosine similarity para inspección; todavía no se
-implementan Parents, Qdrant, LLM ni thresholds de retrieval.
+de embeddings densos GTE y cosine similarity, registrado como
+`exp_001_dense_gte`. `exp_002_dense_gte_bm25` añade un índice BM25 lexical
+independiente sobre los mismos Children. Todavía no se comparan ni fusionan los
+rankings y no se implementan Parents, Qdrant, LLM ni thresholds de retrieval.
 
 Como paso exploratorio previo al chunking, se analizó la longitud real de las
 utterances con un tokenizer explícito. Ese análisis no creó chunks ni decidió
@@ -121,6 +123,10 @@ Las representaciones se mantienen separadas:
 - `chunks.jsonl`: Children V1 ya generados para revisión y futuro retrieval.
 - `data/derived/embeddings/*.npz`: embeddings regenerables asociados por
   `chunk_id`; no son datos canónicos.
+- `experiments/retrieval/exp_001_dense_gte`: contrato congelado del baseline
+  Dense y registro de sus artefactos existentes.
+- `experiments/retrieval/exp_002_dense_gte_bm25/results/bm25_index.json`: índice
+  BM25 regenerable, asociado 1:1 por `chunk_id` con los mismos 140 Children.
 - `parents.jsonl`: unidades futuras de contexto entregadas al LLM; todavía no
   existe.
 
@@ -133,12 +139,15 @@ la revisión humana. La selección de base de datos continúa pendiente.
 Desde la raíz del proyecto:
 
 ```powershell
-.\.venv\Scripts\python.exe scripts\build_talks.py
-.\.venv\Scripts\python.exe scripts\analyze_utterance_lengths.py
-.\.venv\Scripts\python.exe scripts\build_child_chunks.py
-.\.venv\Scripts\python.exe scripts\build_child_embeddings.py --local-files-only
-.\.venv\Scripts\python.exe scripts\retrieve_local.py "consulta" --top-k 5 --local-files-only
-.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+conda activate rag
+python scripts\build_talks.py
+python scripts\analyze_utterance_lengths.py
+python scripts\build_child_chunks.py
+python scripts\build_child_embeddings.py --local-files-only
+python scripts\retrieve_local.py "consulta" --top-k 5 --local-files-only
+python scripts\build_bm25_index.py
+python scripts\retrieve_bm25.py "consulta" --top-k 5
+python -m unittest discover -s tests -v
 ```
 
 Las dependencias se declaran en `pyproject.toml`. El pipeline RAW sigue usando

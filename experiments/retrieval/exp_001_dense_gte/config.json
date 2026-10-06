@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "exp_001_dense_gte",
+  "status": "frozen_baseline",
+  "source": {
+    "path": "data/processed/chunks.jsonl",
+    "sha256": "89856512f48863eb889817884199d318c9285b024cbe7eadc7e67200f29f2d1d",
+    "document_count": 140,
+    "input_field": "text"
+  },
+  "dense": {
+    "model_id": "Alibaba-NLP/gte-multilingual-base",
+    "model_revision": "9bbca17d9273fd0d03d5725c7a4b0f6b45142062",
+    "remote_code_repo": "Alibaba-NLP/new-impl",
+    "remote_code_revision": "40ced75c3017eb27626c9d4ea981bde21a2662f4",
+    "trust_remote_code": true,
+    "device": "cpu",
+    "dtype": "float32",
+    "batch_size": 4,
+    "embedding_dimension": 768,
+    "pooling": "cls",
+    "normalize_embeddings": true,
+    "query_prefix": null,
+    "document_prefix": null,
+    "ranking": "cosine_similarity",
+    "top_k_only": true,
+    "threshold": null
+  },
+  "shared_components": [
+    "config/gte_embedding_baseline.json",
+    "scripts/gte_embedding_common.py",
+    "scripts/build_child_embeddings.py",
+    "scripts/retrieve_local.py"
+  ],
+  "excluded_scope": [
+    "bm25",
+    "rank_comparison",
+    "fusion",
+    "rrf",
+    "reranking",
+    "parents",
+    "qdrant",
+    "llm"
+  ]
+}

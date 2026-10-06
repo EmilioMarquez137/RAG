@@ -23,14 +23,16 @@ Implementado:
   overlap aproximado de 100.
 - Validación de cobertura, continuidad, trazabilidad, overlap y conteos.
 - Estadísticas e inventario de los 140 Children para revisión humana.
+- Baseline Dense con GTE, embeddings normalizados y cosine similarity.
+- Organización reproducible del retrieval en experimentos independientes.
+- Índice y retriever BM25 lexical sobre exactamente los mismos 140 Children.
 
 No implementado:
 
 - Parents.
-- Chunking.
-- Embeddings.
 - Base de datos vectorial.
-- Retriever.
+- Comparación automática Dense vs BM25.
+- Fusión de rankings o RRF.
 - Reranking.
 - Integración con un LLM.
 - API o interfaz de usuario.
@@ -44,13 +46,16 @@ No implementado:
 `pyproject.toml` es la fuente de dependencias; no debe duplicarse en un
 `requirements.txt` mantenido manualmente.
 
-Preparación recomendada en Windows:
+Preparación recomendada en Windows con el entorno Conda del proyecto:
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install setuptools==80.9.0
-.\.venv\Scripts\python.exe -m pip install . --no-build-isolation
+conda activate rag
+conda install pytorch-cpu=2.8.0
+python -m pip install -e ".[sentence-transformers]" --no-build-isolation
 ```
+
+Todos los comandos siguientes presuponen que `rag` está activado. `.venv` no
+es el entorno de ejecución del baseline de embeddings.
 
 ## Estructura relevante
 
@@ -61,11 +66,29 @@ python -m venv .venv
 ├── pyproject.toml
 ├── config/
 │   ├── talks.json
-│   └── child_v1.json
+│   ├── child_v1.json
+│   └── gte_embedding_baseline.json
+├── experiments/retrieval/
+│   ├── exp_001_dense_gte/
+│   │   ├── README.md
+│   │   ├── config.json
+│   │   └── results/artifact_registry.json
+│   └── exp_002_dense_gte_bm25/
+│       ├── README.md
+│       ├── config.json
+│       └── results/
+│           ├── bm25_index.json
+│           └── bm25_validation.json
 ├── scripts/
 │   ├── build_talks.py
 │   ├── analyze_utterance_lengths.py
-│   └── build_child_chunks.py
+│   ├── build_child_chunks.py
+│   ├── gte_embedding_common.py
+│   ├── build_child_embeddings.py
+│   ├── retrieve_local.py
+│   ├── bm25_common.py
+│   ├── build_bm25_index.py
+│   └── retrieve_bm25.py
 ├── tests/
 │   ├── test_build_talks.py
 │   ├── test_analyze_utterance_lengths.py
@@ -219,31 +242,50 @@ python scripts/build_talks.py
 Regenerar el análisis exploratorio de tokens:
 
 ```powershell
-.\.venv\Scripts\python.exe scripts\analyze_utterance_lengths.py
+python scripts\analyze_utterance_lengths.py
 ```
 
 Regenerar exclusivamente Child V1, su validación y estadísticas:
 
 ```powershell
-.\.venv\Scripts\python.exe scripts\build_child_chunks.py
+python scripts\build_child_chunks.py
 ```
 
 Ejecutar las pruebas:
 
 ```powershell
-.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+python -m unittest discover -s tests -v
 ```
 
 Generar el baseline local de embeddings GTE una vez descargado el modelo:
 
 ```powershell
-.\.venv\Scripts\python.exe scripts\build_child_embeddings.py --local-files-only
+python scripts\build_child_embeddings.py --local-files-only
 ```
 
 Ejecutar retrieval local por cosine similarity, sin Qdrant ni thresholds:
 
 ```powershell
-.\.venv\Scripts\python.exe scripts\retrieve_local.py "¿Qué significa la batalla cultural?" --top-k 5 --local-files-only
+python scripts\retrieve_local.py "¿Qué significa la batalla cultural?" --top-k 5 --local-files-only
+```
+
+Para inspeccionar el contenido íntegro de cada resultado en vez del preview:
+
+```powershell
+python scripts\retrieve_local.py "¿Qué significa la batalla cultural?" --top-k 5 --full-text --local-files-only
+```
+
+Regenerar exclusivamente el índice BM25 de `exp_002` y su validación:
+
+```powershell
+python scripts\build_bm25_index.py
+```
+
+Ejecutar la señal BM25 de forma independiente, sin compararla ni fusionarla con
+Dense:
+
+```powershell
+python scripts\retrieve_bm25.py "batalla cultural" --top-k 5
 ```
 
 El pipeline debe ejecutarse de nuevo cuando cambie:
@@ -312,10 +354,35 @@ Cosine similarity se usa solo como score de ranking. No es una probabilidad, no
 se aplican thresholds y los smoke tests no constituyen una evaluación formal.
 Qdrant, Parents y LLM continúan fuera de alcance.
 
+Este baseline queda congelado como
+`experiments/retrieval/exp_001_dense_gte`. Su `config.json` fija el contrato y
+`results/artifact_registry.json` referencia por ruta, tamaño y SHA-256 los
+artefactos históricos sin moverlos ni duplicar el NPZ.
+
+## Experimento BM25
+
+`experiments/retrieval/exp_002_dense_gte_bm25` conserva exactamente el Dense de
+`exp_001` y añade una señal lexical independiente. Ambos consumen los mismos 140
+Children; no existe todavía comparación ni fusión entre sus rankings.
+
+BM25 V1 usa una implementación local y auditable de Okapi con `k1=1.5`,
+`b=0.75` e IDF positiva
+`ln(1 + (N-df+0.5)/(df+0.5))`. Documentos y consultas usan NFC, minúsculas y
+tokens Unicode alfanuméricos. La puntuación se descarta como separador; se
+preservan acentos y stopwords, sin stemming ni lemmatization.
+
+El índice JSON es derivado y regenerable desde `chunks.jsonl`. Conserva el
+array de `chunk_ids`, longitudes, frecuencias documentales, IDF y postings. Su
+validación exige exactamente 140 IDs únicos, correspondencia 1:1 en orden de
+fuente y ningún documento vacío. Los detalles completos viven en el README y
+la configuración del experimento.
+
 ## Próxima decisión técnica
 
-Antes de implementar Parents o infraestructura se deben revisar manualmente los
-Children reales y evaluar después la base de datos y sus capacidades:
+La etapa actual se detiene después de BM25. Antes de implementar comparación,
+fusión o infraestructura se deben revisar el índice, su preprocessing y
+resultados manuales. Después, mediante una decisión explícita, podrá diseñarse
+una evaluación controlada y posteriormente considerar:
 
 - filtros por metadata;
 - búsqueda vectorial e híbrida;

@@ -15,9 +15,43 @@ from gte_embedding_common import (  # noqa: E402
     save_embedding_artifact,
     validate_embeddings,
 )
+from retrieve_local import render_text  # noqa: E402
 
 
 class GteEmbeddingsTest(unittest.TestCase):
+    def test_retrieval_render_can_show_preview_or_full_text(self):
+        payload = {
+            "query": "consulta",
+            "timings": {
+                "model_load_seconds": 1.0,
+                "query_embedding_seconds": 0.1,
+                "search_seconds": 0.001,
+            },
+            "results": [
+                {
+                    "rank": 1,
+                    "cosine_similarity": 0.75,
+                    "chunk_id": "chunk-a",
+                    "talk_id": "talk-a",
+                    "title": "Título",
+                    "primary_speaker": "Ponente",
+                    "start_sequence_index": 1,
+                    "end_sequence_index": 2,
+                    "preview": "Vista previa",
+                    "text": "Texto completo del Child.",
+                }
+            ],
+        }
+
+        preview_output = render_text(payload)
+        full_output = render_text(payload, full_text=True)
+
+        self.assertIn("preview: Vista previa", preview_output)
+        self.assertNotIn("Texto completo del Child.", preview_output)
+        self.assertIn("texto completo:", full_output)
+        self.assertIn("Texto completo del Child.", full_output)
+        self.assertNotIn("preview: Vista previa", full_output)
+
     def test_npz_round_trip_preserves_id_to_vector_mapping(self):
         ids = ["chunk-a", "chunk-b"]
         embeddings = np.asarray([[1.0, 0.0], [0.0, 1.0]], dtype=np.float32)
